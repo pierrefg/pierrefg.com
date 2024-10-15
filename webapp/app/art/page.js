@@ -1,9 +1,9 @@
+import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
+
+import { mainMenuLinks } from '@/components/menu/menuData';
 import { artSections } from './artSections';
 
-import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 import { createPageMetadata } from '@/utils/metadata';
-
-import ArtHeader from './header/artHeader';
 
 export const metadata = createPageMetadata(
     "Portfolio artistique",
@@ -13,9 +13,6 @@ export const metadata = createPageMetadata(
 
 export default function Art() {
     return (
-        <>
-            <ArtHeader />
-            <SubMenuLayout pagesData={artSections} />
-        </>  
+        <SubMenuLayout pageDescription={mainMenuLinks[1]} pagesData={artSections} />
     );
 }

@@ -1,5 +1,8 @@
 import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
+
+import { mainMenuLinks } from '@/components/menu/menuData';
 import { aboutSections } from './aboutSections';
+
 import { createPageMetadata } from '@/utils/metadata';
 
 export const metadata = createPageMetadata(
@@ -8,13 +11,8 @@ export const metadata = createPageMetadata(
     "/about"
 )
 
-import AboutHeader from './header/aboutHeader';
-
 export default function About() {
     return (
-        <>
-            <AboutHeader />
-            <SubMenuLayout pagesData={aboutSections} />
-        </>
+        <SubMenuLayout pageDescription={mainMenuLinks[0]} pagesData={aboutSections} />
     );
 }

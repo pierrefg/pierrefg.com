@@ -4,9 +4,10 @@ import './style.css';
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
+import BackgroundImageLayout from '../BackgroundImageLayout';
 import SubMenu from './SubMenu';
 
-export default function SubMenuLayout({ pagesData, noMenu=false }) {
+export default function SubMenuLayout({pageDescription, pagesData, noMenu=false }) {
     const pathname = usePathname();
 
     const [isFullWidth, setIsFullWidth] = useState(false);
@@ -20,6 +21,14 @@ export default function SubMenuLayout({ pagesData, noMenu=false }) {
 
     return (
         <>
+            <BackgroundImageLayout
+                coverPic={pageDescription.coverPic}
+                title={pageDescription.title}
+                icon={pageDescription.icon}
+            >
+                {pageDescription.description}
+            </BackgroundImageLayout>
+
             {
                 noMenu ?
                 <div className='h-[20px]' />

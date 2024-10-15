@@ -1,11 +1,8 @@
-import { IoArrowUpSharp  } from "react-icons/io5";
 import { PiChalkboardTeacherLight } from "react-icons/pi";
 import { IoSchoolOutline } from "react-icons/io5";
 import { MdOutlineVolunteerActivism } from "react-icons/md";
 import { AiOutlineTool } from "react-icons/ai";
 
-
-import AboutHeader from './header/aboutHeader';
 import Teaching from "./teaching/teaching";
 import Volunteering from "./volunteering/volunteering";
 import Experience from "./experience/experience";

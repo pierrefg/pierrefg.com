@@ -1,5 +1,6 @@
 import SubMenuLayout from '@/components/subMenuLayout/SubMenuLayout';
 
+import { mainMenuLinks } from '@/components/menu/menuData';
 import { contactSections } from './contactSections';
 
 import { createPageMetadata } from '@/utils/metadata';
@@ -10,13 +11,8 @@ export const metadata = createPageMetadata(
     "/contact"
 )
 
-import ContactHeader from "./header/contactHeader";
-
 export default function Contact() {
     return (
-        <>
-            <ContactHeader />
-            <SubMenuLayout noMenu pagesData={contactSections} />
-        </>
+        <SubMenuLayout pageDescription={mainMenuLinks[3]} noMenu pagesData={contactSections} />
     );
 }

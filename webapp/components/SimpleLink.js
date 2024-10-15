@@ -9,7 +9,7 @@ export default function SimpleLink({content, key=null, primary=false, large=fals
             onClick={onClick}
             target={ content.extern && '_blank' }
         >
-            { content.title }
+            {content.icon && content.icon} { content.title }
         </Link>
     )
 }
