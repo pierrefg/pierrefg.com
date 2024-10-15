@@ -26,26 +26,24 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
 
             {/* Content Section */}
             <div>
-                <h2>                        
-                    <strong className="md:p-0">
-                        {  
-                            elementData.title.link ?
-                                <a href={elementData.title.link} target="_blank" rel="noopener noreferrer">
-                                    <span>{elementData.title.name} {elementData.title.postname}</span>
-                                </a>
-                            :
-                            <span>{elementData.title.name} {elementData.title.postname}</span>
-                        }
-                    </strong>
-                </h2>
+                <p className="font-semibold">
+                    {  
+                        elementData.title.link ?
+                            <a href={elementData.title.link} target="_blank" rel="noopener noreferrer">
+                                <span>{elementData.title.name} {elementData.title.postname}</span>
+                            </a>
+                        :
+                        <span>{elementData.title.name} {elementData.title.postname}</span>
+                    }
+                </p>
 
                 <div className="text-small text-primary-muted pl-0">
                     {/* SUBTITLE */}
                     {
                         elementData.subtitle &&
-                        <h3>
+                        <>
                             <MdMergeType className="inline" /> {elementData.subtitle}
-                        </h3>
+                        </>
                     }
                     
 

@@ -10,9 +10,9 @@ export default function Project({data}) {
             }
 
             <div className="text-center">
-                <h2 className="font-semibold">{data.title}</h2>
-                <h3 className="italic">{data.subtitle}</h3>
-                <h3 className="pt-6">{data.period}</h3>
+                <h3>{data.title}</h3>
+                <p className="italic">{data.subtitle}</p>
+                <p className="pt-6">{data.period}</p>
             </div>
             
             {

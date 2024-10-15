@@ -79,11 +79,11 @@ export default function Gallery({ galleryData, size=350 }) {
         <div className="gallery">
             { galleryData.title &&
                 <div className="flex flex-col p-2 text-base text-center">
-                    <h2 
-                        className="inline-block"
+                    <p 
+                        className="font-semibold inline-block text-lg"
                     >
                         {galleryData.title}
-                    </h2>
+                    </p>
                     <p className="inline-block text-small text-primary-muted">
                         {galleryData.place} {galleryData.date && <>[{galleryData.date}]</>}
                     </p>
@@ -128,7 +128,7 @@ export default function Gallery({ galleryData, size=350 }) {
                                     <Image
                                         src={el.img}
                                         alt={`Image ${index + 1}`}
-                                        placeholder={'blur'}
+                                        // placeholder={'blur'}
                                         height={size}
                                         style={{objectFit: "contain"}}
                                         onLoad={(e) => handleImageLoad(index, e)}

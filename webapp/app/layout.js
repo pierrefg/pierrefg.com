@@ -1,10 +1,10 @@
 import "./globals.css";
 import "./button.css";
 
+import React, { Suspense } from 'react';
+
 import MainLayout from "@/components/mainLayout/MainLayout";
 import Loader from "@/components/loader/Loader";
-
-import React, { Suspense } from 'react';
 
 // VERCEL
 import { Analytics } from "@vercel/analytics/react";
@@ -21,9 +21,12 @@ export const metadata = createPageMetadata(
 export default function RootLayout({ children }) {
     return (
         <html lang="fr">
+            <head>
+                <link rel="stylesheet" href="https://use.typekit.net/dsi6anx.css" />
+            </head>
             <body>
                 <Analytics />
-                <SpeedInsights/>
+                <SpeedInsights />
                 <Suspense fallback={<Loader />}>
                     <MainLayout>{children}</MainLayout>
                 </Suspense>

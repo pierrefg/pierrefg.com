@@ -38,15 +38,27 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height));
+
+    font-family: "cofo-sans-mono-variable", sans-serif;
+    font-variation-settings: "wght" 400;
 }
 
 h1 {
-    @apply text-xl font-semibold;
+    @apply text-2xl font-semibold;
+    font-family: "antipol-variable", sans-serif;
+    font-variation-settings: "STCH" 0, "wght" 1000, "wdth" 180;
 }
 
 h2 {
-    @apply text-lg font-semibold;
+    @apply text-xl font-semibold;
+    font-family: "antipol-variable", sans-serif;
+    font-variation-settings: "STCH" 0, "wght" 700, "wdth" 180;
 }
+
+h3 {
+    @apply text-xl font-semibold;
+}
+
 
 .text-small {
     @apply text-sm;

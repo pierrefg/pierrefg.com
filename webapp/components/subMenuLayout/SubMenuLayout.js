@@ -28,18 +28,18 @@ export default function SubMenuLayout({ pagesData, noMenu=false }) {
             }
             
             <div className={`sub-menu-content ${!isFullWidth && 'max-w-7xl md:px-0 px-4 mx-auto'}`}>
-                <div className='flex flex-col gap-6'>
+                <div className='flex flex-col gap-10'>
                     {
                         pagesData.map(
                             (el, index) => (
-                                <div key={index} id={el.id} className='page-section'>
+                                <div key={index} id={el.id} className='page-section flex flex-col gap-4'>
                                     {
                                         !el.noTitle && 
-                                        <div className="flex flex-col text-center mb-6 items-center justify-center">
+                                        <div className="flex flex-col text-center items-center justify-center">
                                             <div>
-                                                <h1 className="">
+                                                <h2>
                                                     {el.title}
-                                                </h1>
+                                                </h2>
                                                 <div className='bg-primary-hover mt-2 w-[50px] h-[5px]' />
                                             </div>
                                         </div>

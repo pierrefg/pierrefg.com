@@ -31,7 +31,7 @@ export default function MenuLayout({ children }) {
             </div>
 
             {/* Copyright section */}
-            <div className={`mt-auto ${menuOpen ? "opacity-40" : ""}`}>
+            <div className={`mt-auto pt-8 ${menuOpen ? "opacity-40" : ""}`}>
                 <Footer />
             </div>
         </div>
