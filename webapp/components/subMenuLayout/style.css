@@ -1,3 +1,7 @@
+.sub-menu-container {
+    @apply h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)] w-full;
+}
+
 .sub-menu-layout {
     @apply flex left-0 w-full items-center justify-center z-40;
     @apply bg-[theme('colors.foreground')] bg-opacity-10;

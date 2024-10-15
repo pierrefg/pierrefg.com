@@ -78,7 +78,7 @@ export default function SubMenu({ pagesData }) {
     }, []);
 
     return (
-        <div className="sub-menu-layout">
+        <div className="sub-menu-container">
             <div className="sub-menu-layout">
                 <div className="sub-menu">
                     {pagesData.map((el, index) => {

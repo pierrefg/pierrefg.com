@@ -32,7 +32,7 @@ export default function SubMenuLayout({ pagesData, noMenu=false }) {
                     {
                         pagesData.map(
                             (el, index) => (
-                                <div key={index} id={el.id} className='page-section flex flex-col gap-4'>
+                                <div key={index} id={el.id} className='page-section flex flex-col gap-8'>
                                     {
                                         !el.noTitle && 
                                         <div className="flex flex-col text-center items-center justify-center">

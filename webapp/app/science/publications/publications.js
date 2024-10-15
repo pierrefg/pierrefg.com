@@ -14,6 +14,25 @@ import { RiPresentationFill } from "react-icons/ri";
 import { FaCode } from "react-icons/fa";
 import { VscSymbolMisc } from "react-icons/vsc";
 
+var data = [
+    {
+        title: 'Publications',
+        content: publicationsData
+    },
+    {
+        title: 'Séminaires',
+        content: seminarsData
+    },
+    {
+        title: 'Logiciels',
+        content: softwareData
+    },
+    {
+        title: 'Divers',
+        content: miscData
+    },
+]
+
 export default function Publications() {
     return (
         <div className="justify-center">
@@ -24,7 +43,22 @@ export default function Publications() {
                 priority
             />
             
-            <h2 className='text-center my-[40px]'>/// Publications</h2>
+            {
+                data.map(
+                    (item, index) => (
+                        <div key={index}>
+                            <h3 className='text-center my-[40px]'>/// {item.title}</h3>
+                            <Timeline
+                                data = {item.content}
+                                authorData = {authorsData}
+                                largeDate = {true}
+                            />
+                        </div>
+                    )
+                )
+            }
+
+            {/* <h3 className='text-center my-[40px]'>/// Publications</h3>
             <Timeline
                 Icon = {IoDocumentsOutline}
                 title = "Publications"
@@ -32,7 +66,7 @@ export default function Publications() {
                 authorData = {authorsData}
                 largeDate = {true}
             />
-            <h2 className='text-center my-[40px]'>/// Séminaires</h2>
+            <h3 className='text-center my-[40px]'>/// Séminaires</h3>
             <Timeline
                 Icon = {RiPresentationFill}
                 title = "Séminaires"
@@ -40,7 +74,7 @@ export default function Publications() {
                 authorData = {authorsData}
                 largeDate = {true}
             />
-            <h2 className='text-center my-[40px]'>/// Logiciels</h2>
+            <h3 className='text-center my-[40px]'>/// Logiciels</h3>
             <Timeline
                 Icon = {FaCode}
                 title = "Logiciels"
@@ -48,13 +82,13 @@ export default function Publications() {
                 authorData = {authorsData}
                 largeDate = {true}
             />
-            <h2 className='text-center my-[40px]'>/// Divers</h2>
+            <h3 className='text-center my-[40px]'>/// Divers</h3>
             <Timeline
                 Icon = {VscSymbolMisc}
                 title = "Divers"
                 data = {miscData}
                 largeDate = {true}
-            />
+            /> */}
         </div>
     );
 }
