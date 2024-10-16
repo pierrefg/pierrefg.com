@@ -28,11 +28,11 @@ export default function Privacy() {
                         privacyData.map(
                             (el, index) => (
                                 <div key={index}>
-                                    <h2 className="underline">
+                                    <h3 className="underline">
                                         <strong>
                                             { el.title }
                                         </strong>
-                                    </h2>
+                                    </h3>
                                     <p>
                                         { el.content }
                                     </p>

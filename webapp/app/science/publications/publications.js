@@ -35,60 +35,29 @@ var data = [
 
 export default function Publications() {
     return (
-        <div className="justify-center">
+        <div className="justify-center items-center flex flex-col gap-8">
             <Image
                 src={CoverPic}
                 className="rounded-full w-[200px] h-[200px] mx-auto"
                 placeholder={'blur'}
                 priority
             />
-            
-            {
-                data.map(
-                    (item, index) => (
-                        <div key={index}>
-                            <h3 className='text-center my-[40px]'>/// {item.title}</h3>
-                            <Timeline
-                                data = {item.content}
-                                authorData = {authorsData}
-                                largeDate = {true}
-                            />
-                        </div>
+            <div className="flex flex-col gap-10">
+                {
+                    data.map(
+                        (item, index) => (
+                            <div key={index} className="flex flex-col gap-4">
+                                <h3 className='text-center'>/// {item.title}</h3>
+                                <Timeline
+                                    data = {item.content}
+                                    authorData = {authorsData}
+                                    largeDate = {true}
+                                />
+                            </div>
+                        )
                     )
-                )
-            }
-
-            {/* <h3 className='text-center my-[40px]'>/// Publications</h3>
-            <Timeline
-                Icon = {IoDocumentsOutline}
-                title = "Publications"
-                data = {publicationsData}
-                authorData = {authorsData}
-                largeDate = {true}
-            />
-            <h3 className='text-center my-[40px]'>/// Séminaires</h3>
-            <Timeline
-                Icon = {RiPresentationFill}
-                title = "Séminaires"
-                data = {seminarsData}
-                authorData = {authorsData}
-                largeDate = {true}
-            />
-            <h3 className='text-center my-[40px]'>/// Logiciels</h3>
-            <Timeline
-                Icon = {FaCode}
-                title = "Logiciels"
-                data = {softwareData}
-                authorData = {authorsData}
-                largeDate = {true}
-            />
-            <h3 className='text-center my-[40px]'>/// Divers</h3>
-            <Timeline
-                Icon = {VscSymbolMisc}
-                title = "Divers"
-                data = {miscData}
-                largeDate = {true}
-            /> */}
+                }
+            </div>
         </div>
     );
 }
