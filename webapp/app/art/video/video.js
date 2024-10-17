@@ -1,5 +1,7 @@
 'use client';
 
+import { videoData } from "./data";
+
 export default function Video() {
     return (
         <div className="flex flex-col gap-10 mx-auto px-4 w-full max-w-screen-md">
