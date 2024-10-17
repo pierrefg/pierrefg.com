@@ -1,3 +1,4 @@
+import { yahtzee } from "./yahtzee/data";
 import { tdG } from "./deception/data";
 import { monsters } from "./monsters/data";
 import { Zzzzzzz } from "./nightmares/data";
@@ -10,6 +11,7 @@ import { infoRussie } from "./shifter-russie/data";
 
 
 export const graphicsData = [
+    yahtzee,
     planets,
     monsters,
     Zzzzzzz,
@@ -18,5 +20,5 @@ export const graphicsData = [
     thesis,
     vague,
     trou,
-    infoRussie
+    // infoRussie
 ]
