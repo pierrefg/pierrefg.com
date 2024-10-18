@@ -37,7 +37,7 @@ export default function MenuBar() {
                     </div>
 
                     <div className='flex items-center text-center md:hidden text-1xl h-full'>
-                        Pierre FG
+                        <h2>pierre fg</h2>
                     </div>
                     
                     {/* Hamburger Menu Icon */}
