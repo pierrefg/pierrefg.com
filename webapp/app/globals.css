@@ -44,19 +44,24 @@ html {
 }
 
 h1 {
-    @apply text-2xl font-semibold;
-    font-family: "antipol-variable", sans-serif;
-    font-variation-settings: "STCH" 0, "wght" 1000, "wdth" 180;
+    @apply text-4xl;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 h2 {
-    @apply text-xl font-semibold;
-    font-family: "antipol-variable", sans-serif;
-    font-variation-settings: "STCH" 0, "wght" 700, "wdth" 180;
+    @apply text-xl;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 h3 {
-    @apply font-semibold;
+    @apply text-lg;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 

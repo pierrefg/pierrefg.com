@@ -79,11 +79,11 @@ export default function Gallery({ galleryData, size=350 }) {
         <div className="gallery">
             { galleryData.title &&
                 <div className="flex flex-col p-2 text-base text-center">
-                    <p 
-                        className="font-semibold inline-block text-lg"
+                    <h3 
+                        className="inline-block"
                     >
                         {galleryData.title}
-                    </p>
+                    </h3>
                     <p className="inline-block text-small text-primary-muted">
                         {galleryData.place} {galleryData.date && <>[{galleryData.date}]</>}
                     </p>

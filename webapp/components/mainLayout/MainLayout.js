@@ -2,7 +2,6 @@
 
 import './style.css';
 
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { usePathname } from 'next/navigation';
 import useStore from '@/store/useStore';
 
@@ -13,15 +12,13 @@ export default function MainLayout({ children }) {
     const pathname = usePathname();
 
     return (
-        <ParallaxProvider>
-            <div id="main-container" className={!darkMode && "light"}>
-                {
-                    pathname === '/' ?
-                    <>{children}</>
-                    :
-                    <MenuLayout>{children}</MenuLayout>
-                }
-            </div>
-        </ParallaxProvider>
+        <div id="main-container" className={!darkMode && "light"}>
+            {
+                pathname === '/' ?
+                <>{children}</>
+                :
+                <MenuLayout>{children}</MenuLayout>
+            }
+        </div>
     ) 
 }

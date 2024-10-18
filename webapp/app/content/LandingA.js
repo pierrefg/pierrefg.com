@@ -27,12 +27,12 @@ export default function LandingTop() {
 
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
                 <div className="flex flex-col items-center gap-4 ">
-                    <div className="flex w-[150px] md:w-[200px]">
+                    <div className="flex w-[150px] md:w-[175px]">
                         <Portrait />
                     </div>
                     <div className="flex flex-col gap-1 text-center justify-center items-center w-full">
                         <div className="w-full">
-                            <h1 className="text-xl md:text-2xl"><AnimatedText targetText='Pierre Faure--Giovagnoli' /></h1>
+                            <h1 className="text-3xl md:text-4xl"><AnimatedText targetText='pierre fg' /></h1>
                         </div>
                         <div className="w-full">
                             <span>
