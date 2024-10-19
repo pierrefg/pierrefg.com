@@ -13,6 +13,16 @@ export const legalData = [
             >
                 <><AiOutlineMail className="inline" /> contact@pierrefg.com</>
             </a>
+            <br />
+            SIREN : 932 466 386
+            <br />
+            Code APE : 70.22Z
+            <br />
+            Immatriculé au RNE le : 18/10/2024
+            <br />
+            Forme juridique : Entrepreneur individuel
+            <br />
+            Siège social : Rhône (69)
         </>
     },
     {
@@ -61,8 +71,7 @@ export const legalData = [
     {
         title: 'Données personnelles',
         content: <>
-            Aucune donnée personnelle n'est collectée à l'insu des visiteurs. 
-            {/* Les seules données collectées via le formulaire de contact (nom, prénom, adresse e-mail) sont utilisées uniquement pour répondre aux demandes des visiteurs et ne sont pas transmises à des tiers. */}
+            Les seules données collectées via le formulaire de contact (nom, prénom, adresse e-mail) sont utilisées uniquement pour répondre aux demandes des visiteurs et ne sont pas transmises à des tiers.
         </>
     },
 ]

@@ -22,7 +22,7 @@ export default function Legals() {
                             (data, index) => (
                                 <div key={index} className="md:flex md:flex-row justify-center">  {/* Added w-full and justify-center */}
                                     <div className="md:w-[400px] md:text-right md:mr-4 underline md:no-underline">
-                                        {data.title}
+                                        <h3>{data.title}</h3>
                                     </div>
                                     <div className="md:w-[400px] border-l-solid md:border-l-2 md:border-l-primary-muted md:pl-4">
                                         {data.content}
