@@ -21,7 +21,7 @@ export default function Legals() {
                         legalData.map(
                             (data, index) => (
                                 <div key={index} className="md:flex md:flex-row justify-center">  {/* Added w-full and justify-center */}
-                                    <div className="md:w-[400px] md:text-right md:mr-4 underline md:no-underline">
+                                    <div className="md:w-[300px] md:text-right md:mr-4 underline md:no-underline">
                                         <h3>{data.title}</h3>
                                     </div>
                                     <div className="md:w-[400px] border-l-solid md:border-l-2 md:border-l-primary-muted md:pl-4">

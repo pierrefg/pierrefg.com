@@ -32,13 +32,16 @@ const servicesData = [
 
 export default function Services() {
     return (
-        <div className="flex flex-col gap-8 max-w-2xl mx-auto" >
+        <div className="flex flex-col gap-8 max-w-4xl mx-auto" >
             {
                 servicesData.map(
                     (item, index) => (
-                        <div key={index} className="flex flex-col gap-4">
-                            <h3>/// {item.title}</h3>
-                            <div>
+                        <div key={index} className="flex flex-col gap-4 w-full">
+                            <div className="w-full text-left">
+                                <h3>/ {item.title}</h3>
+                            </div>
+                            
+                            <div className="pl-2 md:pl-6">
                                 {
                                     item.subtitle && <p>{item.subtitle}</p>
                                 }

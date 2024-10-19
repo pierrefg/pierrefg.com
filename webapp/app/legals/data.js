@@ -4,7 +4,19 @@ export const legalData = [
     {
         title: 'Éditeur du site',
         content: <>
-            Pierre Faure--Giovagnoli
+            Pierre Faure--Giovagnoli 
+            <br />
+            (nom commercial : Pierre FG)
+            <br />
+            SIRET : 932 466 386 00012
+            <br />
+            Code APE : 70.22Z
+            <br />
+            Forme juridique : Entrepreneur individuel
+            <br />
+            Immatriculé au RNE le : 18/10/2024
+            <br />
+            Siège social : Rhône (69)
             <br />
             <a
                 href='mailto: contact@pierrefg.com'
@@ -13,16 +25,6 @@ export const legalData = [
             >
                 <><AiOutlineMail className="inline" /> contact@pierrefg.com</>
             </a>
-            <br />
-            SIREN : 932 466 386
-            <br />
-            Code APE : 70.22Z
-            <br />
-            Immatriculé au RNE le : 18/10/2024
-            <br />
-            Forme juridique : Entrepreneur individuel
-            <br />
-            Siège social : Rhône (69)
         </>
     },
     {

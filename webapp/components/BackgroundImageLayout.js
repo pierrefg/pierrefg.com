@@ -5,7 +5,7 @@ import AnimatedText from "./animatedText";
 export default function BackgroundImageLayout({children, icon, title, coverPic}) {
     return (
         <>
-            <div className="relative min-h-[300px] flex items-center justify-center">
+            <div className="relative min-h-[200px] md:min-h-[300px] flex items-center justify-center">
                 <div className="absolute inset-0">
                     <Image
                         src={coverPic}

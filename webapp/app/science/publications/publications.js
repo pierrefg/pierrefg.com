@@ -42,17 +42,19 @@ export default function Publications() {
                 placeholder={'blur'}
                 priority
             />
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 max-w-5xl">
                 {
                     data.map(
                         (item, index) => (
                             <div key={index} className="flex flex-col gap-4">
-                                <h3 className='text-center'>/// {item.title}</h3>
-                                <Timeline
-                                    data = {item.content}
-                                    authorData = {authorsData}
-                                    largeDate = {true}
-                                />
+                                <h3 className='text-left'>/ {item.title}</h3>
+                                <div className="pl-2 md:pl-12">
+                                    <Timeline
+                                        data = {item.content}
+                                        authorData = {authorsData}
+                                        largeDate = {true}
+                                    />
+                                </div>
                             </div>
                         )
                     )
