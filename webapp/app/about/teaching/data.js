@@ -15,7 +15,7 @@ export var teachingData = [
     },
     {
         title: {
-            name: "Algorithmie - théorie des bases de données - programmation orientée objet C++",
+            name: "Algorithmie, théorie des bases de données & programmation orientée objet C++",
         },
         subtitle: "Travaux dirigés/pratiques (~170 heures)",
         period: "2020-23",

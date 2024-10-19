@@ -3,6 +3,8 @@
     @apply px-[6px] py-[2px] cursor-pointer;
     @apply border-2 border-hidden;
     @apply transition-colors duration-300 ease-in-out;
+    font-family: "cofo-sans-mono-variable", sans-serif;
+    font-variation-settings: "wght" 450;
 }
 
 .btn:hover {

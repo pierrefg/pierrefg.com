@@ -1,17 +1,24 @@
 export const seminarsData = [
     {
         title: {
-            name: 'Automatic air gap monitoring in compact hydro-generators',
+            name: "Surveillance automatique de l'entrefer dans les hydro-générateurs compacts",
         },
         authors: ['pierref', 'cturbidi', 'vscuturici'],
         period: "2023",
         companies: [ 
             {
-                name: "Semaine des altrernatives durables de l'INSA Lyon",
+                name: "Journée de la Science",
+                place: 'Lyon, France',
+                link: "https://www.lyon.fr/evenement/festival/fete-de-la-science-2024",
+                date: '2024',
+                context: 'présentation orale à des collégien.nes'
+            },
+            {
+                name: "Semaine des alternatives durables INSA Lyon",
                 place: 'Lyon, France',
                 link: "https://www.insa-lyon.fr/fr/evenement/sdad-semaine-alternatives-durables-5e-edition-planification-ecologique-et-ressources",
                 date: '2023',
-                context: 'présentation orale (180s)'
+                context: 'présentation orale'
             },
             {
                 name: 'Global industrie',
@@ -24,7 +31,7 @@ export const seminarsData = [
     },
     {
         title: {
-            name: 'Assessing the existence of a function in a dataset: complexity, algorithmics and visualization',
+            name: "Évaluation de l'existence d'une fonction dans un jeu de données : complexité, algorithmique et visualisation",
         },
         authors: ['pierref', 'svilmin', 'jpetit', 'vscuturici'],
         period: "2021-23",
@@ -67,7 +74,7 @@ export const seminarsData = [
     },
     {
         title: {
-            name: 'Usefulness of synthetic datasets for diatom automatic detection using a deep-learning approach',
+            name: "Utilité des jeux de données synthétiques pour la détection automatique de diatomées grâce à l'apprentissage profond",
         },
         authors: ['avenkataramanan', 'pierref', 'cregan', 'dheudre', 'cfigus', 'pusseglio', 'cpradalier', 'mlaviale'],
         period: "2020",
