@@ -10,14 +10,13 @@ export const landingBContent = [
     },
     {
         content: <>
-            Graphiste et photographe issu du milieu associatif, je propose également des projets audiovisuels plus larges incorporant son et vidéo. 
+            Graphiste et photographe issu du milieu associatif, je vous accompagne de la conception de vos illustrations et supports de communication à la couverture de vos événements en images, pour des visuels impactants et adaptés à vos besoins.
         </>,
         linkIndex: 1
     },
     {
         content: <>
-            Je propose également des services dans la science des données.
-            Riche d'une forte expérience dans le domaine, je possède une large palette créative et technique pour répondre à des problématiques complexes.    
+            Fort d'une solide expérience en science des données acquise à travers divers projets en recherche et industrie, je vous propose aujourd'hui mes services en tant qu'indépendant. 
         </>,
         linkIndex: 2
     },

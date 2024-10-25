@@ -43,6 +43,10 @@ html {
     font-variation-settings: "wght" 400;
 }
 
+.scroll-padding {
+    scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height));
+}
+
 h1 {
     @apply text-4xl;
     font-family: josefin-sans, sans-serif;
@@ -87,7 +91,7 @@ li {
 }
 
 li::before {
-    content: '• '; /* Empty content for the dot */
+    content: '> '; /* Empty content for the dot */
     transform: translateY(-100%);
 }
 
@@ -123,4 +127,4 @@ li::before {
 
 .overflow-hidden {
     overflow: hidden;
-  }
+}

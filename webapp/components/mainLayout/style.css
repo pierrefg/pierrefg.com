@@ -1,5 +1,4 @@
 #main-container {
     @apply bg-foreground text-primary scroll-smooth;
-    /* @apply font-mono; */
     @apply transition-all duration-300 ease-in-out;
 }

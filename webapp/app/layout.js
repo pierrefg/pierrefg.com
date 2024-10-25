@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="stylesheet" href="https://use.typekit.net/dsi6anx.css" />
             </head>
-            <body>
+            <body className="scroll-padding">
                 <Analytics />
                 <SpeedInsights />
                 <Suspense fallback={<Loader />}>

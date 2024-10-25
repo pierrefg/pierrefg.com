@@ -25,7 +25,7 @@ export default function Landing() {
     }, []);
 
     return (
-        <>
+        <div className="landing">
             <div className="relative h-screen flex flex-col justify-between animate-fadeIn mb-[20px]">
                 <LandingA />
             </div>
@@ -38,6 +38,6 @@ export default function Landing() {
             >
                 <LandingB />
             </div>
-        </>
+        </div>
     ) 
 }
