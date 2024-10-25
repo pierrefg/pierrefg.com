@@ -37,7 +37,7 @@ html {
     @apply bg-foreground text-base;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height));
+    /* scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height)); */
 
     font-family: "cofo-sans-mono-variable", sans-serif;
     font-variation-settings: "wght" 400;
