@@ -1,7 +1,7 @@
 const servicesData = [
     {
         title: 'Graphisme',
-        subtitle: 'Toutes les prestations sont réalisée sur la suite Adobe.',
+        subtitle: 'Toutes les prestations sont réalisées sur la suite Adobe.',
         content: <>
             <ul>
                 <li>affiches, flyers, cartes de visite, stickers...</li>
