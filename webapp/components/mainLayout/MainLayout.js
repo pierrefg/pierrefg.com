@@ -19,7 +19,7 @@ export default function MainLayout({ children }) {
     const pathname = usePathname();
 
     return (
-        <html className={pathname === '/' ? "nothing" : "scroll-padding"} lang="fr">
+        <html className={['/', '/xp'].includes(pathname)  ? "nothing" : "scroll-padding"} lang="fr">
             <head>
                 <link rel="stylesheet" href="https://use.typekit.net/dsi6anx.css" />
             </head>
@@ -29,7 +29,7 @@ export default function MainLayout({ children }) {
                 <Suspense fallback={<Loader />}>
                     <div id="main-container" className={!darkMode && "light"}>
                         {
-                            pathname === '/' ?
+                            ['/', '/xp'].includes(pathname) ?
                             <>{children}</>
                             :
                             <MenuLayout>{children}</MenuLayout>

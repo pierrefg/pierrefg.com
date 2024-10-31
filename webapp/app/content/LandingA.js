@@ -15,6 +15,9 @@ import { FaArrowDown } from "react-icons/fa";
 
 import AnimatedText from '@/components/animatedText';
 
+import SimpleLink from '@/components/SimpleLink';
+import { AiOutlineNumber } from "react-icons/ai";
+
 export default function LandingTop() {
     const { darkMode } = useStore();
 
@@ -23,6 +26,10 @@ export default function LandingTop() {
             <div className={`absolute h-full w-full z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
                 <Snake color = "purple" big_interval_time={3000}/>
                 <Snake color = "blue" big_interval_time={2000}/>
+            </div>
+
+            <div className='absolute left-4 top-4 z-50'>
+                <SimpleLink content={{title: <AiOutlineNumber />, link: '/xp'}} />
             </div>
 
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
