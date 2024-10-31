@@ -7,7 +7,7 @@ function generatePoints(n, start, end) {
 }
 
 export default function Rain() {
-    const sparseness = 50;
+    const sparseness = 40;
     const windFactor = 0.1;
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -17,7 +17,7 @@ export default function Rain() {
     const [umbrellaCollisions, setUmbrellaCollisions] = useState([]);
     
     const [umbrella, setUmbrella] = useState(null);
-    const umbrellaSize = 100;
+    const [umbrellaSize, setUmbrellaSize] = useState(5);
     
     const generatePath = (points) => {
         let path = '';
@@ -60,6 +60,21 @@ export default function Rain() {
     }
 
     useEffect(() => {
+        const handleResize = () => {
+            let max = 200;
+            let min = 40;
+            let relative = Math.floor(window.innerWidth*0.05);
+            console.log(relative)
+            setUmbrellaSize(Math.min(Math.max(min, relative), max));
+        };
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
         const handleMouseMove = (event) => {
             setMousePosition({
                 x: event.clientX,
@@ -74,7 +89,7 @@ export default function Rain() {
         return () => {
             window.removeEventListener('mousemove', handleMouseMove);
         };
-    }, []);
+    }, [umbrellaSize]);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
