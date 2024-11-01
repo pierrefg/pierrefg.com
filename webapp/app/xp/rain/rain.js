@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import RainAudio from './rainAudio';
+
+const MemoizedRainAudio = React.memo(RainAudio);
 
 function generatePoints(n, start, end) {
     return Array.from({ length: n }, () => Math.random() * (end - start) + start);
@@ -130,9 +133,11 @@ export default function Rain() {
         return () => clearInterval(xyz);
     }, [mousePosition]);
 
+
     return (
         <div id="rain-container" className="h-full w-full">
             <h1 className="absolute text-4xl m-7">RAIN</h1>
+            <MemoizedRainAudio />
 
             <svg className="absolute" width="100%" height="100%">
                 <g>
