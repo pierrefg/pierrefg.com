@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer";
 
 
-import coverPic from '../cover.jpg';
+import coverPic from './cover.jpg';
 import SideImageLayout from "@/components/sideImageLayout";
 import { landingBContent } from "./landingBContent";
 
@@ -42,7 +42,7 @@ export default function About() {
                             )
                         }
                         <div className="text-primary-muted text-small">
-                            Merci à Pierre Fimbel et Charlotte Delfosse de m'avoir tiré le portrait.
+                            Merci à Pierre Fimbel et Arthur Navarro de m'avoir tiré le portrait.
                         </div>
                     </div>
                 </SideImageLayout>

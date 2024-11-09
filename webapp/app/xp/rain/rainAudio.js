@@ -71,7 +71,7 @@ export default function RainAudio() {
         };
 
         if (percSynth) {
-            playRandomly(50, 200, percSynth, '8n', (interval) => (percInterval = interval));
+            playRandomly(100, 300, percSynth, '8n', (interval) => (percInterval = interval));
         }
 
         if (bassSynth) {

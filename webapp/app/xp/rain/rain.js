@@ -3,7 +3,11 @@
 import React, { useEffect, useState } from 'react';
 import RainAudio from './rainAudio';
 
-const MemoizedRainAudio = React.memo(RainAudio);
+import * as Tone from 'tone'; 
+
+import SimpleLink from '@/components/SimpleLink';
+import { MdOutlineMusicNote, MdOutlineMusicOff  } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
 
 function generatePoints(n, start, end) {
     return Array.from({ length: n }, () => Math.random() * (end - start) + start);
@@ -22,6 +26,13 @@ export default function Rain() {
     const [umbrella, setUmbrella] = useState(null);
     const [umbrellaSize, setUmbrellaSize] = useState(5);
     
+    const [audioStarted, setAudioStarted] = useState(false);
+
+    const handleStartAudio = async () => {
+        await Tone.start();
+        setAudioStarted(!audioStarted);
+    };
+
     const generatePath = (points) => {
         let path = '';
         if (points.length !== 0) {
@@ -136,10 +147,22 @@ export default function Rain() {
 
     return (
         <div id="rain-container" className="h-full w-full">
-            <h1 className="absolute text-4xl m-7">RAIN</h1>
-            <MemoizedRainAudio />
+            <div className='absolute m-7 z-50'>
+                <h1 className=" text-4xl">RAIN</h1>
+                <div className='flex flex-row gap-2'>
+                    <SimpleLink content={{icon: <AiOutlineHome />, link: '/'}} />
+                    <button
+                        onClick={handleStartAudio}
+                        className="btn btn-secondary"
+                    >
+                        { audioStarted ? <MdOutlineMusicOff /> : <MdOutlineMusicNote />}
+                    </button>
+                </div>
+            </div>
+            
+            {audioStarted && <RainAudio />}
 
-            <svg className="absolute" width="100%" height="100%">
+            <svg className="absolute z-40" width="100%" height="100%">
                 <g>
                     {
                         drops.map((path, index) => (
