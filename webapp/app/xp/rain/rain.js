@@ -1,53 +1,34 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import RainAudio from './rainAudio';
-
 import * as Tone from 'tone'; 
-
 import SimpleLink from '@/components/SimpleLink';
 import { MdOutlineMusicNote, MdOutlineMusicOff  } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
-
-function generatePoints(n, start, end) {
-    return Array.from({ length: n }, () => Math.random() * (end - start) + start);
-}
 
 export default function Rain() {
     const sparseness = 40;
     const windFactor = 0.1;
 
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [dropsSet, setDropsSet] = useState([]);
     const [drops, setDrops] = useState([]);
-
     const [groundCollisions, setGroundCollisions] = useState([]);
     const [umbrellaCollisions, setUmbrellaCollisions] = useState([]);
-    
     const [umbrella, setUmbrella] = useState(null);
     const [umbrellaSize, setUmbrellaSize] = useState(5);
-    
     const [audioStarted, setAudioStarted] = useState(false);
 
-    const handleStartAudio = async () => {
-        await Tone.start();
+    // Ref pour stocker la position de la souris
+    const mousePositionRef = useRef({ x: 0, y: 0 });
+
+    const handleStartAudio = useCallback(async () => {
+        if (!audioStarted) await Tone.start();
         setAudioStarted(!audioStarted);
-    };
+    }, [audioStarted]);
 
-    const generatePath = (points) => {
-        let path = '';
-        if (points.length !== 0) {
-            const [firstPoint, ...otherPoints] = points;
-            path += `M${firstPoint.x},${firstPoint.y} L`;
-            for (let point of otherPoints) {
-                path += `${point.x},${point.y} `;
-            }
-        }
-        return path;
-    };
-
-    const generateUmbrella = (mouseX, mouseY) => {
+    const generateUmbrella = useCallback((mouseX, mouseY) => {
         const wHeight = window.innerHeight;
-
         setUmbrella({
             path: `
                 M${mouseX - umbrellaSize},${mouseY} 
@@ -59,26 +40,22 @@ export default function Rain() {
                 ${mouseX + umbrellaSize + (wHeight - mouseY) * windFactor},${wHeight} 
                 ${mouseX - umbrellaSize + (wHeight - mouseY) * windFactor},${wHeight}
             `
-        })
-    }
+        });
+    }, [umbrellaSize, windFactor]);
 
-    const generateUmbrellaCollisions = (mouseX, mouseY) => {
+    const generateUmbrellaCollisions = useCallback((mouseX, mouseY) => {
         setUmbrellaCollisions(
             Array.from({ length: 3 }, () => ({
-                point: {
-                    x: mouseX - umbrellaSize + Math.random() * 2 * umbrellaSize,
-                    y: mouseY-2
-                }
+                point: { x: mouseX - umbrellaSize + Math.random() * 2 * umbrellaSize, y: mouseY - 2 }
             }))
-        )
-    }
+        );
+    }, [umbrellaSize]);
 
     useEffect(() => {
         const handleResize = () => {
             let max = 200;
             let min = 40;
             let relative = Math.floor(window.innerWidth*0.05);
-            console.log(relative)
             setUmbrellaSize(Math.min(Math.max(min, relative), max));
         };
         handleResize();
@@ -90,60 +67,60 @@ export default function Rain() {
 
     useEffect(() => {
         const handleMouseMove = (event) => {
-            setMousePosition({
-                x: event.clientX,
-                y: event.clientY,
-            });
-            generateUmbrella(event.clientX, event.clientY);  
-            generateUmbrellaCollisions(event.clientX, event.clientY);          
+            mousePositionRef.current = { x: event.clientX, y: event.clientY };
+            generateUmbrella(event.clientX, event.clientY);
+            generateUmbrellaCollisions(event.clientX, event.clientY);
         };
 
         window.addEventListener('mousemove', handleMouseMove);
 
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, [umbrellaSize]);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+    }, [generateUmbrella, generateUmbrellaCollisions]);
+
+    useEffect(() => {
+        setDropsSet(
+            Array.from({ length: 100 }, () => (
+                    [Math.random(), Math.random()].sort((a, b) => a - b)
+                )
+            )
+        )
+    }, []);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             const wWidth = window.innerWidth;
             const wHeight = window.innerHeight;
 
-            // Generate drops
-            const nDrops =  Math.floor(wWidth/sparseness)
-            const drops_x_locations = generatePoints(nDrops, 0, wWidth);
+            const nDrops =  Math.floor(wWidth/sparseness);
+            const drops_x_locations = Array.from({ length: nDrops }, () => Math.random() * wWidth);
             const tmp_drops = drops_x_locations.map(x_location => {
-                const drop_extent = generatePoints(2, 0, wHeight).sort((a, b) => a - b);
+                const drop_extent = dropsSet[Math.floor(Math.random() * dropsSet.length)];
+                let y0 = drop_extent[0] * wHeight;
+                let y1 = drop_extent[1] * wHeight;
                 return {
                     points: [
-                        { x: x_location, y: drop_extent[0] },
-                        { x: x_location + (drop_extent[1] - drop_extent[0]) * windFactor, y: drop_extent[1] }
+                        { x: x_location, y: y0 },
+                        { x: x_location + (y1 - y0) * windFactor, y: y1 }
                     ],
                     opacity: Math.random(),
                     width: Math.random() * 2
                 };
             });
             setDrops(tmp_drops);
-            const nGroundCollisions = Math.floor( wWidth/(3*sparseness))
+
+            const nGroundCollisions = Math.floor(wWidth / (3 * sparseness));
             setGroundCollisions(
                 Array.from({ length: nGroundCollisions }, () => ({
                     point: { x: Math.random() * wWidth, y: wHeight }
                 }))
-            )
+            );
+
+            const { x, y } = mousePositionRef.current;
+            generateUmbrellaCollisions(x, y);
         }, 80);
 
         return () => clearInterval(intervalId);
-    }, []);
-
-    useEffect(() => {
-        const xyz = setInterval(() => {
-            generateUmbrellaCollisions(mousePosition.x, mousePosition.y)
-        }, 80);
-
-        return () => clearInterval(xyz);
-    }, [mousePosition]);
-
+    }, [dropsSet, sparseness, windFactor, generateUmbrellaCollisions]);
 
     return (
         <div id="rain-container" className="h-full w-full">
@@ -160,7 +137,7 @@ export default function Rain() {
                 </div>
             </div>
             
-            {audioStarted && <RainAudio />}
+            { audioStarted && <RainAudio /> }
 
             <svg className="absolute z-40" width="100%" height="100%">
                 <g>
@@ -168,7 +145,7 @@ export default function Rain() {
                         drops.map((path, index) => (
                             <path
                                 key={index}
-                                d={generatePath(path.points)}
+                                d={`M${path.points[0].x},${path.points[0].y} L${path.points[1].x},${path.points[1].y}`}
                                 fill="transparent"
                                 stroke="white"
                                 strokeWidth={path.width}
@@ -181,8 +158,8 @@ export default function Rain() {
                             <g key={index}>
                                 <circle 
                                     cx={collision_point.point.x} 
-                                    cy={collision_point.point.y-Math.random()*5}
-                                    r={Math.random()*2.5} 
+                                    cy={collision_point.point.y - Math.random() * 5}
+                                    r={Math.random() * 2.5} 
                                     fill="white" 
                                 />
                             </g>
@@ -199,20 +176,14 @@ export default function Rain() {
                             strokeWidth="3"
                             opacity="1"
                         />
-                        <polygon
-                            points={umbrella.polygon}
-                            fill="black"
-                            stroke="transparent"
-                            strokeWidth="0"
-                            opacity="1"
-                        />
+                        <polygon points={umbrella.polygon} fill="black" opacity="1" />
                         {
                             umbrellaCollisions.map((collision_point, index) => (
                                 <g key={index}>
                                     <circle 
                                         cx={collision_point.point.x} 
-                                        cy={collision_point.point.y-Math.random()*5}
-                                        r={Math.random()*2.5} 
+                                        cy={collision_point.point.y - Math.random() * 5}
+                                        r={Math.random() * 2.5} 
                                         fill="white" 
                                     />
                                 </g>
