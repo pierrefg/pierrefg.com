@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, forwardRef } from 'react';
 import * as Tone from 'tone';
 
 const getRandomElement = (list) => list[Math.floor(Math.random() * list.length)];
@@ -14,7 +14,7 @@ if (typeof window !== "undefined" && (window.AudioContext || window.webkitAudioC
     console.warn("AudioContext is not supported in this environment.");
 }
 
-export default function RainAudio({ x = 100, y = 100 }) {  // Default values for x and y
+export default function RainAudio({ control }) {  // Default values for x and y
     const percSynthRef = useRef(null);
     const bassSynthRef = useRef(null);
 
@@ -23,7 +23,7 @@ export default function RainAudio({ x = 100, y = 100 }) {  // Default values for
     const octavesRef = useRef(["2", "3", "4", "5"]);
 
     const initializeSynths = () => {
-        const percGain = new Tone.Gain(0.23).toDestination();
+        const percGain = new Tone.Gain(0.15).toDestination();
         const bassGain = new Tone.Gain().toDestination();
     
         const percSynth = new Tone.PolySynth(Tone.MetalSynth, {
@@ -56,7 +56,7 @@ export default function RainAudio({ x = 100, y = 100 }) {  // Default values for
         }).toDestination();
     
         const bassSynth = new Tone.PolySynth(Tone.MonoSynth, {
-            volume: -15,
+            volume: -20,
             filter: {
                 Q: 5,
                 type: 'lowpass',
@@ -93,19 +93,19 @@ export default function RainAudio({ x = 100, y = 100 }) {  // Default values for
     }, []);
 
     useEffect(() => {
-        const harmonicity = 0.1+x*9;
-        const resonance = Number.isFinite(y) ? Math.floor(1000+(1-y)*4000) : 2000;
+        const harmonicity = 0.1+control.current.y*9;
+        const resonance = Number.isFinite(control.current.y) ? Math.floor(1000+(1-control.current.y)*4000) : 2000;
 
         if (percSynthRef.current) {
             percSynthRef.current.set({ harmonicity, resonance });
         }
 
-        bitCrusherRef.current.set({'bits': Math.floor(4+(1-x)*4)})
+        bitCrusherRef.current.set({'bits': Math.floor(4+(1-control.current.x)*4)})
 
-        octavesRef.current = Array.from({ length: Math.floor(2 + 5 * (1-y)) }, (_, index) => (
+        octavesRef.current = Array.from({ length: Math.floor(2 + 5 * (1-control.current.y)) }, (_, index) => (
             (index + 1).toString()
         ));
-    }, [x, y]);
+    }, []);
 
     const playSound = (synth, noteLength) => {
         if (synth && !synth.disposed) {
@@ -121,19 +121,20 @@ export default function RainAudio({ x = 100, y = 100 }) {  // Default values for
         const transport = Tone.getTransport();
 
         const schedulePercSound = () => {
-            const interval = getRandomInterval(200, 500) / 1000;
+            const interval = 100 + (1-control.current.x)*getRandomInterval(150, 300);
+            
             transport.scheduleOnce((time) => {
                 playSound(percSynth, '4n');
                 schedulePercSound();
-            }, `+${interval}`);
+            }, `+${interval/1000}`);
         };
 
         const scheduleBassSound = () => {
-            const interval = getRandomInterval(500, 1500) / 1000;
+            const interval = 100 + (1-control.current.x)*getRandomInterval(1000, 2000);
             transport.scheduleOnce((time) => {
                 playSound(bassSynth, '1n');
                 scheduleBassSound();
-            }, `+${interval}`);
+            }, `+${interval/1000}`);
         };
 
         schedulePercSound();
