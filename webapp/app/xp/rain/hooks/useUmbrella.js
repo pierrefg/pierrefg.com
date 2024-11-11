@@ -7,28 +7,23 @@ export function useUmbrella(mousePositionRef, canvasSize) {
     const umbrellaSizeRef = useRef(100);
     const [umbrellaCollisions, setUmbrellaCollisions] = useState([]);
 
-    // Function to generate the umbrella's shape based on the mouse position
     const generateUmbrella = useCallback(() => {
         if (!canvasSize) return;
         
         const mouseX = mousePositionRef.current.x;
         const mouseY = mousePositionRef.current.y;
         const umbrellaSize = umbrellaSizeRef.current;
-        const wHeight = canvasSize.height;
-        const windFactor = 0.1; // Define wind factor here or pass it as a prop/ref if dynamic
 
         umbrella.current = {
-            path: `M${mouseX - umbrellaSize},${mouseY} L${mouseX + umbrellaSize},${mouseY}`,
-            polygon: `
-                ${mouseX - umbrellaSize},${mouseY} 
-                ${mouseX + umbrellaSize},${mouseY} 
-                ${mouseX + umbrellaSize + (wHeight - mouseY) * windFactor},${wHeight} 
-                ${mouseX - umbrellaSize + (wHeight - mouseY) * windFactor},${wHeight}
-            `
+            path: `
+                M${mouseX - umbrellaSize},${mouseY} 
+                L${mouseX + umbrellaSize},${mouseY}
+            `,
+            left: [mouseX - umbrellaSize, mouseY],
+            right: [mouseX + umbrellaSize, mouseY],
         };
     }, [canvasSize, mousePositionRef]);
 
-    // Function to generate umbrella collision points for raindrops
     const generateUmbrellaCollisions = useCallback(() => {
         const mouseX = mousePositionRef.current.x;
         const mouseY = mousePositionRef.current.y;
@@ -44,19 +39,14 @@ export function useUmbrella(mousePositionRef, canvasSize) {
         );
     }, [mousePositionRef]);
 
-    // Effect to handle umbrella resizing on window resize
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         const max = 200;
-    //         const min = 40;
-    //         const relative = Math.floor(window.innerWidth * 0.05);
-    //         umbrellaSizeRef.current = Math.min(Math.max(min, relative), max);
-    //     };
+    useEffect(() => {
+        if (!canvasSize) return;
 
-    //     handleResize();
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, []);
+        const max = 200;
+        const min = 40;
+        const relative = Math.floor(canvasSize.width * 0.05);
+        umbrellaSizeRef.current = Math.min(Math.max(min, relative), max);
+    }, [canvasSize]);
 
     return { umbrella, umbrellaCollisions, umbrellaSizeRef, generateUmbrella, generateUmbrellaCollisions };
 }

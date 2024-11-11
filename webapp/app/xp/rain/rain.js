@@ -9,8 +9,13 @@ import Controls from './controls';
 import { useUmbrella } from './hooks/useUmbrella';
 import * as Tone from 'tone';
 
+function updateValue(source, target, dampening){
+    return source+(target-source)*dampening
+}
+    
 export default function Rain() {
     const [canvasSize, setCanvasSize] = useState(null);
+    const [debug, setDebug] = useState(false);
 
     const sparsenessRef = useRef(40);
     const windFactorRef = useRef(0.1);
@@ -33,10 +38,7 @@ export default function Rain() {
 
     useEffect(() => {
         const handleResize = () => {
-            setCanvasSize({
-                width: window.innerWidth,
-                height: window.innerHeight
-            })
+            setCanvasSize({ width: window.innerWidth, height: window.innerHeight })
         };
 
         handleResize();
@@ -45,20 +47,12 @@ export default function Rain() {
     }, []);
 
     useEffect(() => {
-        if (!canvasSize) return;
-
-        const cWidth = canvasSize.width;
-        const cHeight = canvasSize.height;
-
         let animationFrameId;
     
         const debouncedMouseMove = debounce((event) => {
             animationFrameId = requestAnimationFrame(() => {
                 mousePositionRef.current = { x: event.clientX, y: event.clientY };
-                controlParamtersRef.current = { x: event.clientX/cWidth, y: event.clientY/cHeight };
                 generateUmbrella();
-                sparsenessRef.current = 80+(1-controlParamtersRef.current.x)*150;
-                windFactorRef.current = controlParamtersRef.current.x*0.3;
             });
         }, 5);
     
@@ -134,9 +128,42 @@ export default function Rain() {
         return () => clearInterval(intervalId);
     }, [generateDrops]);
 
+    useEffect(() => {
+        const int = setInterval(() => {
+            console.log(mousePositionRef.current)
+            if (!canvasSize) return;
+
+            const cWidth = canvasSize.width;
+            const cHeight = canvasSize.height;
+            
+            const updateSpeed = 0.05;
+            controlParamtersRef.current = { 
+                x: updateValue(controlParamtersRef.current.x, mousePositionRef.current.x/cWidth, updateSpeed),
+                y: updateValue(controlParamtersRef.current.y, mousePositionRef.current.y/cHeight, updateSpeed)
+            };
+            sparsenessRef.current = updateValue(sparsenessRef.current, 80+(1-controlParamtersRef.current.x)*150, updateSpeed);
+            windFactorRef.current = updateValue(windFactorRef.current, controlParamtersRef.current.x*0.3, 0.05);
+        }, 50);
+
+        return () => clearInterval(int);
+    }, [canvasSize]);
+
     if (!canvasSize) return;
     return (
         <div id="rain-container" className="h-full w-full">
+            {
+                debug &&
+                <div className='absolute r-10 z-50 m-7 bottom-7'>
+                    mouse position: {mousePositionRef.current.x} {mousePositionRef.current.y}
+                    <br />
+                    x/y parameters: {controlParamtersRef.current.x} {controlParamtersRef.current.y}
+                    <br />
+                    windfactor: {windFactorRef.current}
+                    <br />
+                    sparsness: {sparsenessRef.current}
+                </div>
+            }
+
             <Controls audioStarted={audioStarted} handleStartAudio={handleStartAudio} />
             {
                 audioStarted && 
@@ -144,6 +171,7 @@ export default function Rain() {
                     control={controlParamtersRef}
                 />
             }
+
             <RainDisplay 
                 drops={drops}
                 groundCollisions={groundCollisions}
@@ -153,6 +181,7 @@ export default function Rain() {
                 lightX={0}
                 canvasSize={canvasSize}
                 windFactorRef={windFactorRef}
+                // mousePositionRef={mousePositionRef}
             />
         </div>
     );

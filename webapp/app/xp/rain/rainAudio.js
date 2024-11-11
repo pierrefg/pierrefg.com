@@ -7,13 +7,6 @@ const getRandomElement = (list) => list[Math.floor(Math.random() * list.length)]
 const getRandomInterval = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 const getRandomVelocity = (min, max) => Math.random() * (max - min) + min;
 
-if (typeof window !== "undefined" && (window.AudioContext || window.webkitAudioContext)) {
-    const context = new Tone.Context({ latencyHint: "playback", lookAhead: 0.1 });
-    Tone.setContext(context);
-} else {
-    console.warn("AudioContext is not supported in this environment.");
-}
-
 export default function RainAudio({ control }) {  // Default values for x and y
     const percSynthRef = useRef(null);
     const bassSynthRef = useRef(null);
@@ -84,6 +77,13 @@ export default function RainAudio({ control }) {  // Default values for x and y
     
 
     useEffect(() => {
+        if (typeof window !== "undefined" && (window.AudioContext || window.webkitAudioContext)) {
+            const context = new Tone.Context({ latencyHint: "playback", lookAhead: 0.1 });
+            Tone.setContext(context);
+        } else {
+            console.warn("AudioContext is not supported in this environment.");
+        }
+        
         initializeSynths();
 
         return () => {

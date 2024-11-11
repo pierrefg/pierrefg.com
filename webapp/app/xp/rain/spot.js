@@ -20,9 +20,9 @@ export default function Spot({ x, y, spotWidth, color, lightWidth, canvasSize, w
     const updateWiggle = () => {
         setSpotWiggle(
             (
-                Math.cos(timeRef.current * 70 * windFactorRef.current)
-                // + 0.3 * Math.random() * Math.sin(timeRef.current * windFactorRef.current)
-            ) * (2 + 0.1 * spotMass.current * windFactorRef.current)
+                Math.cos(timeRef.current*70)
+                + 0.3 * Math.random() * Math.sin(timeRef.current*60)
+            ) * (0.3 + 4 * spotMass.current * windFactorRef.current)
         );
     };
     
@@ -37,7 +37,7 @@ export default function Spot({ x, y, spotWidth, color, lightWidth, canvasSize, w
             updateWiggle();
         
             if (spotIsStableRef.current) {
-                if (Math.random() < 0.05) spotIsStableRef.current = false;
+                if (Math.random() < 0.03) spotIsStableRef.current = false;
             } else {
                 updateIntensity();
                 if (Math.random() < 0.1) spotIsStableRef.current = true;
