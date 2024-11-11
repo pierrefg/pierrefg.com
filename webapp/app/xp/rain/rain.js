@@ -130,13 +130,12 @@ export default function Rain() {
 
     useEffect(() => {
         const int = setInterval(() => {
-            console.log(mousePositionRef.current)
             if (!canvasSize) return;
 
             const cWidth = canvasSize.width;
             const cHeight = canvasSize.height;
             
-            const updateSpeed = 0.05;
+            const updateSpeed = 0.1;
             controlParamtersRef.current = { 
                 x: updateValue(controlParamtersRef.current.x, mousePositionRef.current.x/cWidth, updateSpeed),
                 y: updateValue(controlParamtersRef.current.y, mousePositionRef.current.y/cHeight, updateSpeed)
@@ -181,7 +180,6 @@ export default function Rain() {
                 lightX={0}
                 canvasSize={canvasSize}
                 windFactorRef={windFactorRef}
-                // mousePositionRef={mousePositionRef}
             />
         </div>
     );
