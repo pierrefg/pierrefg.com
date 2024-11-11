@@ -34,13 +34,10 @@ export default function RainDisplay({ drops, groundCollisions, umbrella, umbrell
 
         <svg className="absolute z-40 bg-black" width="100%" height="100%" filter="url(#grain)">
             <defs>
-                <linearGradient id="spotGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: elementsColor, stopOpacity: 1 }} />
-                    <stop offset="75%" style={{ stopColor: bgColor, stopOpacity: 1 }} />
-                </linearGradient>
-                <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="90%" style={{ stopColor: bgColor, stopOpacity: 0 }} />
-                    <stop offset="100%" style={{ stopColor: elementsColor, stopOpacity: 0.2 }} />
+                <linearGradient id="spotGradient" x1={canvasSize.width/2} y1={100} x2={canvasSize.width/2} y2={canvasSize.height}  gradientUnits="userSpaceOnUse">
+                {/* <linearGradient id="spotGradient" x1="0" y1="0" x2={canvasSize.width} y2={canvasSize.height}  gradientUnits="userSpaceOnUse"> */}
+                    <stop offset="10%" style={{ stopColor: elementsColor, stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: bgColor, stopOpacity: 0 }} />
                 </linearGradient>
             </defs>
 
@@ -49,8 +46,6 @@ export default function RainDisplay({ drops, groundCollisions, umbrella, umbrell
                 height='100%'
                 fill='url(#backgroundGradient)'
             /> */}
-
-            
 
             <g>
                 {
@@ -84,7 +79,7 @@ export default function RainDisplay({ drops, groundCollisions, umbrella, umbrell
                             x = {spotX}
                             cordLength = {100}
                             spotWidth = {15}
-                            lightSpreadAngle = {10}
+                            lightSpreadAngle = {13}
                             canvasSize = {canvasSize}
                             color = {elementsColor}
                             windFactorRef = {windFactorRef}
