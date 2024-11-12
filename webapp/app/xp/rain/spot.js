@@ -11,6 +11,11 @@ function degreesToRadians(degrees) {
     return degrees * (Math.PI / 180);
 }
 
+function toTheRight(A, B, P) {
+    const crossProduct = (B[0] - A[0]) * (P[1] - A[1]) - (B[1] - A[1]) * (P[0] - A[0]);
+    return crossProduct > 0 ? false : true;
+}
+
 function findIntersection(segment1, segment2) {
     const [x1, y1] = segment1.p1;
     const [x2, y2] = segment1.p2;
@@ -66,7 +71,10 @@ export default function Spot({ x, cordLength, spotWidth, color, lightSpreadAngle
                 if (Math.random() < 0.03) spotIsStableRef.current = false;
             } else {
                 updateIntensity();
-                if (Math.random() < 0.1) spotIsStableRef.current = true;
+                if (Math.random() < 0.1) {
+                    spotIntensityRef.current = 1;
+                    spotIsStableRef.current = true;
+                }
             }
         }, 50);
         return () => clearInterval(int);
@@ -85,17 +93,22 @@ export default function Spot({ x, cordLength, spotWidth, color, lightSpreadAngle
     const lightReach = 8000;
     const lightSpreadAngleRads = degreesToRadians(-lightSpreadAngle)
 
-    const RTotalCompAngleRad = Math.PI - (finalSpotAngleRads+lightSpreadAngleRads)
-    const RTotalLength = Math.sin(finalSpotAngleRads)*cordLength + Math.sin(lightSpreadAngleRads)*lightReach;
-    const coneBRX = x + Math.sin(RTotalCompAngleRad)*RTotalLength;
-    const coneBRY = Math.cos(RTotalCompAngleRad)*RTotalLength;
-    const coneBR = [coneBRX, coneBRY];
+    const coneCalculator = (lightSource, lightAngle, lightReach) => {
+        const reachX = lightSource[0] - Math.sin(lightAngle) * lightReach;
+        const reachY = lightSource[1] + Math.cos(lightAngle) * lightReach;
+        return [reachX, reachY];
+    };
 
-    const LTotalCompAngleRad = Math.PI - (finalSpotAngleRads-lightSpreadAngleRads)
-    const LTotalLength = Math.sin(finalSpotAngleRads)*cordLength + Math.sin(lightSpreadAngleRads)*lightReach;
-    const coneBLX = x + Math.sin(LTotalCompAngleRad)*LTotalLength;
-    const coneBLY = Math.cos(LTotalCompAngleRad)*LTotalLength;
-    const coneBL = [coneBLX, coneBLY];
+    const coneCalculatorFromPoint = (lightSource, hitPoint, lightReach) => {
+        const deltaX = hitPoint[0] - lightSource[0];
+        const deltaY = hitPoint[1] - lightSource[1];
+        const angle = Math.atan2(-deltaX, deltaY); // Calculate the angle based on deltaX and deltaY
+    
+        return coneCalculator(lightSource, angle, lightReach);
+    };
+
+    const coneBR = coneCalculator(spot, finalSpotAngleRads+lightSpreadAngleRads, lightReach);
+    const coneBL = coneCalculator(spot, finalSpotAngleRads-lightSpreadAngleRads, lightReach);
 
     const interR = findIntersection(
         {p1: spot, p2: coneBR},
@@ -107,36 +120,33 @@ export default function Spot({ x, cordLength, spotWidth, color, lightSpreadAngle
         {p1: umbrella.left, p2: umbrella.right},
     )
 
-    const ux = [umbrella.left[0], umbrella.right[0]]
     let lightShape = [spot, coneBR, coneBL]
-    if (umbrella.left[1]<spotY) {
-        let lightShape = [spot, coneBR, coneBL];
-    } else if(interR && interL) {
-        console.log("inter both")
-        lightShape = [spot, interR, interL]
-    } else if (interR) {
-        console.log("inter right")
-        lightShape = [spot, interR, umbrella.left, coneBL]
-    } else if (interL) {
-        console.log("inter left")
-        lightShape = [spot, coneBR, umbrella.right, interL]
-    } else {
-        
-        if(ux[1]<spotX || ux[1]<coneBLX) {
-            console.log("to the left")
-            lightShape = [spot, coneBR, coneBL]
-        } else if (ux[0]>spotX || ux[0]>coneBRX) {
-            lightShape = [spot, coneBR, coneBL]
-            console.log("to the right")
+    let hitPointLeft = coneCalculatorFromPoint(spot, umbrella.left, lightReach);
+    let hitPointRight = coneCalculatorFromPoint(spot, umbrella.right, lightReach);
+    
+    if (umbrella.left[1]<spotY) 
+        lightShape = [spot, coneBR, coneBL];
+    else if(interR && interL) 
+        lightShape = [spot, interR, interL];
+    else if (interR)
+        lightShape = [spot, interR, umbrella.left, hitPointLeft, coneBL];
+    else if (interL) 
+        lightShape = [spot, coneBR, hitPointRight, umbrella.right, interL];
+    else {        
+        const outiseRight = toTheRight(spot, coneBR, umbrella.left);
+        const outsideLeft = !toTheRight(spot, coneBL, umbrella.right);
+            
+        if (outsideLeft || outiseRight) {
+            console.log('outside');
+            lightShape = [spot, coneBR, coneBL];
         } else {
-            lightShape = [spot, coneBR, umbrella.right, umbrella.left, coneBL]
-            console.log("inside")
+            console.log('inside')
+            lightShape = [spot, coneBR, hitPointRight, umbrella.right, umbrella.left, hitPointLeft, coneBL];
         }
     }
-    console.log(lightShape)
 
     return (
-        <g >
+        <g>
             
             <path
                 d={`M${x},0 L${spotX},${spotY}`}
@@ -150,7 +160,7 @@ export default function Spot({ x, cordLength, spotWidth, color, lightSpreadAngle
                     points={lightShape.map(([x, y]) => `${x},${y}`).join(' ')}
                     fill="url(#spotGradient)"
                     opacity={0.9*spotIntensityRef.current}
-                    style={{'mix-blend-mode': 'multiply'}}
+                    // style={{'mix-blend-mode': 'multiply'}}
                 />
                 <rect
                     x={x - spotWidth / 2}
