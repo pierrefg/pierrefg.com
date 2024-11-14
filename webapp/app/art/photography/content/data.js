@@ -1,3 +1,4 @@
+import { glenans57 } from "./glenans57/data";
 import { london } from "./london/data";
 import { ambel24 } from "./monestier/data";
 import { megabassines } from "./megabassines/data";
@@ -11,6 +12,7 @@ import { raquettes } from "./snow/data";
 import { istanbul } from "./istanbul/data";
 
 export const photoData = [
+    glenans57,
     london,
     megabassines,
     ambel24,

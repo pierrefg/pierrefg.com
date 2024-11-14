@@ -1,3 +1,4 @@
+import { orangeViolet } from "./orange_violet/data";
 import { yahtzee } from "./yahtzee/data";
 import { tdG } from "./deception/data";
 import { monsters } from "./monsters/data";
@@ -11,6 +12,7 @@ import { infoRussie } from "./shifter-russie/data";
 
 
 export const graphicsData = [
+    orangeViolet,
     yahtzee,
     planets,
     monsters,
