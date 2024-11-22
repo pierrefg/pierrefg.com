@@ -3,7 +3,7 @@ export const seminarsData = [
         title: {
             name: "Détection automatique des phases de réveil/sommeil en pédiatrie à partir d’enregistrements audio",
         },
-        authors: ['pierref', 'cturbidi', 'vscuturici'],
+        authors: ['pierref', 'vbarrellon', 'bbertin', 'cdepagne', 'gdelagastine', 'astagnara'],
         period: "2023",
         companies: [ 
             {

@@ -28,7 +28,7 @@ export const publicationsData = [
             },
             {  
                 text: 'voir plus',
-                url: '/science/research'
+                url: '/science#thesis'
             }
         ]  
     },
@@ -170,7 +170,7 @@ export const publicationsData = [
             },
             {  
                 text: 'voir plus',
-                url: '/science/research#mthesis'
+                url: '/science#mthesis'
             }
         ] 
     },

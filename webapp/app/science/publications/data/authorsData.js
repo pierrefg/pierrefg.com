@@ -50,5 +50,25 @@ export const authorsData = {
     mlaviale: {
         name: 'Martin',
         surname: 'Laviale'
+    },
+    vbarrellon: {
+        name: 'Vincent',
+        surname: 'Barellon'
+    },
+    bbertin: {
+        name: 'Benjamin',
+        surname: 'Bertin'
+    },
+    cdepagne: {
+        name: 'Corinne',
+        surname: 'Depagne'
+    },
+    gdelagastine: {
+        name: 'Geoffroy',
+        surname: 'De La Gastine'
+    },
+    astagnara: {
+        name: 'André',
+        surname: 'Stagnara'
     }
 }
