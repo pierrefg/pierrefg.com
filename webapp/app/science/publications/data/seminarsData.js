@@ -1,6 +1,22 @@
 export const seminarsData = [
     {
         title: {
+            name: "Détection automatique des phases de réveil/sommeil en pédiatrie à partir d’enregistrements audio",
+        },
+        authors: ['pierref', 'cturbidi', 'vscuturici'],
+        period: "2023",
+        companies: [ 
+            {
+                name: "Congrès du Sommeil",
+                place: 'Lille, France',
+                link: "https://www.lecongresdusommeil.com/",
+                date: '2024',
+                context: 'communication orale en symposium'
+            },
+        ],
+    },
+    {
+        title: {
             name: "Surveillance automatique de l'entrefer dans les hydro-générateurs compacts",
         },
         authors: ['pierref', 'cturbidi', 'vscuturici'],

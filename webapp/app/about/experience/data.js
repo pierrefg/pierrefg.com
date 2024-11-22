@@ -14,7 +14,7 @@ export const workData = [
         type: "CDD puis indépendant",
         links: [
             {
-                url: "/science/data-science",
+                url: "/science#projects",
                 text: "Voir plus"
             }
         ],
@@ -41,7 +41,7 @@ export const workData = [
         ],
         links: [
             {
-                url: "/science/research",
+                url: "/science#thesis",
                 text: "Voir plus"
             }
         ],
@@ -62,7 +62,7 @@ export const workData = [
         ],
         links: [
             {
-                url: "/science/research#mthesis",
+                url: "/science#mthesis",
                 text: "Voir plus"
             }
         ],

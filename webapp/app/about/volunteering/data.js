@@ -38,7 +38,7 @@ export const volunteeringData = [
     },
     {
         title: {
-            name: "Ciné La Mouete",
+            name: "Ciné La Mouette",
             link: "https://cinelamouette.fr/"
         },
         subtitle: "Association de cinéma de l'INSA Lyon",

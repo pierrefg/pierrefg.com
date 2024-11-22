@@ -17,7 +17,7 @@ export const educationData = [
         },
         links: [
             {
-                url: "/science/research#mthesis",
+                url: "/science#mthesis",
                 text: "Voir plus"
             }
         ]
