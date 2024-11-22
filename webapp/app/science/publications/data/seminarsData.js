@@ -4,7 +4,7 @@ export const seminarsData = [
             name: "Détection automatique des phases de réveil/sommeil en pédiatrie à partir d’enregistrements audio",
         },
         authors: ['pierref', 'vbarrellon', 'bbertin', 'cdepagne', 'gdelagastine', 'astagnara'],
-        period: "2023",
+        period: "2024",
         companies: [ 
             {
                 name: "Congrès du Sommeil",
@@ -20,7 +20,7 @@ export const seminarsData = [
             name: "Surveillance automatique de l'entrefer dans les hydro-générateurs compacts",
         },
         authors: ['pierref', 'cturbidi', 'vscuturici'],
-        period: "2023",
+        period: "2023-24",
         companies: [ 
             {
                 name: "Journée de la Science",
