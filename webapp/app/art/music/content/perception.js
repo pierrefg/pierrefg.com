@@ -3,7 +3,7 @@ import perceptionCover from './perception.jpg';
 export const perceptionData = {
     title: 'Perception',
     cover: perceptionCover,
-    releasedDate: '2023',
+    releasedDate: '2024',
     fullLink: {
         title: 'Streaming',
         link: 'https://songwhip.com/p1ps/perception',
