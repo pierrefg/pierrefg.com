@@ -2,11 +2,12 @@ import x0aCover from './x0a.jpg';
 
 export const x0aData = {
     title: 'X0a (single)',
+    id: 'xoa',
     cover: x0aCover,
     releasedDate: '2024',
     fullLink: {
         title: 'Streaming',
-        link: 'https://songwhip.com/p1ps/perception',
+        link: 'https://song.link/xoa',
         extern: true
     },
     description: 'Voyage rythmique, mélodique et textural.',

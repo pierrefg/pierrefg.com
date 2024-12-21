@@ -22,7 +22,7 @@ export default function PlaylistPlayer({playlist}) {
     }, [isPlaying]);
 
     return (
-        <div className='flex flex-col gap-0 w-full max-w-4xl mx-auto items-center justify-center'>
+        <div className='flex flex-col gap-0 w-full max-w-4xl mx-auto items-center justify-center' id={playlist.id} >
             
             <div className='w-full max-w-lg mx-auto p-2 mb-2'>
                 

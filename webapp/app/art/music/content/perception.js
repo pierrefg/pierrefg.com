@@ -2,11 +2,12 @@ import perceptionCover from './perception.jpg';
 
 export const perceptionData = {
     title: 'Perception',
+    id: 'perception',
     cover: perceptionCover,
     releasedDate: '2024',
     fullLink: {
         title: 'Streaming',
-        link: 'https://songwhip.com/p1ps/perception',
+        link: 'https://song.link/p1ps_perception',
         extern: true
     },
     description: 'Perception est une compilation de musiques électroacoustiques réalisées entre 2007 et 2017.',
