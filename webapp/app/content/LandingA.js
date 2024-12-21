@@ -17,6 +17,7 @@ import AnimatedText from '@/components/animatedText';
 
 import SimpleLink from '@/components/SimpleLink';
 import { AiOutlineNumber } from "react-icons/ai";
+import { LuPartyPopper } from "react-icons/lu";
 
 export default function LandingTop() {
     const { darkMode } = useStore();
@@ -50,8 +51,22 @@ export default function LandingTop() {
                         </div>
                     </div>
                 </div>
+                
                 <div className='py-4  md:py-8'>
                     <MenuBar />
+                </div>
+                <div className='flex flex-row gap-6 items-center'>
+                    <LuPartyPopper className='inline'/> 
+                    <SimpleLink 
+                        content={
+                            {
+                                title: 'X0a - nouveau single',
+                                link: 'https://song.link/p1ps_x0a',
+                                extern: true
+                            }
+                        } 
+                    /> 
+                    <LuPartyPopper className='inline'/>
                 </div>
                 <SocialIcons />
                 <div className='hidden md:block'>
