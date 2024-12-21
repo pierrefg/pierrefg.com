@@ -7,7 +7,7 @@ export const x0aData = {
     releasedDate: '2024',
     fullLink: {
         title: 'Streaming',
-        link: 'https://song.link/xoa',
+        link: 'https://song.link/p1ps_x0a',
         extern: true
     },
     description: 'Voyage rythmique, mélodique et textural.',
