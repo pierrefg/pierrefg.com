@@ -11,8 +11,10 @@ import { turbines } from "./turbine/data";
 import { madere } from "./madere/data";
 import { raquettes } from "./snow/data";
 import { istanbul } from "./istanbul/data";
+import { scanner } from "./scanner/data";
 
 export const photoData = [
+    scanner,
     morilles,
     glenans57,
     london,

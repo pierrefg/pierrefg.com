@@ -9,9 +9,11 @@ import { thesis } from "./thesis/data";
 import { trou } from "./trou/data";
 import { vague } from "./vague/data";
 import { infoRussie } from "./shifter-russie/data";
+import { maternelle } from "./maternelle/data";
 
 
 export const graphicsData = [
+    maternelle,
     orangeViolet,
     yahtzee,
     planets,
