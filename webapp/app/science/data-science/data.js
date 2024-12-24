@@ -40,7 +40,7 @@ export const dataScienceData =
             icon: IoDocumentTextOutline,
             title: 'Analyse automatique de mise en page PDF et système RAG',
             subtitle: "analyse d'image, traitement automatique du langage naturel",
-            period: "2024-*",
+            period: "2024 (4 mois)",
             img: pdfPic,
             imgLegend: "Exemple de pdf analysé par l'outil développé dans ce projet.",
             summary: <>
