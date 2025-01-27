@@ -10,9 +10,11 @@ import { trou } from "./trou/data";
 import { vague } from "./vague/data";
 import { infoRussie } from "./shifter-russie/data";
 import { maternelle } from "./maternelle/data";
+import { fantome } from "./fantome/data";
 
 
 export const graphicsData = [
+    fantome,
     maternelle,
     orangeViolet,
     yahtzee,

@@ -12,8 +12,10 @@ import { madere } from "./madere/data";
 import { raquettes } from "./snow/data";
 import { istanbul } from "./istanbul/data";
 import { scanner } from "./scanner/data";
+import { bercail } from "./bercail/data";
 
 export const photoData = [
+    bercail,
     scanner,
     morilles,
     glenans57,
