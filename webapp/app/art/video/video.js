@@ -29,7 +29,7 @@ export default function Video() {
                     <h3 
                         className="inline-block"
                     >
-                        Noisy square
+                        Noisy cube
                     </h3>
                     <p className="inline-block text-small text-primary-muted">
                         Audio-reactive video (Python and After Effects)

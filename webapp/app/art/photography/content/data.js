@@ -13,8 +13,10 @@ import { raquettes } from "./snow/data";
 import { istanbul } from "./istanbul/data";
 import { scanner } from "./scanner/data";
 import { bercail } from "./bercail/data";
+import { monochrom } from "./monochrom/data";
 
 export const photoData = [
+    monochrom,
     bercail,
     scanner,
     morilles,
