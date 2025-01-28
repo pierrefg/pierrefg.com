@@ -11,7 +11,7 @@ import imgJ from './J.jpg';
 
 export const monochrom = {
     title: 'Monochrom',
-    date: 'Janvier 20245',
+    date: 'Janvier 2025',
     place: 'Lyon',
     imgs: [
         {

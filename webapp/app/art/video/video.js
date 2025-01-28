@@ -10,12 +10,14 @@ export default function Video() {
                     <h3 
                         className="inline-block"
                     >
-                        Noisy bubble
+                        Bulle grainée
                     </h3>
                     <p className="inline-block text-small text-primary-muted">
-                        Real-time audio-reactive video (TouchDesigner)
+                        Animation réactive au son
                         <br />
-                        Music made with love
+                        Réalisée sur TouchDesigner (temps-réel)
+                        <br />
+                        Musique faite maison
                     </p>
                 </div>
                 <video className="w-full h-auto" controls>
@@ -29,12 +31,14 @@ export default function Video() {
                     <h3 
                         className="inline-block"
                     >
-                        Noisy cube
+                        Cube grainé
                     </h3>
                     <p className="inline-block text-small text-primary-muted">
-                        Audio-reactive video (Python and After Effects)
+                        Animation réactive au son 
+                        <br/>
+                        Réalisée sur Python et After Effects
                         <br />
-                        Music made with love
+                        Musique faite maison
                     </p>
                 </div>
                 <video className="w-full h-auto" controls>
