@@ -4,13 +4,13 @@ export const landingBContent = [
     {
         content: <>
             Je place toujours au centre de mes préoccupations les enjeux sociaux et environnementaux qui me tiennent à <FaHeart className="inline"/>. 
-            Allez jeter un coup d'oeil à mon parours par ici. 
+            Allez jeter un coup d'oeil à mon parcours par ici. 
         </>,
         linkIndex: 0
     },
     {
         content: <>
-            Graphiste et photographe issu du milieu associatif, je vous accompagne de la conception de vos illustrations et supports de communication à la couverture de vos événements en images, pour des visuels impactants et adaptés à vos besoins.
+            Graphiste et photographe issu du milieu associatif, je vous accompagne de la conception de vos illustrations et supports de communication à la couverture de vos événements en images.
         </>,
         linkIndex: 1
     },
