@@ -13,6 +13,7 @@ export default function Gallery({ galleryData, size=350 }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imageWidths, setImageWidths] = useState([]);
     const [isScrollable, setIsScrollable] = useState(false);
+    const [isNavigating, setIsNavigating] = useState(false);
 
     const [toShowInOverlay, setToShowInOverlay] = useState(null);
 
@@ -27,16 +28,20 @@ export default function Gallery({ galleryData, size=350 }) {
     const handlePrevClick = () => {
         if (currentIndex > 0) {
             const newIndex = currentIndex - 1;
+            setIsNavigating(true);
             setCurrentIndex(newIndex);
             scrollToImage(newIndex);
+            setTimeout(() => setIsNavigating(false), 300);
         }
     };
-
+    
     const handleNextClick = () => {
         if (currentIndex < galleryLength - 1) {
             const newIndex = currentIndex + 1;
+            setIsNavigating(true);
             setCurrentIndex(newIndex);
             scrollToImage(newIndex);
+            setTimeout(() => setIsNavigating(false), 300);
         }
     };
 
@@ -62,14 +67,16 @@ export default function Gallery({ galleryData, size=350 }) {
     };
 
     const handleScroll = (e) => {
+        if (isNavigating) return;
+    
         const target = e.target;
         const scrollPosition = target.scrollLeft;
         const scrollableWidth = target.scrollWidth - target.clientWidth;
         const ratio = scrollPosition / scrollableWidth;
-        const newIndex = Math.round(ratio*(galleryLength-1))
-        setCurrentIndex(newIndex)
-        console.log('Scroll ratio:', newIndex);
-    }
+        const newIndex = Math.round(ratio * (galleryLength - 1));
+    
+        setCurrentIndex(newIndex);
+    };
 
     return (<>
         {
