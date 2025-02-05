@@ -7,6 +7,7 @@ import imgF from './F.jpg';
 import imgG from './G.jpg';
 import imgH from './H.jpg';
 import imgI from './I.jpg';
+import imgJ from './J.jpg';
 
 export const minolta1 = {
     title: "Minolta 1 (aucun effet numérique)",
@@ -39,6 +40,9 @@ export const minolta1 = {
         },
         {
             img: imgI
+        },
+        {
+            img: imgJ
         }
     ]
 }
