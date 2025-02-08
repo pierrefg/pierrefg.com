@@ -15,8 +15,10 @@ import { scanner } from "./scanner/data";
 import { bercail } from "./bercail/data";
 import { monochrom } from "./monochrom/data";
 import { minolta1 } from "./minolta1/data";
+import { ventoux } from "./ventoux/data";
 
 export const photoData = [
+    ventoux,
     minolta1,
     monochrom,
     bercail,

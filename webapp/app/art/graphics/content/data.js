@@ -25,6 +25,6 @@ export const graphicsData = [
     tdG,
     thesis,
     vague,
-    trou,
+    //trou,
     // infoRussie
 ]
