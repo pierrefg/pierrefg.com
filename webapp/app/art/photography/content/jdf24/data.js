@@ -6,7 +6,7 @@ import imgE from './E.jpg';
 import imgF from './F.jpg';
 
 export const jdf24 = {
-    title: 'Journée internationale des droits des femmes',
+    title: 'Journée int. des droits des femmes',
     date: 'Mars 2024',
     place: 'Lyon',
     imgs: [
