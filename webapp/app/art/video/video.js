@@ -10,6 +10,27 @@ export default function Video() {
                     <h3 
                         className="inline-block"
                     >
+                        Full (+25 pts)
+                    </h3>
+                    <p className="inline-block text-small text-primary-muted">
+                        3D Motion Design
+                        <br />
+                        Réalisée sur Blender et After Effects
+                        <br />
+                        Musique faite maison
+                    </p>
+                </div>
+                <video className="w-full h-auto" controls>
+                    <source src="https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/video/des.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div className="video-container max-w-md mx-auto">
+                <div className="flex flex-col p-2 text-base text-center">
+                    <h3 
+                        className="inline-block"
+                    >
                         Bulle grainée
                     </h3>
                     <p className="inline-block text-small text-primary-muted">
