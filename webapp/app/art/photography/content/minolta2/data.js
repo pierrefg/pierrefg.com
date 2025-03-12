@@ -9,9 +9,9 @@ import imgH from './H.jpg';
 import imgI from './I.jpg';
 import imgJ from './J.jpg';
 
-export const minolta1 = {
-    title: "Minolta 1",
-    date: 'Janvier 2025',
+export const minolta2 = {
+    title: 'Minolta 2',
+    date: 'Février 2025',
     place: 'Lyon',
     imgs: [
         {

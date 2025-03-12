@@ -16,8 +16,14 @@ import { bercail } from "./bercail/data";
 import { monochrom } from "./monochrom/data";
 import { minolta1 } from "./minolta1/data";
 import { ventoux } from "./ventoux/data";
+import { minolta2 } from "./minolta2/data";
+import { minolta3 } from "./minolta3/data";
+import { concerts } from "./concerts/data";
 
 export const photoData = [
+    minolta3,
+    concerts,
+    minolta2,
     ventoux,
     minolta1,
     monochrom,

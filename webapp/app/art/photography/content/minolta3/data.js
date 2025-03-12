@@ -8,21 +8,22 @@ import imgG from './G.jpg';
 import imgH from './H.jpg';
 import imgI from './I.jpg';
 import imgJ from './J.jpg';
+import imgK from './K.jpg';
 
-export const minolta1 = {
-    title: "Minolta 1",
-    date: 'Janvier 2025',
+export const minolta3 = {
+    title: 'Minolta 3',
+    date: 'Mars 2025',
     place: 'Lyon',
     imgs: [
         {
             img: imgA
         },
-        {
-            img: imgB
-        },
-        {
-            img: imgC
-        },
+        // {
+        //     img: imgB
+        // },
+        // {
+        //     img: imgC
+        // },
         {
             img: imgD
         },
@@ -32,9 +33,9 @@ export const minolta1 = {
         {
             img: imgF
         },
-        {
-            img: imgG
-        },
+        // {
+        //     img: imgG
+        // },
         {
             img: imgH
         },
@@ -43,6 +44,9 @@ export const minolta1 = {
         },
         {
             img: imgJ
+        },
+        {
+            img: imgK
         }
     ]
 }

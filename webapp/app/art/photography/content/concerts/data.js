@@ -6,13 +6,11 @@ import imgE from './E.jpg';
 import imgF from './F.jpg';
 import imgG from './G.jpg';
 import imgH from './H.jpg';
-import imgI from './I.jpg';
-import imgJ from './J.jpg';
 
-export const minolta1 = {
-    title: "Minolta 1",
-    date: 'Janvier 2025',
-    place: 'Lyon',
+export const concerts = {
+    title: "Couverture de concerts",
+    date: '2025',
+    place: 'Lyon et ailleurs',
     imgs: [
         {
             img: imgA
@@ -38,11 +36,5 @@ export const minolta1 = {
         {
             img: imgH
         },
-        {
-            img: imgI
-        },
-        {
-            img: imgJ
-        }
     ]
 }
