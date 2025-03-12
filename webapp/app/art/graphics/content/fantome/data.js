@@ -3,7 +3,7 @@ import imgB from './B.jpg';
 
 export const fantome = {
     title: 'Bouh',
-    place: 'Risograhie A3 (4 couleurs)',
+    place: 'Risograhie A3',
     imgs: [
         {
             img: imgA

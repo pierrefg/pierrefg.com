@@ -9,7 +9,7 @@ import imgG from './G.jpg';
 export const turbines = {
     title: 'Turbines',
     date: '2023',
-    place: 'Centrales de la CNR',
+    place: 'Centrales CNR',
     imgs: [
         {
             img: imgA
