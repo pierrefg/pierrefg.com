@@ -5,11 +5,10 @@ import imgD from './D.jpg';
 import imgE from './E.jpg';
 import imgF from './F.jpg';
 import imgG from './G.jpg';
-import imgH from './H.jpg';
 
-export const concerts = {
-    title: "Couvertures de concerts",
-    date: '2025',
+export const minolta5 = {
+    title: 'Minolta 5 (périmée)',
+    date: 'Mars 2025',
     place: 'Lyon et ailleurs',
     imgs: [
         {
@@ -32,9 +31,6 @@ export const concerts = {
         },
         {
             img: imgG
-        },
-        {
-            img: imgH
-        },
+        }
     ]
 }

@@ -19,8 +19,10 @@ import { ventoux } from "./ventoux/data";
 import { minolta2 } from "./minolta2/data";
 import { minolta3 } from "./minolta3/data";
 import { concerts } from "./concerts/data";
+import { minolta5 } from "./minolta5/data";
 
 export const photoData = [
+    minolta5,
     minolta3,
     concerts,
     minolta2,
