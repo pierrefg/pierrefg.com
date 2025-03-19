@@ -20,8 +20,12 @@ import { minolta2 } from "./minolta2/data";
 import { minolta3 } from "./minolta3/data";
 import { concerts } from "./concerts/data";
 import { minolta5 } from "./minolta5/data";
+import { minolta6 } from "./minolta6/data";
+import { yahtzee2 } from "./yahtzee2/data";
 
 export const photoData = [
+    yahtzee2,
+    minolta6,
     minolta5,
     minolta3,
     concerts,
