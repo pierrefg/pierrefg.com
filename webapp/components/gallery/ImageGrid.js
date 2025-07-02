@@ -35,32 +35,32 @@ export default function ImageGrid({ content }) {
             <div className="relative max-h-[85%] w-5/6 md:w-4/5 overflow-y-auto p-4" onClick={(e) => e.stopPropagation()}>
                 
                 {/* Masonry Columns */}
-                <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+                <div className="columns-1 sm:columns-2 md:columns-2 lg:columns-3 gap-4 space-y-4">
                     {content.imgs.map((el, i) => (
                         <div
                             key={i}
                             className="break-inside-avoid cursor-pointer"
-                            onClick={() =>
-                                setToShowInOverlay(
-                                    <Image
-                                        src={el.img}
-                                        alt={`Image ${i + 1} full size`}
-                                        width={1000}
-                                        height={1000}
-                                        className="w-auto h-auto max-w-full max-h-screen object-contain"
-                                        onClick={(e) => e.stopPropagation()}
-                                    />
-                                )
-                            }
+                            // onClick={() =>
+                            //     setToShowInOverlay(
+                            //         <Image
+                            //             src={el.img}
+                            //             alt={`Image ${i + 1} full size`}
+                            //             width={1000}
+                            //             height={1000}
+                            //             className="w-auto h-auto max-w-full max-h-screen object-contain"
+                            //             onClick={(e) => e.stopPropagation()}
+                            //         />
+                            //     )
+                            // }
                         >
                             <Image
                                 src={el.img}
                                 alt={`Image ${i + 1}`}
-                                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 20vw, 10vw"
+                                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 30vw, 30vw"
                                 // sizes="5vw"
                                 // placeholder="blur"
                                 // blurDataURL={el.blurDataURL || '/placeholder.png'} // fallback
-                                className="w-full h-auto rounded object-cover transition duration-200 hover:brightness-110 shadow-sm"
+                                className="w-full h-auto rounded object-cover transition duration-200 hover:brightness-110"
                             />
                         </div>
                     ))}
