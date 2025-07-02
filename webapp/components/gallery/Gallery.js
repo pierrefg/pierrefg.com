@@ -33,7 +33,7 @@ export default function Gallery({ galleryContent, GalleryObject }) {
                                 alt={`Image ${index + 1}`}
                                 //quality={50}
                                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 20vw, 10vw"
-                                className="object-cover rounded h-[300px] md:h-[300px]"
+                                className="object-cover rounded h-[200px] md:h-[300px]"
                             />
                         </div>
 

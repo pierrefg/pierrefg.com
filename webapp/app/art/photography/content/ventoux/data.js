@@ -5,8 +5,8 @@ import imgD from './D.jpg';
 
 export const ventoux = {
     title: 'Luge',
-    date: 'Janvier 2025',
-    place: "Mont Ventoux",
+    date: 'Janv. 2025',
+    place: "Ventoux",
     imgs: [
         {
             img: imgA

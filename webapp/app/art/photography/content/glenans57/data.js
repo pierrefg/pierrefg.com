@@ -12,7 +12,7 @@ import imgK from './K.jpg';
 
 export const glenans57 = {
     title: 'Glénans 5.7',
-    date: 'Novembre 2024',
+    date: 'Nov. 2024',
     place: 'Marseillan',
     imgs: [
         {

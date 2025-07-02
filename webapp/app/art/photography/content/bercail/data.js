@@ -11,7 +11,7 @@ import imgJ from './J.jpg';
 
 export const bercail = {
     title: 'Retour au bercail',
-    date: 'Décembre 2024',
+    date: 'Déc. 2024',
     place: 'Angoulême',
     imgs: [
         {

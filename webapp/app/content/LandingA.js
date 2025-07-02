@@ -44,9 +44,9 @@ export default function LandingTop() {
                         </div>
                         <div className="w-full">
                             <span>
-                                Graphiste, photographe et musicien
+                                Photographe, graphiste et musicien
                                 <br />
-                                Scientifique des données
+                                Informatique engagée
                             </span>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export default function LandingTop() {
                 <div className='py-4  md:py-8'>
                     <MenuBar />
                 </div>
-                <div className='flex flex-row gap-6 items-center'>
+                {/* <div className='flex flex-row gap-6 items-center'>
                     <LuPartyPopper className='inline'/> 
                     <SimpleLink 
                         content={
@@ -67,7 +67,7 @@ export default function LandingTop() {
                         } 
                     /> 
                     <LuPartyPopper className='inline'/>
-                </div>
+                </div> */}
                 <SocialIcons />
                 <div className='hidden md:block'>
                     <ThemeSwitch />

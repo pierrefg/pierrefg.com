@@ -8,7 +8,7 @@ import imgG from './G.jpg';
 import imgH from './H.jpg';
 
 export const concerts = {
-    title: "Couvertures de concerts",
+    title: "Concerts",
     date: '2025',
     place: 'Lyon et ailleurs',
     imgs: [
