@@ -17,7 +17,7 @@ export default function Gallery({ galleryContent, GalleryObject }) {
     return (
         <div className="flex flex-col w-full">
             { showOverlay && <Overlay onClose={() => setShowOverlay(false)}>{overlayContent}</Overlay> }
-            <div className="grid grid-cols-2 md:grid-cols-5 md:gap-2 md:p-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:gap-2 md:p-4">
                 {galleryContent.map((carrouselData, index) => (
                     <div 
                         className="flex flex-col items-center text-center" 
