@@ -31,7 +31,8 @@ export default function Gallery({ galleryContent, GalleryObject }) {
                             <Image
                                 src={carrouselData.imgs[0].img}
                                 alt={`Image ${index + 1}`}
-                                // height={300}
+                                quality={50}
+                                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 20vw, 10vw"
                                 className="object-contain h-[200px] md:h-[300px]"
                             />
                         </div>
