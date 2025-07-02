@@ -27,8 +27,10 @@ import { diversAvril25 } from "./divers_avril25/data";
 import { diversMai25 } from "./divers_mai25/data"; 
 import { diversJuin25 } from "./divers_juin25/data";
 import { voyageVelo } from "./voyage_velo/data";
+import { mariageA } from "./mariageA/data";
 
 export const photoData = [
+    mariageA,
     pride25,
     diversJuin25,
     voyageVelo,
