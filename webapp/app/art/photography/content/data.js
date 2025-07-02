@@ -22,9 +22,19 @@ import { concerts } from "./concerts/data";
 import { minolta5 } from "./minolta5/data";
 import { minolta6 } from "./minolta6/data";
 import { yahtzee2 } from "./yahtzee2/data";
+import { pride25 } from "./pride25/data";
+import { diversAvril25 } from "./divers_avril25/data";
+import { diversMai25 } from "./divers_mai25/data"; 
+import { diversJuin25 } from "./divers_juin25/data";
+import { voyageVelo } from "./voyage_velo/data";
 
 export const photoData = [
+    pride25,
+    diversJuin25,
+    voyageVelo,
+    diversMai25,
     yahtzee2,
+    diversAvril25,
     minolta6,
     minolta5,
     minolta3,

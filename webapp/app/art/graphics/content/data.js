@@ -12,15 +12,17 @@ import { infoRussie } from "./shifter-russie/data";
 import { maternelle } from "./maternelle/data";
 import { fantome } from "./fantome/data";
 import { darkmatter } from "./darkmatter/data";
+import { fleurs } from "./fleurs/data";
 
 export const graphicsData = [
+    fleurs,
     darkmatter,
     fantome,
     maternelle,
     orangeViolet,
     yahtzee,
     planets,
-    monsters,
+    // monsters,
     Zzzzzzz,
     pastel,
     tdG,

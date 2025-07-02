@@ -10,17 +10,17 @@ import Video from "./video/video";
 
 export const artSections = [
     {
-        title: <><MdOutlinePolyline className='title-icon' /> Graphisme</>,
-        id: 'graphics',
-        link: '/art#graphics',
-        section: <Graphics />,
-        fullWidth: true
-    },
-    {
         title: <><MdOutlinePhotoCamera className='title-icon' /> Photographie</>,
         id: 'photography',
         link: '/art#photography',
         section: <Photography />,
+        fullWidth: true
+    },
+    {
+        title: <><MdOutlinePolyline className='title-icon' /> Graphisme</>,
+        id: 'graphics',
+        link: '/art#graphics',
+        section: <Graphics />,
         fullWidth: true
     },
     {
