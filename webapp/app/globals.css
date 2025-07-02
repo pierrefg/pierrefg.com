@@ -20,6 +20,8 @@
     /* SPACING */
     --btn-padding-x: 12px; /* Button padding x */
     --btn-padding-y: 8px; /* Button padding y */
+
+    color-scheme: dark;
 }
 
 #main-container.light {
@@ -127,4 +129,8 @@ li::before {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.max-h-5-6 {
+  max-height: 83.3333%;
 }

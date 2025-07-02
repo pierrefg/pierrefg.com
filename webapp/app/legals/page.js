@@ -16,15 +16,15 @@ export default function Legals() {
                     Mentions légales
                 </h1>
 
-                <div className="flex flex-col gap-6 md:items-center mt-6">  {/* Added items-center to center the content */}
+                <div className="flex flex-col gap-6 lg:items-center mt-6">  {/* Added items-center to center the content */}
                     {
                         legalData.map(
                             (data, index) => (
-                                <div key={index} className="md:flex md:flex-row justify-center">  {/* Added w-full and justify-center */}
-                                    <div className="md:w-[300px] md:text-right md:mr-4 underline md:no-underline">
+                                <div key={index} className="lg:flex lg:flex-row justify-center">  {/* Added w-full and justify-center */}
+                                    <div className="lg:w-[300px] lg:text-right lg:mr-4 underline lg:no-underline">
                                         <h3>{data.title}</h3>
                                     </div>
-                                    <div className="md:w-[400px] border-l-solid md:border-l-2 md:border-l-primary-muted md:pl-4">
+                                    <div className="lg:w-[400px] border-l-solid lg:border-l-2 lg:border-l-primary-muted lg:pl-4">
                                         {data.content}
                                     </div>
                                 </div>

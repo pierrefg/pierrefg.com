@@ -41,7 +41,7 @@ export default function Services() {
                                 <h3>/ {item.title}</h3>
                             </div>
                             
-                            <div className="pl-2 md:pl-6">
+                            <div className="pl-2 lg:pl-6">
                                 {
                                     item.subtitle && <p>{item.subtitle}</p>
                                 }

@@ -36,7 +36,7 @@ export default function SubMenuLayout({pageDescription, pagesData, noMenu=false 
                 <SubMenu pagesData={pagesData} />
             }
             
-            <div className={`sub-menu-content ${!isFullWidth && 'max-w-7xl md:px-0 px-4 mx-auto'}`}>
+            <div className={`sub-menu-content ${!isFullWidth && 'max-w-7xl lg:px-0 px-4 mx-auto'}`}>
                 <div className='flex flex-col gap-10 mt-4'>
                     {
                         pagesData.map(

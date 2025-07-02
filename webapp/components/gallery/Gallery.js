@@ -24,7 +24,7 @@ export default function Gallery({ galleryContent, GalleryObject }) {
                         key={index}
                         onClick={() => onImageClick(carrouselData)}
                     >
-                        <div className="btn relative  flex items-center justify-center group">
+                        <div className="btn relative flex items-center justify-center group">
                             <span className="absolute text-white bg-black p-1 opacity-0 group-hover:opacity-100">
                                 voir +
                             </span>

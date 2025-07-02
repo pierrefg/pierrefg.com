@@ -48,7 +48,7 @@ export default function Publications() {
                         (item, index) => (
                             <div key={index} className="flex flex-col gap-4">
                                 <h3 className='text-left'>/ {item.title}</h3>
-                                <div className="pl-2 md:pl-12">
+                                <div className="pl-2 lg:pl-12">
                                     <Timeline
                                         data = {item.content}
                                         authorData = {authorsData}

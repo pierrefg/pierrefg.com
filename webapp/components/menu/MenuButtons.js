@@ -10,7 +10,7 @@ export default function MenuButtons({ toDoOnElementClick }) {
     const pathname = usePathname();
     
     return (
-        <div className={`flex flex-col md:flex-row items-center md:gap-4 gap-3`}>
+        <div className={`flex flex-col lg:flex-row items-center lg:gap-4 gap-3`}>
             {
                 mainMenuLinks.map(
                     (el, index) => {

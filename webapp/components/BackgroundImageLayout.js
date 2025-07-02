@@ -19,7 +19,7 @@ export default function BackgroundImageLayout({children, icon, title, coverPic})
                 </div>
 
                 <div className="relative z-10 max-w-4xl p-6">
-                    <h1 className="text-2xl md:text-3xl mb-6">
+                    <h1 className="text-2xl lg:text-3xl mb-6">
                         {/* {icon} */}
                         / <AnimatedText targetText={title} />
                     </h1>

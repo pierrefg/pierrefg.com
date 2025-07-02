@@ -1,12 +1,12 @@
 .sub-menu-container {
-    @apply h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)] w-full;
+    @apply h-[var(--secondary-menu-mobile-height)] lg:h-[var(--secondary-menu-height)] w-full;
 }
 
 .sub-menu-layout {
     @apply flex left-0 w-full items-center justify-center z-40;
     @apply bg-[theme('colors.foreground')] bg-opacity-10;
-    @apply top-[var(--primary-menu-mobile-height)] md:top-[var(--primary-menu-height)] ;
-    @apply h-[var(--secondary-menu-mobile-height)] md:h-[var(--secondary-menu-height)];
+    @apply top-[var(--primary-menu-mobile-height)] lg:top-[var(--primary-menu-height)] ;
+    @apply h-[var(--secondary-menu-mobile-height)] lg:h-[var(--secondary-menu-height)];
     @apply transition-colors duration-300 ease-in-out;
 }
 

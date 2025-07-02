@@ -2,10 +2,10 @@ import { photoData } from './content/data';
 
 import Gallery from '@/components/gallery/Gallery';
 
-import ImageCarrousel from '@/components/gallery/ImageCarrousel';
+import ImageGrid from '@/components/gallery/ImageGrid';
 
 export default function Photography() {
     return (
-        <Gallery galleryContent = {photoData} GalleryObject={ImageCarrousel} />
+        <Gallery galleryContent = {photoData} GalleryObject={ImageGrid} />
     );
 }

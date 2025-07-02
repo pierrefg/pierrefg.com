@@ -98,7 +98,10 @@ export default function ImageCarrousel({ content, size=350 }) {
             toShowInOverlay &&
             <Overlay onClose={() => setToShowInOverlay(null)}>{toShowInOverlay}</Overlay>
         }
-        <div className="gallery">
+        <div 
+            className="gallery"
+            onClick={(e) => e.stopPropagation()}
+        >
             { ImageCarrousel.makeTitle(content) }
             
             <div 
