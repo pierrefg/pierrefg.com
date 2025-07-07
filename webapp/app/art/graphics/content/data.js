@@ -13,8 +13,10 @@ import { maternelle } from "./maternelle/data";
 import { fantome } from "./fantome/data";
 import { darkmatter } from "./darkmatter/data";
 import { fleurs } from "./fleurs/data";
+import { anomalie } from "./anomalie/data";
 
 export const graphicsData = [
+    anomalie,
     fleurs,
     darkmatter,
     fantome,
@@ -22,7 +24,7 @@ export const graphicsData = [
     orangeViolet,
     yahtzee,
     planets,
-    // monsters,
+    monsters,
     Zzzzzzz,
     pastel,
     tdG,
