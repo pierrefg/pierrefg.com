@@ -1,5 +1,15 @@
 const servicesData = [
     {
+        title: 'Photographie',
+        content: <>
+            <ul>
+                <li>couverture événementielle (soirées, concerts, mariages...)</li>
+                <li>portraits</li>
+                <li>photo-reportage</li>
+            </ul>
+        </>
+    },
+    {
         title: 'Graphisme',
         subtitle: 'Toutes les prestations sont réalisées sur la suite Adobe.',
         content: <>
@@ -12,22 +22,13 @@ const servicesData = [
             </ul>
         </>
     },
-    {
-        title: 'Photographie',
-        content: <>
-            <ul>
-                <li>couverture événementielle</li>
-                <li>portraits</li>
-                <li>photo-reportage</li>
-            </ul>
-        </>
-    },
-    {
-        title: 'Audiovisuel et motion design',
-        content: <>
-            [WIP]
-        </>
-    }
+    
+    // {
+    //     title: 'Audiovisuel et motion design',
+    //     content: <>
+    //         [WIP]
+    //     </>
+    // }
 ]
 
 export default function Services() {
