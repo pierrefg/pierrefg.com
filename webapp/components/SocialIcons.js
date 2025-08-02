@@ -5,11 +5,11 @@ import { SlSocialSoundcloud } from "react-icons/sl";
 export default function SocialIcons() {
     var socialIcons = [
         [AiOutlineInstagram, "https://www.instagram.com/pierre_fg/"],
-        [AiOutlineYoutube, "https://www.youtube.com/@pierrefg"],
-        [SlSocialSoundcloud, "https://soundcloud.com/pierrefg"],
-        [AiOutlineLinkedin, "https://www.linkedin.com/in/pierrefg/"],
+        [SlSocialSoundcloud, "https://soundcloud.com/p1ps_music"],
+        // [AiOutlineYoutube, "https://www.youtube.com/@pierrefg"],
         [HiOutlineAcademicCap, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
-        [AiOutlineGithub, "https://github.com/PierreFG"],
+        [AiOutlineLinkedin, "https://www.linkedin.com/in/pierrefg/"],
+        // [AiOutlineGithub, "https://github.com/PierreFG"],
     ]
 
     return (
