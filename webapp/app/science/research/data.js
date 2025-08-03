@@ -9,6 +9,7 @@ export const researchData =
         {
             id: 'thesis',
             icon: IoHammerOutline,
+            type: 'Thèse',
             title: 'Connaissances du Domaine et Fonctions en Science des Données',
             subtitle: "Application à la Production d'Hydroélectricité",
             period: "2020-23",
@@ -120,6 +121,7 @@ export const researchData =
         {
             id: 'mthesis',
             icon: MdOutlineWater,
+            type: 'Thèse de master',
             title: "Apprentissage Profond pour la Détection et l'Identification Automatique de Diatomées",
             subtitle:  "pour le Diagnostic Écologique des Milieux d'Eau Douce",
             period: "2020 (6 mois)",

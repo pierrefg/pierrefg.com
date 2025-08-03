@@ -6,7 +6,12 @@ export default function Project({data}) {
     return (
         <div id={data.id} className="flex flex-col gap-6">
             {
-                data.icon && <div><data.icon className="text-3xl mx-auto " /></div>
+                data.icon && (
+                <div className="flex justify-center items-center gap-2 text-center">
+                    <data.icon className="text-3xl" />
+                    {data.type && <h3>{data.type}</h3>}
+                </div>
+                )
             }
 
             <div className="text-center">
