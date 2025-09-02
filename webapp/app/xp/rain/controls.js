@@ -9,9 +9,9 @@ export default function Controls({ audioStarted, handleStartAudio }) {
       <h1 className="text-4xl">RAIN</h1>
       <div className="flex flex-row gap-2">
         <SimpleLink content={{ icon: <AiOutlineHome />, link: '/' }} />
-        <button onClick={handleStartAudio} className="btn btn-secondary">
+        {/* <button onClick={handleStartAudio} className="btn btn-secondary">
           {audioStarted ? <MdOutlineMusicOff /> : <MdOutlineMusicNote />}
-        </button>
+        </button> */}
       </div>
     </div>
   );
