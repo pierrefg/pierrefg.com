@@ -28,8 +28,12 @@ import { diversMai25 } from "./divers_mai25/data";
 import { diversJuin25 } from "./divers_juin25/data";
 import { voyageVelo } from "./voyage_velo/data";
 import { mariageA } from "./mariageA/data";
+import { mrcastle } from "./mrcastle/data";
+import { bloquons_tout } from "./bloquons_tout/data";
 
 export const photoData = [
+    bloquons_tout,
+    mrcastle,
     mariageA,
     pride25,
     diversJuin25,
