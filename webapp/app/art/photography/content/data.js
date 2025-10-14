@@ -30,8 +30,10 @@ import { voyageVelo } from "./voyage_velo/data";
 import { mariageA } from "./mariageA/data";
 import { mrcastle } from "./mrcastle/data";
 import { bloquons_tout } from "./bloquons_tout/data";
+import { marche_resist25 } from "./marche_resist/data";
 
 export const photoData = [
+    marche_resist25,
     bloquons_tout,
     mrcastle,
     mariageA,

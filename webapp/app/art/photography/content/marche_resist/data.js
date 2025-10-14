@@ -9,18 +9,17 @@ import imgH from './H.jpg';
 import imgI from './I.jpg';
 import imgJ from './J.jpg';
 import imgK from './K.jpg';
-import imgL from './L.jpg';
 
-export const bloquons_tout = {
-    title: 'Bloquons tout',
+export const marche_resist25 = {
+    title: 'Marche des Résistances',
     date: 'Septembre 2025',
     place: 'Lyon',
     imgs: [
         {
-            img: imgB
+            img: imgA
         },
         {
-            img: imgA
+            img: imgB
         },
         {
             img: imgC
@@ -48,9 +47,6 @@ export const bloquons_tout = {
         },
         {
             img: imgK
-        },
-        {
-            img: imgL
-        },
+        }
     ]
 }
