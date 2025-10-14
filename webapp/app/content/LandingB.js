@@ -42,7 +42,7 @@ export default function About() {
                             )
                         }
                         <div className="text-primary-muted text-small">
-                            Merci à Pierre Fimbel et Arthur Navarro de m'avoir tiré le portrait.
+                            Merci à Charlotte Delfosse et Arthur Navarro de m'avoir tiré le portrait.
                         </div>
                     </div>
                 </SideImageLayout>

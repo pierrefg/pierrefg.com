@@ -17,7 +17,7 @@ export const dataScienceData =
             icon: SlEnergy,
             title: "Surveillance de l'entrefer dans des turbines hydro-électriques compactes",
             subtitle: "traitement du signal, visualisation",
-            period: "2023-*",
+            period: "2023-2024 (1 an)",
             img: airgapPic,
             imgLegend: "Déplié 3D de la valeur d'entrefer dans une turbine hydroélectrique.",
             summary: <>
@@ -61,7 +61,7 @@ export const dataScienceData =
             img: saosPic,
             imgLegend: "Visualisation du spectrograme de MEL d'un enregistrement de sommeil avec labels médicaux sur le dessous.",
             summary: <>
-                En France , les structures pédiatriques réalisant une polygraphe (PG) respiratoire du sommeil sont rares, impliquant un délai d’examen souvent déraisonnable avec une perte de chance pour l'enfant atteint de SAS. La présente étude ouvre la voie à une assistance à la lecture des enregistrements PG, dans l’objectif de réduire ces délais. Nous nous intéressons à la détection automatique des phases d’éveil / sommeil. Pour ce faire, nous choisissons d’exploiter le son (NOX®), qui est le signal le plus fiable chez l’enfant. La détection des phases d'éveil à partir d'enregistrements audio reste un défi technologique et a été très peu étudiée sur des cohortes pédiatriques.
+                En France, les structures pédiatriques réalisant une polygraphe (PG) respiratoire du sommeil sont rares, impliquant un délai d’examen souvent déraisonnable avec une perte de chance pour l'enfant atteint de SAS. La présente étude ouvre la voie à une assistance à la lecture des enregistrements PG, dans l’objectif de réduire ces délais. Nous nous intéressons à la détection automatique des phases d’éveil / sommeil. Pour ce faire, nous choisissons d’exploiter le son (NOX®), qui est le signal le plus fiable chez l’enfant. La détection des phases d'éveil à partir d'enregistrements audio reste un défi technologique et a été très peu étudiée sur des cohortes pédiatriques.
                 <br />
                 La cohorte étudiée est constituée de 1388 enfants âgés de 1 an et demi à 17 ans, dont 62 % de garçons, avec un IMC moyen de 19,82. Les antécédents médicaux des participants sont variés. Les annotations éveil / sommeil proviennent d’une double lecture par des praticiens certifiés du sommeil. Après expérimentation, le modèle de machine learning retenu est XGBoost, reconnu pour sa robustesse et l'explicabilité de ses résultats. Pour l’entraînement, un échantillon aléatoire de 500 individus, représentant 8150 heures d’audio, a été utilisé. Le son a été découpé en époques standards et un ensemble d’attributs temporels et fréquentiels a été extrait.
                 <br />
@@ -79,7 +79,7 @@ export const dataScienceData =
             img: tsnePic,
             imgLegend: "Visualisation TSNE des pièces 3D dans l'espace des embeddings. Les couleurs représentent les classes des pièces.",
             summary: <>
-                Dans ce projet, nous avons analysés des pièces d'usinage 3D au format <i>.step</i>.
+                Dans ce projet, nous avons analysé des pièces d'usinage 3D au format <i>.step</i>.
                 Les pièces ont été converties dans un espace vectoriel latent permettant leur comparaison sur des critères visuel.
                 Nous avons alors proposé un système permettant de réunir automatiquement des pièces aux caractéristiques similiaires grâce à plusieurs techniques de clustering complémentaires.
                 <br />
