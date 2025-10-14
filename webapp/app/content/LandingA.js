@@ -26,7 +26,7 @@ export default function LandingTop() {
         <>
             <div className={`absolute h-full w-full z-10 pointer-events-none ${!darkMode ? 'opacity-40' : ''}`}>
                 <Snake color = "purple" big_interval_time={3000}/>
-                <Snake color = "blue" big_interval_time={2000}/>
+                <Snake color = "#500052" big_interval_time={2000}/>
             </div>
 
             <div className='absolute left-4 top-4 z-50'>
