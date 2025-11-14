@@ -1,9 +1,17 @@
 export const workData = [
     {
         title: {
+            name: "Photographe et graphiste"
+        },
+        period: "2024-*",
+        type: "Auto-entrepreneur",
+        description: "Travailleur indépendant en photographie, graphisme et vidéo.",
+    },
+    {
+        title: {
             name: "Scientifique des données"
         },
-        period: "2023-*",
+        period: "2023-25",
         companies: [ 
             {
                 name: 'DataValor',
