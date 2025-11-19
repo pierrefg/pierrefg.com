@@ -30,7 +30,7 @@ export default function LandingTop() {
             </div>
 
             <div className='absolute left-4 top-4 z-50'>
-                <SimpleLink content={{title: <AiOutlineNumber />, link: '/xp'}} />
+                <SimpleLink content={{title: <AiOutlineNumber />, link: 'https://p1ps.net', extern: true}} />
             </div>
 
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
