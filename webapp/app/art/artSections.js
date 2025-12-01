@@ -30,10 +30,10 @@ export const artSections = [
         section: <Music />,
         fullWidth: true
     },
-    {
-        title: <><RiVideoOnLine className='title-icon' /> Vidéo</>,
-        id: 'video',
-        link: '/art#video',
-        section: <Video />
-    },
+    // {
+    //     title: <><RiVideoOnLine className='title-icon' /> Vidéo</>,
+    //     id: 'video',
+    //     link: '/art#video',
+    //     section: <Video />
+    // },
 ];
