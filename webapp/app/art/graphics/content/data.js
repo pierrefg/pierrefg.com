@@ -24,12 +24,12 @@ export const graphicsData = [
     orangeViolet,
     yahtzee,
     planets,
-    monsters,
+    // monsters,
     Zzzzzzz,
-    pastel,
+    // pastel,
     tdG,
-    thesis,
-    vague,
+    // thesis,
+    // vague,
     //trou,
     // infoRussie
 ]
