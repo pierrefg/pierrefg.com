@@ -85,7 +85,8 @@ export default function SubMenu({ pagesData }) {
                         const isActive = pathname+hash === el.link;
                         return (
                             <SimpleLink 
-                                key={index} 
+                                key={index}
+                                linkKey={index} 
                                 content={el}  
                                 active={isActive}
                             />

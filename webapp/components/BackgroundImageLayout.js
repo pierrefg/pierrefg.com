@@ -9,7 +9,7 @@ export default function BackgroundImageLayout({children, icon, title, coverPic})
                 <div className="absolute inset-0">
                     <Image
                         src={coverPic}
-                        alt="cover image"
+                        alt='cover picture'
                         layout="fill"
                         objectFit="cover"
                         objectPosition="center"

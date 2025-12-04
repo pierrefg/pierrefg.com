@@ -27,7 +27,7 @@ export default function MainLayout({ children }) {
                 <Analytics />
                 <SpeedInsights />
                 <Suspense fallback={<Loader />}>
-                    <div id="main-container" className={!darkMode && "light"}>
+                    <div id="main-container" className={!darkMode ? "light" : ""}>
                         {
                             ['/', '/xp'].includes(pathname) ?
                             <>{children}</>

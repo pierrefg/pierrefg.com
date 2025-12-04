@@ -13,9 +13,9 @@ export default function MenuLayout({ children }) {
     return (
         <div className='flex flex-col min-h-screen'>
             {/* ThemeSwitch positioning */}
-            <div className='z-50 fixed hidden lg:block bottom-[50px] right-[50px]'>  
+            {/* <div className='z-50 fixed hidden lg:block bottom-[50px] right-[50px]'>  
                 <ThemeSwitch />
-            </div>
+            </div> */}
 
             {/* MenuBar section */}
             <div className="z-30">

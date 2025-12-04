@@ -38,6 +38,7 @@ export default function Publications() {
         <div className="justify-center items-center flex flex-col gap-8">
             <Image
                 src={CoverPic}
+                alt='cover picture'
                 className="rounded-full w-[200px] h-[200px] mx-auto"
                 placeholder={'blur'}
                 priority

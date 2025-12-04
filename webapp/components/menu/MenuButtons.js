@@ -18,7 +18,8 @@ export default function MenuButtons({ toDoOnElementClick }) {
                         
                         return (
                             <SimpleLink 
-                                key={index} 
+                                key={index}
+                                linkKey={index} 
                                 content={el} 
                                 primary 
                                 large 
