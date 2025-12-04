@@ -1,31 +1,35 @@
 'use client';
 
 import React, { useEffect, useState } from "react";
-import { animated, useSpring } from "react-spring";
 
 export default function AnimatedText({ targetText }) {
-  const [show, setShow] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [delays, setDelays] = useState([]);
 
   useEffect(() => {
-    // Trigger the animation after component mounts
-    setShow(true);
-  }, []);
-
-  const springs = targetText.split("").map((item, index) =>
-    useSpring({
-      opacity: show ? 1 : 0, // Start at opacity 0 and animate to 1 when `show` becomes true
-      from: { opacity: 0 },
-      delay: index * 40 + Math.random() * 250,
-    })
-  );
+    setMounted(true);
+    // Generate random delays only on client
+    setDelays(
+      targetText.split("").map((_, i) => i * 50 + Math.random() * 200)
+    );
+  }, [targetText]);
 
   return (
-    <>
-      {targetText.split("").map((item, index) => (
-        <animated.span key={index} style={springs[index]}>
-          {item}
-        </animated.span>
+    <span className="animated-text">
+      {targetText.split("").map((char, index) => (
+        <span
+          key={index}
+          className="char"
+          style={{
+            opacity: mounted ? 1 : 0,
+            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
+            transition: `opacity 0.3s ease ${delays[index] || index * 50}ms, transform 0.3s ease ${delays[index] || index * 50}ms`,
+            display: 'inline-block'
+          }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </span>
       ))}
-    </>
+    </span>
   );
 }
