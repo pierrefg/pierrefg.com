@@ -35,7 +35,7 @@ export default function LandingTop() {
 
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
                 <div className="flex flex-col items-center gap-4 ">
-                    <div className="flex w-[150px] md:w-[175px]">
+                    <div className="flex w-[100px] md:w-[175px]">
                         <Portrait />
                     </div>
                     <div className="flex flex-col gap-1 text-center justify-center items-center w-full">
@@ -55,18 +55,17 @@ export default function LandingTop() {
                 <div className='py-4  md:py-8'>
                     <MenuBar />
                 </div>
-                <div className='flex flex-row gap-6 items-center'>
-                    <LuPartyPopper className='inline'/> 
+                <div className='flex flex-row gap-6 items-center text-small md:text-base mt-1 mb-1'>
+                    
                     <SimpleLink 
                         content={
                             {
-                                title: 'The Walking Flower - nouveau single',
+                                title: <>The Walking Flower (nouv. single&nbsp;<LuPartyPopper className='inline'/>)</>,
                                 link: 'https://soundcloud.com/p1ps_music/the_walking_flower',
                                 extern: true
                             }
                         } 
-                    /> 
-                    <LuPartyPopper className='inline'/>
+                    />
                 </div>
                 <SocialIcons />
                 {/* <div className='hidden md:block'>
