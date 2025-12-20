@@ -34,12 +34,12 @@ export default function ImageGrid({ content }) {
 
             <div className="relative max-h-[85%] w-5/6 md:w-4/5 overflow-y-auto p-4" onClick={(e) => e.stopPropagation()}>
                 
-                <div className='sticky p-4 bg-black text-center'>
+                <div className='p-4 bg-black text-center'>
                     {ImageGrid.makeTitle(content)}
                 </div>
 
                 {/* Masonry Columns */}
-                <div className="columns-1 sm:columns-2 md:columns-2 lg:columns-4 gap-4 space-y-4">
+                <div className="columns-2 sm:columns-2 md:columns-2 lg:columns-4 gap-4 space-y-4">
                     {content.imgs.map((el, i) => (
                         <div
                             key={i}
