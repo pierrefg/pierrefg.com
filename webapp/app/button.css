@@ -1,0 +1,58 @@
+.btn {
+    /* @apply px-[6px] py-[2px] cursor-pointer whitespace-nowrap; */
+    @apply px-[6px] py-[2px] cursor-pointer;
+    @apply border-2 border-hidden;
+    @apply transition-colors duration-300 ease-in-out;
+    font-family: "cofo-sans-mono-variable", sans-serif;
+    font-variation-settings: "wght" 450;
+}
+
+.btn:hover {
+    @apply animate-pulse;
+}
+
+.btn.active {
+    @apply  rotate-3;
+}
+
+.btn-large {
+    @apply px-[7px] py-[5px];
+}
+
+.btn-tight {
+    @apply p-0;
+}
+
+.btn-primary {
+   @apply bg-primary;
+   @apply text-foreground;
+   @apply border-solid border-primary;
+}
+
+.btn-primary:hover {
+    @apply bg-primary-hover text-white border-primary-hover;
+}
+
+.btn-primary.active {
+    @apply bg-primary-hover text-white border-primary-hover;
+}
+
+.btn-secondary {
+    @apply bg-foreground;
+    @apply text-primary text-center;
+    @apply border-solid border-primary;
+    @apply hover:text-primary;
+    @apply inline-flex justify-center items-center;
+}
+
+.btn-secondary:hover {
+    @apply border-secondary-hover;
+}
+
+.btn-secondary.active {
+    @apply border-secondary-hover text-primary;
+}
+
+.btn-secondary.disabled {
+    @apply text-primary-muted border-primary-muted animate-none cursor-no-drop;
+}

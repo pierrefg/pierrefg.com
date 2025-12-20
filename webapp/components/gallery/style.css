@@ -1,0 +1,43 @@
+.img-div {
+    @apply shrink-0 snap-center snap-always pb-4 flex justify-center w-full;
+    @apply md:justify-normal md:w-auto;
+}
+
+.img-carrousel {
+    @apply flex flex-row gap-[20px] mx-auto;
+    @apply overflow-x-scroll snap-x snap-mandatory ;
+    @apply scroll-smooth;
+    @apply md:snap-none;
+}
+
+.gallery {
+    @apply flex flex-col gap-0;
+    
+    ::-webkit-scrollbar {
+        @apply md:hidden;
+    }
+}
+
+.gallery-light {
+    @apply text-black bg-white;
+
+    ::-webkit-scrollbar {
+        @apply md:hidden;
+    }
+}
+
+.gallery-dark {
+    @apply text-white bg-black;
+
+    ::-webkit-scrollbar {
+        @apply md:hidden;
+    }
+}
+
+.circle {
+    @apply rounded-full bg-primary-muted w-[5px] h-[5px] opacity-50;
+}
+
+.circle.active {
+    @apply bg-primary opacity-80;
+}

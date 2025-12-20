@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* MENU */
+    --primary-menu-height: 75px; /* Default primary menu height */
+    --primary-menu-mobile-height: 70px;
+    --secondary-menu-height: 90px; /* Default secondary menu height */
+    --secondary-menu-mobile-height: 75px;
+    /* FOREGROUND */
+    --foreground-rgb: 0, 0, 0; /* Background color */
+    /* PRIMARY */
+    --primary-color-rgb: 255, 255, 255; /* Button primary color */
+    --primary-hover-color-rgb: 128, 0, 128; /* Button primary hover color */
+    --primary-muted-color-rgb: 180, 180, 180;
+    /* SECONDARY */
+    --secondary-color-rgb: 0, 0, 0; /* Button secondary color */
+    --secondary-hover-color-rgb: 128, 0, 128; /* Button secondary hover color */
+    /* SPACING */
+    --btn-padding-x: 12px; /* Button padding x */
+    --btn-padding-y: 8px; /* Button padding y */
+
+    color-scheme: dark;
+}
+
+#main-container.light {
+    --foreground-rgb: 255, 255, 255; /* Background color */
+    /* PRIMARY */
+    --primary-color-rgb: 0, 0, 0; /* Button primary color */
+    --primary-hover-color-rgb: 128, 0, 128; /* Button primary hover color */
+    --primary-muted-color-rgb: 70, 70, 70;
+    /* SECONDARY */
+    --secondary-color-rgb: 255, 255, 255; /* Button secondary color */
+    --secondary-hover-color-rgb: 128, 0, 128; /* Button secondary hover color */
+}
+
+html {
+    @apply bg-foreground text-base;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height)); */
+
+    font-family: "cofo-sans-mono-variable", sans-serif;
+    font-variation-settings: "wght" 400;
+}
+
+.scroll-padding {
+    scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height));
+}
+
+h1 {
+    @apply text-4xl;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2 {
+    @apply text-xl;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h3 {
+    @apply text-lg;
+    font-family: josefin-sans, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.text-small {
+    @apply text-sm;
+}
+
+a {
+    @apply hover:text-primary-hover cursor-pointer;
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.icon {
+    @apply text-2xl inline;
+}
+
+.title-icon {
+    @apply inline mr-2;
+}
+
+li {
+    @apply relative pl-3 my-2;
+}
+
+li::before {
+    content: '> '; /* Empty content for the dot */
+    transform: translateY(-100%);
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg); /* Keep the rotation at 360 degrees for the last 20% */
+    }
+    80% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+
+  }
+  
+.rotate-animation {
+    animation: rotate360 5s linear infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.timeline-container {
+    @apply max-w-4xl mx-auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.max-h-5-6 {
+  max-height: 83.3333%;
+}

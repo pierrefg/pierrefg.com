@@ -1,0 +1,5 @@
+.timeline .timeline-title {
+    @apply flex text-primary p-4 justify-center items-center 
+        border-b-2 border-primary 
+        md:border-r-2 md:justify-end md:border-0;
+}

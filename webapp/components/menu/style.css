@@ -1,0 +1,16 @@
+.menu-bar {
+    @apply fixed top-[0px] w-full bg-foreground ;
+    @apply border-solid border-b-2 border-b-primary-muted;
+    @apply h-[var(--primary-menu-mobile-height)] lg:h-[var(--primary-menu-height)];
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.mobile-menu-bar {
+    @apply lg:hidden flex flex-col items-center gap-6 bg-foreground pt-4;
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.menu-content {
+    @apply flex-grow flex-1 w-full mx-auto;
+    @apply mt-[var(--primary-menu-mobile-height)] lg:mt-[var(--primary-menu-height)];
+}

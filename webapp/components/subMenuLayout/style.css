@@ -1,0 +1,27 @@
+.sub-menu-container {
+    @apply h-[var(--secondary-menu-mobile-height)] lg:h-[var(--secondary-menu-height)] w-full;
+}
+
+.sub-menu-layout {
+    @apply flex left-0 w-full items-center justify-center z-40;
+    @apply bg-[theme('colors.foreground')] bg-opacity-10;
+    @apply top-[var(--primary-menu-mobile-height)] lg:top-[var(--primary-menu-height)] ;
+    @apply h-[var(--secondary-menu-mobile-height)] lg:h-[var(--secondary-menu-height)];
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.sub-menu {
+    @apply flex flex-row gap-4 overflow-x-auto whitespace-nowrap px-4 z-40;
+    @apply h-full;
+    @apply items-center;
+}
+
+.sub-menu-content {
+    @apply flex flex-col w-full justify-center;
+    /* @apply mt-[var(--secondary-menu-mobile-height)];
+    @apply md:mt-[var(--secondary-menu-height)]; */
+}
+
+.sticky {
+    @apply fixed;
+}

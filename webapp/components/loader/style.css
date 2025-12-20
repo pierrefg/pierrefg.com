@@ -1,0 +1,17 @@
+.loader-div {
+    @apply fixed inset-0 flex items-center justify-center bg-[theme('colors.foreground')] z-50;
+}
+
+.square-loader {
+    @apply bg-primary-hover border-solid border-2 border-white;
+    animation: rotate 3s linear infinite;
+}
+  
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
