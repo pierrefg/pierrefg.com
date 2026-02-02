@@ -31,7 +31,7 @@ module.exports = {
       height: {
         'primary-menu': 'var(--primary-menu-height)',
         'secondary-menu': 'var(--secondary-menu-height)',
-        'secondary-menu-mobile': 'var(--secondary-menu-mobile-height)'
+        'secondary-menu-mobile': 'var(--secondary-menu-mobile-height)',
       },
       keyframes: {
         fadeIn: {
@@ -50,9 +50,24 @@ module.exports = {
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         rotate: 'rotate 20s linear infinite',
-        slideIn: 'slideIn 1s ease-in-out'
+        slideIn: 'slideIn 1s ease-in-out',
       },
     },
   },
-  plugins: [],
+
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.slant-sm': {
+          fontVariationSettings: "'slnt' -5",
+        },
+        '.slant-md': {
+          fontVariationSettings: "'slnt' -10",
+        },
+        '.slant-lg': {
+          fontVariationSettings: "'slnt' -14",
+        },
+      })
+    },
+  ],
 };

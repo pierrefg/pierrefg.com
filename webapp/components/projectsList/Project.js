@@ -16,7 +16,7 @@ export default function Project({data}) {
 
             <div className="text-center">
                 <h3>{data.title}</h3>
-                <p className="italic">{data.subtitle}</p>
+                <p className="slant-sm">{data.subtitle}</p>
                 <p className="pt-6">{data.period}</p>
             </div>
             
@@ -68,7 +68,7 @@ export default function Project({data}) {
                             alt='project cover picture'
                             className="mx-auto rounded-full w-3/5 md:w-[250px]"
                         />
-                        <p className="text-primary-muted italic pt-2">{data.imgLegend}</p>
+                        <p className="text-primary-muted slant-sm pt-2">{data.imgLegend}</p>
                     </div>
                 }  
                 

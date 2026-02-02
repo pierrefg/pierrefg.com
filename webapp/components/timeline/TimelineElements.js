@@ -116,7 +116,7 @@ export default function TimelineElement({ elementData, authorData, largeDate=fal
                     {/* DESCRIPTION */}
                     {
                         elementData.description &&
-                            <div className="italic">
+                            <div className="slant-sm">
                                 <><FaCircleInfo className="inline" /> </>
                                 {elementData.description}
                             </div>

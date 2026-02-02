@@ -29,7 +29,7 @@ export const mainMenuLinks = [
         icon: <LuPaintbrush className='icon'/>,
         title: 'Porfolio artistique',
         link: '/art',
-        description: "De graphisme spatial à photographie militante en passant par motion design et musique électroacoustique, vous trouverez ici un aperçu de mes activités artistiques ! ",
+        description: "De graphisme spatial à photographie militante en passant par vidéo et musique électroacoustique, vous trouverez ici un aperçu de mes activités artistiques ! ",
         coverPic: artCover
     },
     {
