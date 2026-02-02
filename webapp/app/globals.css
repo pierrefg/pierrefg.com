@@ -36,13 +36,10 @@
 }
 
 html {
-    @apply bg-foreground text-base;
+    @apply bg-foreground text-base font-mona;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    /* scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height)); */
-
-    font-family: "cofo-sans-mono-variable", sans-serif;
-    font-variation-settings: "wght" 400;
+    scroll-padding-top: calc(var(--primary-menu-height) + var(--secondary-menu-height));
 }
 
 .scroll-padding {
@@ -50,24 +47,15 @@ html {
 }
 
 h1 {
-    @apply text-4xl;
-    font-family: josefin-sans, sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    @apply text-4xl font-josefin font-bold;
 }
 
 h2 {
-    @apply text-xl;
-    font-family: josefin-sans, sans-serif;
-    font-weight: 600;
-    font-style: normal;
+    @apply text-xl font-josefin font-semibold;
 }
 
 h3 {
-    @apply text-lg;
-    font-family: josefin-sans, sans-serif;
-    font-weight: 600;
-    font-style: normal;
+    @apply text-lg font-josefin font-semibold;
 }
 
 

@@ -20,9 +20,13 @@ module.exports = {
           muted: 'rgb(var(--secondary-muted-color-rgb))',
         },
       },
+      fontFamily: {
+        josefin: ['var(--font-josefin)'],
+        mona: ['var(--font-mona)'],
+      },
       fontSize: {
-        base: '15px', // Default for mobile (since Tailwind is mobile-first)
-        lg: '16px',   // Larger screens (e.g., "lg" breakpoint and above)
+        base: '14px',
+        lg: '17px',
       },
       height: {
         'primary-menu': 'var(--primary-menu-height)',
