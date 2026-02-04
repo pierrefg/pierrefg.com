@@ -22,8 +22,8 @@ const servicesData = [
         content: <>
             <ul>
                 <li>couverture événementielle (soirées, concerts, mariages...)</li>
-                <li>portraits</li>
                 <li>photo-reportage</li>
+                <li>portraits</li>
             </ul>
         </>
     },
@@ -33,10 +33,7 @@ const servicesData = [
         content: <>
             <ul>
                 <li>affiches, flyers, cartes de visite, stickers...</li>
-                <li>création de graphiques associés à des données</li>
                 <li>mise en page, typographie</li>
-                <li>logos</li>
-                <li>possibilité d'animation</li>
             </ul>
         </>
     },
