@@ -81,8 +81,17 @@ li {
 }
 
 li::before {
-    content: '> '; /* Empty content for the dot */
+    content: '> ';
     transform: translateY(-100%);
+}
+
+li li {
+  @apply pl-5 text-sm;
+}
+
+li li::before {
+  content: '~';
+  /* @apply absolute left-0 text-gray-400; */
 }
 
 @keyframes rotate360 {

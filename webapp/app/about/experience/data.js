@@ -26,7 +26,7 @@ export const workData = [
                 text: "Voir plus"
             }
         ],
-        description: "Travailler à Datavalor m'a permis d'explorer une large palette de problématiques de vision par ordinateur à traitement du langage naturel et traitement du signal.",
+        description: "Signaux médicaux, surveillance de turbines, aide au recrutement, objets 3d, analyse de docs non-structurés",
     },
     {
         title: {
@@ -53,7 +53,7 @@ export const workData = [
                 text: "Voir plus"
             }
         ],
-        description: "Pendant cette thèse, j'ai développé des solutions pratiques et théoriques afin de faciliter le dialogue entre experts métiers et scientifiques des données.",
+        description: "Dialogue experts métier/scientifiques des données, algorithmie, complexité, visualisation",
     },
     {
         title: {
@@ -74,7 +74,7 @@ export const workData = [
                 text: "Voir plus"
             }
         ],
-        description: "Pendant cette thèse de master, j'ai travaillé conjointement avec des biologistes afin de développer une solution permettant de reconnaitre automatiquement des organismes unicellulaires dans les eaux fluviales.",
+        description: "Vision par ordinateur, génération d’images synthétiques, biologie fluviale",
     },
     {
         title: {
@@ -90,7 +90,7 @@ export const workData = [
             }
         ],
         type: "Stage",
-        description: "J'ai travaillé avec une équipe AGILE sur le développement d'un grand produit de Worldline (Contact). En parallèle, j'ai également collaboré étroitement avec la R&D sur des problématiques de langage naturel.",
+        description: "Codage en équipe, recherche en traitement du langage naturel",
     },
     {
         title: { 
@@ -106,7 +106,7 @@ export const workData = [
             }
         ],
         type: "Stage",
-        description: "Ce stage de gestion SAP m'a permis d'approfondir mes connaissances techniques (Unix, réseau, base de données, web...) et mes capacités à travailler en équipe.",
+        description: "Unix, réseau, base de données, web",
     },
     {
         title: {
@@ -122,6 +122,6 @@ export const workData = [
             }
         ],
         type: "Stage",
-        description: "Ce stage m'a permis d'acquérir des connaissances sur le fonctionnement de l'entreprise et de sa chaîne de production.",
+        description: "Fonctionnement de l'entreprise et de sa chaîne de production.",
     },
 ];

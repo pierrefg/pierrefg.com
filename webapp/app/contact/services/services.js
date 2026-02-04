@@ -1,5 +1,23 @@
 const servicesData = [
     {
+        title: 'Informatique',
+        content: <>
+            <ul>
+                <li>science des données
+                <ul>
+                    <li>visualisation des données</li>
+                    <li>vision par ordinnateur</li>
+                    <li>traitement du signal</li>
+                    <li>traitement du langage naturel</li>
+                    <li>conception de models prédictifs</li>
+                </ul>
+                </li>
+                <li>développement d'applications full-stack</li>
+                <li>conception et developpement de sites web</li>
+            </ul>
+        </>
+    },
+    {
         title: 'Photographie',
         content: <>
             <ul>
@@ -11,7 +29,7 @@ const servicesData = [
     },
     {
         title: 'Graphisme',
-        subtitle: 'Toutes les prestations sont réalisées sur la suite Adobe.',
+        // subtitle: 'Toutes les prestations sont réalisées sur la suite Adobe.',
         content: <>
             <ul>
                 <li>affiches, flyers, cartes de visite, stickers...</li>
@@ -22,13 +40,6 @@ const servicesData = [
             </ul>
         </>
     },
-    
-    // {
-    //     title: 'Audiovisuel et motion design',
-    //     content: <>
-    //         [WIP]
-    //     </>
-    // }
 ]
 
 export default function Services() {
