@@ -1,7 +1,7 @@
 'use client';
 
 import './style.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import SimpleLink from '../SimpleLink';
 
@@ -9,18 +9,25 @@ export default function SubMenu({ pagesData }) {
     const pathname = usePathname();
     const [hash, setHash] = useState('');
 
+    // refs for horizontal auto-scroll
+    const menuRef = useRef(null);
+    const itemRefs = useRef([]);
+
     // HANDLING HASH UPDATE BASED ON SCROLL POSITION
     useEffect(() => {
         const handleScroll = () => {
-            let sections = document.querySelectorAll('.page-section');
-            let scrollPosition = window.scrollY + window.innerHeight / 3;
+            const sections = document.querySelectorAll('.page-section');
+            const scrollPosition = window.scrollY + window.innerHeight / 3;
 
             sections.forEach((section, index) => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
 
-                // Regular case for all sections except the last one
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Regular case
+                if (
+                    scrollPosition >= sectionTop &&
+                    scrollPosition < sectionTop + sectionHeight
+                ) {
                     const sectionId = section.getAttribute('id');
                     if (sectionId && `#${sectionId}` !== window.location.hash) {
                         setHash(`#${sectionId}`);
@@ -28,68 +35,98 @@ export default function SubMenu({ pagesData }) {
                     }
                 }
 
-                // Special case for the last section when reaching full scroll
+                // Last section special case
                 if (
-                    window.innerHeight + window.scrollY >= document.body.offsetHeight && 
+                    window.innerHeight + window.scrollY >=
+                        document.body.offsetHeight &&
                     index === sections.length - 1
                 ) {
                     const lastSectionId = section.getAttribute('id');
-                    if (lastSectionId && `#${lastSectionId}` !== window.location.hash) {
+                    if (
+                        lastSectionId &&
+                        `#${lastSectionId}` !== window.location.hash
+                    ) {
                         setHash(`#${lastSectionId}`);
-                        history.pushState(null, null, `${pathname}#${lastSectionId}`);
+                        history.pushState(
+                            null,
+                            null,
+                            `${pathname}#${lastSectionId}`
+                        );
                     }
                 }
             });
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [pathname]);
 
-    // HANDLING SCROLLING AND STICKING
+    // HANDLING STICKY MENU
     useEffect(() => {
         const subMenu = document.querySelector('.sub-menu-layout');
+        if (!subMenu) return;
+
         const computedStyle = getComputedStyle(subMenu);
-        
-        let topValue = computedStyle.getPropertyValue('top');
-        topValue = parseInt(topValue, 10);
-    
-        // Capture the original offsetTop before the sticky class is applied
+        let topValue = parseInt(
+            computedStyle.getPropertyValue('top'),
+            10
+        );
+
         const originalOffsetTop = subMenu.offsetTop;
-    
+
         const handleStickyMenu = () => {
-            // Use the original offsetTop for all calculations
             if (window.scrollY + topValue > originalOffsetTop) {
                 subMenu.classList.add('sticky');
-                subMenu.style.top = `${topValue}px`;  // Maintain the top offset for sticky position
+                subMenu.style.top = `${topValue}px`;
             } else {
                 subMenu.classList.remove('sticky');
-                subMenu.style.top = '';  // Reset top to the original CSS
+                subMenu.style.top = '';
             }
         };
-    
+
         window.addEventListener('scroll', handleStickyMenu);
-    
-        return () => {
+        return () =>
             window.removeEventListener('scroll', handleStickyMenu);
-        };
     }, []);
+
+    // AUTO-SCROLL TO ACTIVE ITEM
+    useEffect(() => {
+        const activeIndex = pagesData.findIndex(
+            (el) => pathname + hash === el.link
+        );
+
+        const activeItem = itemRefs.current[activeIndex];
+
+        if (activeItem && menuRef.current) {
+            activeItem.scrollIntoView({
+                behavior: 'smooth',
+                inline: 'center',
+                block: 'nearest',
+            });
+        }
+    }, [hash, pathname, pagesData]);
 
     return (
         <div className="sub-menu-container">
             <div className="sub-menu-layout">
-                <div className="sub-menu">
+                <div className="sub-menu" ref={menuRef}>
                     {pagesData.map((el, index) => {
-                        const isActive = pathname+hash === el.link;
+                        const isActive =
+                            pathname + hash === el.link;
+
                         return (
-                            <SimpleLink 
+                            <div
                                 key={index}
-                                linkKey={index} 
-                                content={el}  
-                                active={isActive}
-                            />
+                                ref={(node) =>
+                                    (itemRefs.current[index] = node)
+                                }
+                            >
+                                <SimpleLink
+                                    linkKey={index}
+                                    content={el}
+                                    active={isActive}
+                                />
+                            </div>
                         );
                     })}
                 </div>
