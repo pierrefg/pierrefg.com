@@ -16,7 +16,7 @@ import { FaArrowDown } from "react-icons/fa";
 import AnimatedText from '@/components/animatedText';
 
 import SimpleLink from '@/components/SimpleLink';
-import { AiOutlineNumber } from "react-icons/ai";
+import { AiOutlineNumber, AiOutlineFilePdf } from "react-icons/ai";
 import { LuPartyPopper } from "react-icons/lu";
 
 export default function LandingTop() {
@@ -71,6 +71,19 @@ export default function LandingTop() {
                 {/* <div className='hidden md:block'>
                     <ThemeSwitch />
                 </div> */}
+                
+            </div>
+
+            <div className='absolute right-4 top-4 z-50'>
+                <SimpleLink 
+                    content={
+                        {
+                            title: <><AiOutlineFilePdf className='inline'/>&nbsp;Mon CV</>,
+                            link: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/cv_pierrefg.pdf',
+                            extern: true
+                        }
+                    } 
+                />
             </div>
             
             <div className="flex justify-center mb-8 z-20 ">
