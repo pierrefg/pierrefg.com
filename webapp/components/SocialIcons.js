@@ -9,7 +9,7 @@ export default function SocialIcons() {
         // [AiOutlineYoutube, "https://www.youtube.com/@pierrefg"],
         [HiOutlineAcademicCap, "https://scholar.google.com/citations?user=vl3UIQoAAAAJ"],
         [AiOutlineLinkedin, "https://www.linkedin.com/in/pierrefg/"],
-        // [AiOutlineGithub, "https://github.com/PierreFG"],
+        [AiOutlineGithub, "https://github.com/PierreFG"],
     ]
 
     return (
