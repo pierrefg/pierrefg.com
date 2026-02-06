@@ -4,7 +4,7 @@ export const publicationsData = [
             name: <>Computing the g3-error with Relaxed Equality: <br className="hidden md:block" /><i>Complexity, Algorithmic and Visualization</i></>,
         },
         authors: ['pierref', 'svilmin', 'jpetit', 'vscuturici'],
-        period: "en cours",
+        period: "À paraître, 2026",
         type: "Article de journal",
         companies: [ 
             {
