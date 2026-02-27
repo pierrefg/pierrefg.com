@@ -20,7 +20,7 @@ export default function Footer() {
                 </Link>
             </div>
             <div >
-                <AiOutlineCopyright className='inline'/> Pierre Faure--Giovagnoli, 2025
+                <AiOutlineCopyright className='inline'/> Pierre Faure--Giovagnoli, 2026
             </div>
         </div>
     );
