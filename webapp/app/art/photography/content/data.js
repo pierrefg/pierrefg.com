@@ -31,9 +31,11 @@ import { mariageA } from "./2025/mariageA/data";
 import { mrcastle } from "./2025/mrcastle/data";
 import { bloquons_tout } from "./2025/bloquons_tout/data";
 import { marche_resist25 } from "./2025/marche_resist/data";
-import { jvf } from "./journee_violences_femmes/data";
+import { jvf } from "./2025/journee_violences_femmes/data";
+import { rencurel } from "./2026/rencurel/data";
 
 export const photoData = [
+    rencurel,
     jvf,
     marche_resist25,
     bloquons_tout,
