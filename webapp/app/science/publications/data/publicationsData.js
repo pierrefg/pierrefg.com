@@ -1,10 +1,10 @@
 export const publicationsData = [
     {
         title: {
-            name: <>Computing the g3-error with Relaxed Equality: <br className="hidden md:block" /><i>Complexity, Algorithmic and Visualization</i></>,
+            name: <>Computing the g3-error with Relaxed Equality: <br className="hidden md:block" /><i>Complexity, Algorithms and Visualization</i></>,
         },
         authors: ['pierref', 'svilmin', 'jpetit', 'vscuturici'],
-        period: "À paraître, 2026",
+        period: "2026",
         type: "Article de journal",
         companies: [ 
             {
@@ -12,10 +12,16 @@ export const publicationsData = [
                 link: 'https://dl.acm.org/journal/tods'
             }
         ],
+        links: [
+            {
+                text: 'ACM (open access)',
+                url: 'https://dl.acm.org/doi/10.1145/3800938'
+            }
+        ]  
     },
     {
         title: {
-            name: <>Domain Knowledge and Functions in Data Science, <br className="hidden md:block" /><i>Application to Hydroelectricity Production</i></>,
+            name: <>Domain Knowledge and Functions in Data Science, <br className="hidden md:block"/><i>Application to Hydroelectricity Production</i></>,
         },
         authors: ['pierref'],
         period: "2023",

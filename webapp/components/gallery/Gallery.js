@@ -31,13 +31,12 @@ export default function Gallery({ galleryContent, GalleryObject }) {
                             <Image
                                 src={carrouselData.imgs[0].img}
                                 alt={`Image ${index + 1}`}
-                                //quality={50}
                                 sizes="(max-width: 768px) 50vw, (max-width: 1200px) 20vw, 10vw"
                                 className="object-cover rounded h-[200px] md:h-[300px]"
                             />
                         </div>
 
-                        <div className="h-[60px] flex items-center">
+                        <div className="h-[70px] flex items-center">
                             { GalleryObject.makeTitle(carrouselData) }
                         </div>
                     </div>

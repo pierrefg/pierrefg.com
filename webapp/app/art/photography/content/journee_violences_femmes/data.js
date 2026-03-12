@@ -12,7 +12,7 @@ import imgK from './K.jpg';
 import imgL from './L.jpg';
 
 export const jvf = {
-    title: 'Journée de lutte contre les violences faites aux femmes',
+    title: <span key='jvf'className='text-base leading-[0.1]'>Journée de lutte contre les violences faites aux femmes</span>,
     date: 'Novembre 2025',
     place: 'Lyon',
     imgs: [
