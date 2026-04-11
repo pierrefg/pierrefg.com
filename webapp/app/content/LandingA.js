@@ -60,8 +60,8 @@ export default function LandingTop() {
                     <SimpleLink 
                         content={
                             {
-                                title: <>The Walking Flower (nouv. single&nbsp;<LuPartyPopper className='inline'/>)</>,
-                                link: 'https://soundcloud.com/p1ps_music/the_walking_flower',
+                                title: <>Echoes from the Garden (nouv. EP&nbsp;<LuPartyPopper className='inline'/>)</>,
+                                link: 'https://soundcloud.com/p1ps_music/sets/echoes_from_the_garden',
                                 extern: true
                             }
                         } 
