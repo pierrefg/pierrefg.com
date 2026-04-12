@@ -31,7 +31,7 @@ export default function PlaylistPlayer({playlist}) {
                         <Image
                             src={playlist.cover}
                             alt={`${playlist.title}-cover`}
-                            className={`border-white border-2 transition-rounded ease-in-out duration-[5s] animate-rotate mx-auto ${
+                            className={`transition-rounded ease-in-out duration-[5s] animate-rotate mx-auto ${
                                 !isPlaying && 'paused'
                             } ${
                                 hasNeverPlayed ? 'rounded-none' : 'rounded-full'
