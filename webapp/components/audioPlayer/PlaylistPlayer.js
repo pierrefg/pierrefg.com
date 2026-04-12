@@ -27,11 +27,11 @@ export default function PlaylistPlayer({playlist}) {
             <div className='w-full max-w-lg mx-auto p-2 mb-2'>
                 
                 <div className='flex md:flex-row flex-col gap-4'>
-                    <div className={`cursor-pointer mx-auto w-2/6 md:w-2/6 hover:opacity-70 ${isSeeking && 'animate-pulse'}`}>
+                    <div className={` cursor-pointer mx-auto w-2/6 md:w-2/6 hover:opacity-70 ${isSeeking && 'animate-pulse'}`}>
                         <Image
                             src={playlist.cover}
                             alt={`${playlist.title}-cover`}
-                            className={`transition-rounded ease-in-out duration-[5s] animate-rotate mx-auto ${
+                            className={`border-white border-2 transition-rounded ease-in-out duration-[5s] animate-rotate mx-auto ${
                                 !isPlaying && 'paused'
                             } ${
                                 hasNeverPlayed ? 'rounded-none' : 'rounded-full'
