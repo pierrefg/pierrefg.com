@@ -7,7 +7,7 @@ export const perceptionData = {
     releasedDate: '2024',
     fullLink: {
         title: 'Streaming',
-        link: 'https://song.link/p1ps_perception',
+        link: 'https://song.link/p1ps-perception',
         extern: true
     },
     description: 'Compilation de musiques électroacoustiques réalisées entre 2007 et 2017.',
