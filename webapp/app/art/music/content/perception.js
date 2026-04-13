@@ -14,31 +14,31 @@ export const perceptionData = {
     tracks: [
         {
             title: 'Prélude',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/01_Prelude.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/01_prelude.mp3'
         },
         {
             title: 'Alternance',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/02_Alternance.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/02_alternance.mp3'
         },
         {
             title: 'Éclipse',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/03_Eclipse.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/03_eclipse.mp3'
         },
         {
             title: 'Décadence',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/04_Decadence.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/04_decadence.mp3'
         },
         {
             title: 'Volume',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/05_Volume.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/05_volume.mp3'
         },
         {
             title: 'Rêverie',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/06_Reverie.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/06_reverie.mp3'
         },
         {
             title: 'Sable',
-            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/07_Sable.mp3'
+            url: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/sound/perception/07_sable.mp3'
         },
     ]
 }
