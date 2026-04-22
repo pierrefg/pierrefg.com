@@ -6,8 +6,8 @@ export const echoesFromTheGarden = {
     cover: cover,
     releasedDate: '2026',
     fullLink: {
-        title: 'Soundcloud',
-        link: 'https://soundcloud.com/p1ps_music/sets/echoes_from_the_garden',
+        title: 'Streaming',
+        link: 'https://album.link/echoes_from_the_garden',
         extern: true
     },
     description: <>Echoes from my garden and some others.<br />

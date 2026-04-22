@@ -61,7 +61,7 @@ export default function LandingTop() {
                         content={
                             {
                                 title: <>Echoes from the Garden (nouv. EP&nbsp;<LuPartyPopper className='inline'/>)</>,
-                                link: 'https://soundcloud.com/p1ps_music/sets/echoes_from_the_garden',
+                                link: 'https://album.link/echoes_from_the_garden',
                                 extern: true
                             }
                         } 
