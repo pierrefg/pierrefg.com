@@ -79,7 +79,7 @@ export default function LandingTop() {
                     content={
                         {
                             title: <><AiOutlineFilePdf className='inline'/>&nbsp;Mon CV</>,
-                            link: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/cv_pierrefg.pdf',
+                            link: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/cv_pierrefg_new.pdf',
                             extern: true
                         }
                     } 
