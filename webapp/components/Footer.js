@@ -4,7 +4,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 
 export default function Footer() {
     return (
-        <div className="flex flex-col gap-0 w-full items-center py-6 text-small lg:text-base max-w-7xl mx-auto text-primary-muted">
+        <div className="flex flex-col gap-0 w-full items-center py-6 text-small lg:text-sm max-w-7xl mx-auto text-primary-muted">
             <div className='text-center'>
                 <Link 
                     href="/legals"
