@@ -1,7 +1,7 @@
 import perceptionCover from './perception.jpg';
 
 export const perceptionData = {
-    title: 'Perception [EP]',
+    title: 'Perception [Album]',
     id: 'perception',
     cover: perceptionCover,
     releasedDate: '2024',

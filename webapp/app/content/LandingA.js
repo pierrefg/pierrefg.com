@@ -46,7 +46,7 @@ export default function LandingTop() {
                             <span>
                                 Informatique engagée
                                 <br />
-                                Photographe, graphiste & musicien
+                                Photographie, illustration & musique
                             </span>
                         </div>
                     </div>

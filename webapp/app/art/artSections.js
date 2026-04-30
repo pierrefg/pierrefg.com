@@ -17,7 +17,7 @@ export const artSections = [
         fullWidth: true
     },
     {
-        title: <><MdOutlinePolyline className='title-icon' /> Graphisme</>,
+        title: <><MdOutlinePolyline className='title-icon' /> Illustration</>,
         id: 'graphics',
         link: '/art#graphics',
         section: <Graphics />,
