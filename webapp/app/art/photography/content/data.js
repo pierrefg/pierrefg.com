@@ -33,8 +33,10 @@ import { bloquons_tout } from "./2025/bloquons_tout/data";
 import { marche_resist25 } from "./2025/marche_resist/data";
 import { jvf } from "./2025/journee_violences_femmes/data";
 import { rencurel } from "./2026/rencurel/data";
+import { premierMai26 } from "./2026/1ermai/data";
 
 export const photoData = [
+    premierMai26,
     rencurel,
     jvf,
     marche_resist25,
