@@ -23,10 +23,10 @@ export default function About() {
                     <div className='flex flex-col gap-8'>
                         <div className="flex flex-col gap-0">
                             <span>
-                                <MdOutlinePlace className="inline" /> Basé à Lyon
+                                <MdOutlinePlace className="inline" /> Lyon
                             </span>
                             <span>
-                                <IoLanguage className="inline" /> Parle le français, l'anglais et (un petit peu) l'allemand
+                                <IoLanguage className="inline" /> Français, anglais et (un petit peu) allemand
                             </span>
                         </div>
                         {
