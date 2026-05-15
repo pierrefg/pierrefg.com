@@ -10,8 +10,8 @@ export default function Music() {
             <p className="text-center max-w-sm mx-auto py-5">
                 Quelques-un de mes projets persos, quelque chose de plus gros se prépare en secret, et peut-être pas tout seul {">.<"} 
             </p>
-            <PlaylistPlayer playlist={laDerniereVague} />
             <PlaylistPlayer playlist={echoesFromTheGarden} />
+            <PlaylistPlayer playlist={laDerniereVague} />
             <PlaylistPlayer playlist={perceptionData} />
         </div>
     );
