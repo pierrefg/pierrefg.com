@@ -112,7 +112,7 @@ export default function About() {
                         </p>
                         <p>
                             Ce site tente de réunir ces différentes facettes de mon parcours, en espérant que vous y trouverez des choses intéressantes !
-                            N'hésitez pas à m'envoyer un petit messaghe si vous voulez discuter, collaborer ou juste dire bonjour :)
+                            N'hésitez pas à m'envoyer un petit message si vous voulez discuter, collaborer ou juste dire bonjour :)
                         </p>
                         {/* <MenuBar /> */}
                     

@@ -44,7 +44,9 @@ export default function LandingTop() {
                         </div>
                         <div className="w-full">
                             <span>
-                                Cartographe en devenir, informatique engagée
+                                Cartographe en devenir
+                                <br />
+                                Informatique engagée
                                 <br />
                                 Photographie, musique & illustration
                             </span>

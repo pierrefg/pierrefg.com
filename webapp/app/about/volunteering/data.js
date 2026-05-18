@@ -1,6 +1,15 @@
 export const volunteeringData = [
     {
         title: {
+            name: "ARTIS",
+            link: "https://www.artis-mbc.fr"
+        },
+        subtitle: "Association musicale",
+        period: "2025-*",
+        description: "Musicien, logistique",
+    },
+    {
+        title: {
             name: "Engrainage",
             link: "https://engrainage-media.com/"
         },
@@ -14,7 +23,7 @@ export const volunteeringData = [
             link: "https://www.habitat-humanisme.org/escales-solidaires-rhone/"
         },
         subtitle: "Association de repas solidaires",
-        period: "2023-*",
+        period: "2023-25",
         description: "Cuisinier",
     },
     {
@@ -34,7 +43,7 @@ export const volunteeringData = [
         },
         subtitle: "Association de la faculté d'informatique de l'INSA Lyon",
         period: "2018-19",
-        description: "Graphiste et responsable logistique"
+        description: "Graphiste, photographe et responsable logistique"
     },
     {
         title: {
