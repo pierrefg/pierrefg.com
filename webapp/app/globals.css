@@ -131,3 +131,13 @@ li li::before {
 .max-h-5-6 {
   max-height: 83.3333%;
 }
+
+.inline-link {
+  display: inline;
+  color: inherit;
+  text-decoration: underline;
+}
+
+.inline-link:hover {
+  opacity: 0.8;
+}
