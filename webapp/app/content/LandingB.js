@@ -116,7 +116,7 @@ export default function About() {
                         </p>
                         {/* <MenuBar /> */}
                     
-                        <div className="flex justify-center mb-8 z-20 ">
+                        <div className="flex justify-center z-20 ">
                             <Link
                                 href='/#homescreen'
                                 className='btn btn-primary rounded-full flex justify-center items-center w-[40px] h-[40px] animate-bounce'
