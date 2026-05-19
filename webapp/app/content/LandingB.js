@@ -54,7 +54,7 @@ export default function About() {
                                 informatique
                             </a>{" "}
                             en 2018. 
-                            En parallèle, je m’ouvre à la recherche via un double diplôme avec{" "}
+                            Je m’ouvre ensuite à la recherche via un double diplôme avec{" "}
                             <a
                                 href="https://www.gatech.edu"
                                 target="_blank"
@@ -90,11 +90,11 @@ export default function About() {
                             >
                                 CNR
                             </a>. 
-                            J’y étudie des données issues de capteurs fluviaux et hydroélectriques variés, croisées avec l’expertise métier et des données territoriales. 
+                            J’y étudie des données issues de capteurs fluviaux et hydroélectriques, croisées avec l’expertise métier et des données territoriales. 
                             Je m’intéresse également à l’explicabilité des modèles d’apprentissage automatique, notamment via l’analyse des contre-exemples.
-                        </p>
-                        <p>
-                            Après 2 ans comme ingénieur de recherche au LIRIS, je m'oriente aujourd'hui vers la cartographie afin de mettre mes compétences au service de la compréhension des territoires et de leurs enjeux, notamment environnementaux.
+                        {/* </p>
+                        <p> */}
+                            {" "}Après 2 ans comme ingénieur de recherche, je m'oriente aujourd'hui vers la cartographie afin de mettre mes compétences au service de la compréhension des territoires et de leurs enjeux.
                         </p>
                         <p>
                             En parallèle, je développe plusieurs pratiques artistiques. 
@@ -112,7 +112,7 @@ export default function About() {
                         </p>
                         <p>
                             Ce site tente de réunir ces différentes facettes de mon parcours, en espérant que vous y trouverez des choses intéressantes !
-                            N'hésitez pas à m'envoyer un petit message si vous voulez discuter, collaborer ou juste dire bonjour :)
+                            N'hésitez pas à m'envoyer un petit message si vous voulez collaborer ou juste dire bonjour :)
                         </p>
                         {/* <MenuBar /> */}
                     
