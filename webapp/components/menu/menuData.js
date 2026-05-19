@@ -36,10 +36,14 @@ export const mainMenuLinks = [
         icon: <RiQuestionAnswerLine className='icon'/>,
         title: 'Contact',
         link: '/contact',
+        // description: <>
+        //     Pour tout projet, toute collaboration ou question : n'hésitez pas ! <LuPartyPopper className='inline' />
+        //     <br />
+        //     Retrouvez également l'ensemble de mes prestations ci-dessous.
+        // </>,
         description: <>
-            Pour tout projet, toute collaboration ou question : n'hésitez pas ! <LuPartyPopper className='inline' />
+            Pour tout projet, collaboration ou juste pour dire bonjour : n'hésitez pas ! <LuPartyPopper className='inline' />
             <br />
-            Retrouvez également l'ensemble de mes prestations ci-dessous.
         </>,
         coverPic: contactCover
     }

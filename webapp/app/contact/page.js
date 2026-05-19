@@ -7,7 +7,7 @@ import { createPageMetadata } from '@/utils/metadata';
 
 export const metadata = createPageMetadata(
     "Contact",
-    "Contactez-moi pour toute question, collaboration ou demande d'information.",
+    "Contactez-moi pour toute question, collaboration ou juste dire bonjour :)",
     "/contact"
 )
 

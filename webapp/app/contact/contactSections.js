@@ -8,8 +8,8 @@ export const contactSections = [
         noTitle: true,
         section: <ContactSection />
     },
-    {
-        title: <><MdOutlineDesignServices className='title-icon' /> Prestations</>,
-        section: <Services />
-    },
+    // {
+    //     title: <><MdOutlineDesignServices className='title-icon' /> Prestations</>,
+    //     section: <Services />
+    // },
 ];
