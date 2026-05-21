@@ -24,15 +24,15 @@ export default function About() {
                     coverPic={coverPic}
                     title='Pierre Faure--Giovagnoli'
                 >
-                    <div className='flex flex-col gap-8'>
-                        <div className="flex flex-col gap-0">
+                    <div className='flex flex-col gap-4'>
+                        {/* <div className="flex flex-col gap-0">
                             <span>
                                 <MdOutlinePlace className="inline" /> Lyon
                             </span>
                             <span>
                                 <IoLanguage className="inline" /> Français, anglais et (un petit peu) allemand
                             </span>
-                        </div>
+                        </div> */}
                         
                         <p>
                             Originaire d’Angoulême, je rejoins{" "}
