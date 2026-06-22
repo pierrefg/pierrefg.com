@@ -1,6 +1,15 @@
 export const volunteeringData = [
     {
         title: {
+            name: "Engrainage",
+            link: "https://engrainage-media.com/"
+        },
+        subtitle: "Média sur l'écologie radicale",
+        period: "2024-*",
+        description: "Photographe, développeur et graphiste",
+    },
+    {
+        title: {
             name: "Les Glénans",
             link: "https://www.glenans.asso.fr/"
         },
@@ -14,17 +23,8 @@ export const volunteeringData = [
             link: "https://www.artis-mbc.fr"
         },
         subtitle: "Association musicale",
-        period: "2025-*",
+        period: "2025-26",
         description: "Musicien, logistique",
-    },
-    {
-        title: {
-            name: "Engrainage",
-            link: "https://engrainage-media.com/"
-        },
-        subtitle: "Média sur l'écologie radicale",
-        period: "2024-*",
-        description: "Photographe, développeur et graphiste",
     },
     {
         title: {
