@@ -44,7 +44,7 @@ export default function LandingTop() {
                         </div>
                         <div className="w-full">
                             <span>
-                                Cartographe en devenir
+                                Alternant cartographe
                                 <br />
                                 Informatique engagée
                                 <br />

@@ -1,6 +1,15 @@
 export const volunteeringData = [
     {
         title: {
+            name: "Les Glénans",
+            link: "https://www.glenans.asso.fr/"
+        },
+        subtitle: "Association de voile",
+        period: "Juin 2026",
+        description: "Cuisinier à la base de Marseillan pour 80 personnes pendant 1 semaine (MDM).",
+    },
+    {
+        title: {
             name: "ARTIS",
             link: "https://www.artis-mbc.fr"
         },
