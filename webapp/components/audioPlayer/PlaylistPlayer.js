@@ -61,7 +61,7 @@ export default function PlaylistPlayer({playlist}) {
                 <AudioPlayer 
                     title={playlist.tracks[selectedTrackIndex].title}
                     url={playlist.tracks[selectedTrackIndex].url}
-                    isMaxTrack = {selectedTrackIndex==playlist.tracks.length-1}
+                    isMaxTrack = {selectedTrackIndex == playlist.tracks.length-1}
                     isMinTrack = {selectedTrackIndex == 0}
                     onPlayPause = {(playState) => setIsPlaying(playState)}
                     onNext = { () => {
@@ -71,25 +71,30 @@ export default function PlaylistPlayer({playlist}) {
                         if(selectedTrackIndex>0) setSelectedTrackIndex(selectedTrackIndex-1)
                     } }
                     onSeek = {(seekingState) => setIsSeeking(seekingState)}
+                    isSingleTrack = {playlist.tracks.length == 1}
                 />
             </div>
-
-            <div className='flex flex-col gap-2 mx-auto border-2 p-6 border-t-0 w-4/5 md:w-fit'>
-                {
-                    playlist.tracks.map(
-                        (track, index) => (
-                            <div key={index}>
-                                <button
-                                    onClick={() => setSelectedTrackIndex(index)}
-                                    className={`btn text-left ${index==selectedTrackIndex && 'active text-primary bg-primary-hover'}`}
-                                >
-                                    {index} - { track.title }
-                                </button>
-                            </div>
-                        )
-                    )
-                }
-            </div>
+            
+            {
+                playlist.tracks.length > 1 && (
+                    <div className='flex flex-col gap-2 mx-auto border-2 p-6 border-t-0 w-4/5 md:w-fit'>
+                        {
+                            playlist.tracks.map(
+                                (track, index) => (
+                                    <div key={index}>
+                                    <button
+                                        onClick={() => setSelectedTrackIndex(index)}
+                                        className={`btn text-left ${index==selectedTrackIndex && 'active text-primary bg-primary-hover'}`}
+                                    >
+                                        {index} - { track.title }
+                                    </button>
+                                </div>
+                                )
+                            )
+                        }
+                    </div>
+                )
+            }
             
         </div>
     )

@@ -17,7 +17,8 @@ export default function AudioPlayer({
     onPlayPause,
     onNext,
     onPrevious,
-    onSeek
+    onSeek,
+    isSingleTrack
 }) {
     const [isPlayable, setIsPlayable] = useState(true);
     const [wasPlaying, setWasPlaying] = useState(false);
@@ -101,12 +102,14 @@ export default function AudioPlayer({
 
 
                     <div className='flex flex-1 flex-row gap-4 md:mx-auto'>
-                        <button
-                            onClick={handlePrevious}
-                            className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMinTrack && 'disabled'}`}
-                        >
-                            <MdOutlineSkipPrevious className='inline text-2xl' />
-                        </button>
+                        {isSingleTrack || (
+                            <button
+                                onClick={handlePrevious}
+                                className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMinTrack && 'disabled'}`}
+                            >
+                                <MdOutlineSkipPrevious className='inline text-2xl' />
+                            </button>
+                        )}
 
                         <button
                             onClick={togglePlayPause}
@@ -119,12 +122,14 @@ export default function AudioPlayer({
                             }
                         </button>
 
-                        <button
-                            onClick={handleNext}
-                            className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMaxTrack && 'disabled'}`}
-                        >
-                            <MdOutlineSkipNext className='text-2xl' />
-                        </button>
+                        {isSingleTrack || (
+                            <button
+                                onClick={handleNext}
+                                className={`btn btn-secondary btn-tight w-[30px] h-[30px] ${isMaxTrack && 'disabled'}`}
+                            >
+                                <MdOutlineSkipNext className='text-2xl' />
+                            </button>
+                        )}
                     </div>
                 </div>
 
