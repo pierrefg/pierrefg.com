@@ -34,10 +34,12 @@ import { marche_resist25 } from "./2025/marche_resist/data";
 import { jvf } from "./2025/journee_violences_femmes/data";
 import { rencurel } from "./2026/rencurel/data";
 import { premierMai26 } from "./2026/1ermai/data";
+import { roman_empire } from "./2026/roman_empire/data";
 
 export const photoData = [
     premierMai26,
     rencurel,
+    roman_empire,
     jvf,
     marche_resist25,
     bloquons_tout,
