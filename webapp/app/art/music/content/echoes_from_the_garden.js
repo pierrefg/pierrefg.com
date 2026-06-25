@@ -11,8 +11,8 @@ export const echoesFromTheGarden = {
         extern: true
     },
     description: <>Echoes from my garden and some others.<br />
-    ~ Produced between 2024 and 2026.<br />
-    ~ Mastering by Marie Pieprzownik.
+    ~ Produit entre 2024 et 2026.<br />
+    ~ Mastering par Marie Pieprzownik.
     </>,
     tracks: [
         {
