@@ -5,12 +5,12 @@ export const pseudoZak = {
     id: 'pseudo',
     cover: cover,
     releasedDate: '2026',
-    // fullLink: {
-    //     title: 'Streaming',
-    //     link: 'https://album.link/echoes_from_the_garden',
-    //     extern: true
-    // },
-    description: <>Musique produite pour le trailer du spectacle Pseudo de Zacharie Féron. <br />
+    fullLink: {
+        title: 'Trailer',
+        link: 'https://www.youtube.com/watch?v=buHyT83N4mI',
+        extern: true
+    },
+    description: <>Musique pour le trailer du spectacle Pseudo de Zacharie Féron. <br />
     </>,
     tracks: [
         {
