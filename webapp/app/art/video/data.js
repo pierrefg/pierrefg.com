@@ -1,5 +1,11 @@
 export const videoData = [
     {
+        title: 'Enregistement groupe Tasty Fruits (extrait sd)',
+        year: 2026,
+        description: 'Enregistrement, mix et video',
+        link: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/video/lilly_lq.mov'
+    },
+    {
         title: 'Minuit Minuit ft. Soleil Sauvage (preview)',
         year: 2025,
         description: 'After Effects, Mix par Soleil Sauvage',
