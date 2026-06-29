@@ -40,7 +40,14 @@ export default function LandingTop() {
                     </div>
                     <div className="flex flex-col gap-1 text-center justify-center items-center w-full">
                         <div className="w-full">
-                            <h1 className="text-3xl md:text-4xl"><AnimatedText targetText='pierre fg' /></h1>
+                            <h1 className="text-3xl md:text-4xl"><AnimatedText targetText='pierre fg' />
+                            <AnimatedText
+                                texts={[
+                                    'pierre fg'
+                                ]}
+                                holdTime={2500}
+                            />
+                            </h1>
                         </div>
                         <div className="w-full">
                             <span>

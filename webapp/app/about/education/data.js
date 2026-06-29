@@ -1,6 +1,21 @@
 export const educationData = [
     {
         title: {
+            name: "Mastère Spécialisé en géomatique et gestion des territoires (SILAT)"
+        },
+        type: "Alternance",
+        period: "2026-*",
+        companies: [ 
+            {
+                name: 'AgroParisTech',
+                place: 'Montpellier, France',
+                link: "https://www.agroparistech.fr/lecole/ecole-8-sites/campus-montpellier"
+            }
+        ],
+        description: "géomatique et SIG, analyse spatiale, géotraitement, bases de données spatiales, webmapping et télédétection...",
+    },
+    {
+        title: {
             name: "Master of Science in Computer Science"
         },
         period: "2019-20",

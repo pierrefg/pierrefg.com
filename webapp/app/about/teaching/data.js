@@ -4,7 +4,7 @@ export var teachingData = [
             name: "Science des données"
         },
         subtitle: "Travaux dirigés (~25 heures)",
-        period: "2023-*",
+        period: "2023-25",
         companies: [ 
             {
                 name: "Département GEN de l'INSA Lyon",

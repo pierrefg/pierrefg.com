@@ -62,9 +62,9 @@ export default function MenuBar() {
                             <div className='flex'>
                                 <SocialIcons />
                             </div>
-                            <div className='flex h-[50px]'>
+                            {/* <div className='flex h-[50px]'>
                                 <ThemeSwitch />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 )}

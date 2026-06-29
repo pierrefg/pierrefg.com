@@ -1,11 +1,26 @@
 export const workData = [
     {
         title: {
+            name: "Géomaticien"
+        },
+        period: "2026-*",
+        companies: [ 
+            {
+                name: 'Institut Paris Région',
+                place: 'Île de France',
+                link: "https://www.institutparisregion.fr/"
+            }
+        ],
+        type: "Alternant",
+        description: "Géomate pour la consolidation et la diffusion du Schéma Régional de Cohérence Écologique"
+    },
+{
+        title: {
             name: "Photographe et graphiste"
         },
         period: "2024-*",
         type: "Auto-entrepreneur",
-        description: "Travailleur indépendant en photographie, graphisme et vidéo.",
+        description: "Travailleur indépendant en photographie, graphisme et vidéo",
     },
     {
         title: {
