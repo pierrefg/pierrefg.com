@@ -17,7 +17,7 @@ export const dataScienceData =
         icon: SlEnergy,
         title: "Surveillance de l'entrefer dans des turbines hydro-électriques compactes",
         subtitle: "traitement du signal, visualisation",
-        period: "2023-2024 (1 an)",
+        period: "2024-2025 (1 an)",
         img: airgapPic,
         imgLegend: "Déplié 3D de la valeur d'entrefer dans une turbine hydroélectrique.",
         summary: <>
@@ -35,7 +35,7 @@ export const dataScienceData =
         icon: IoDocumentTextOutline,
         title: 'Analyse automatique de mise en page PDF et système RAG',
         subtitle: "analyse d'image, traitement automatique du langage naturel",
-        period: "2024 (4 mois)",
+        period: "2025 (4 mois)",
         img: pdfPic,
         imgLegend: "Exemple de pdf analysé par l'outil développé dans ce projet.",
         summary: <>
@@ -52,7 +52,7 @@ export const dataScienceData =
         icon: RiHealthBookLine,
         title: "Détection automatique des phases d’éveil/sommeil en pédiatrie à partir d’enregistrements audio",
         subtitle: "traitement du signal, classification",
-        period: "2024 (3 mois)",
+        period: "2025 (3 mois)",
         img: saosPic,
         imgLegend: "Spectrogramme de MEL avec annotations médicales.",
         summary: <>

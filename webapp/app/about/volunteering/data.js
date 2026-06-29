@@ -15,7 +15,7 @@ export const volunteeringData = [
         },
         subtitle: "Association de voile",
         period: "Juin 2026",
-        description: "Cuisinier à la base de Marseillan pour 80 personnes pendant 1 semaine (MDM).",
+        description: "Cuisinier à la base de Marseillan pour 80 personnes pendant 1 semaine (MDM)",
     },
     {
         title: {
@@ -24,7 +24,7 @@ export const volunteeringData = [
         },
         subtitle: "Association musicale",
         period: "2025-26",
-        description: "Musicien, logistique",
+        description: "Musicien, logistique son, service restauration",
     },
     {
         title: {
@@ -33,7 +33,7 @@ export const volunteeringData = [
         },
         subtitle: "Association de repas solidaires",
         period: "2023-25",
-        description: "Cuisinier",
+        description: "Cuisinier pour ~20-30 personnes en situation de précarité chaque mercredi",
     },
     {
         title: {
@@ -42,7 +42,7 @@ export const volunteeringData = [
         },
         subtitle: "Association pour le soutien du Shift Project",
         period: "2022-23",
-        description: "Graphiste"
+        description: "Graphiste vulgarisateur"
     },
     {
         title: {
@@ -61,7 +61,7 @@ export const volunteeringData = [
         },
         subtitle: "Association de cinéma de l'INSA Lyon",
         period: "2017-19",
-        description: "Graphiste et coordinateur de la communication"
+        description: "Graphiste et vidéaste"
     },
     {
         title: {
