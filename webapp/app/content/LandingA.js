@@ -43,9 +43,9 @@ export default function LandingTop() {
                             <h1 className="text-3xl md:text-4xl"><AnimatedText targetText='pierre fg' />
                             <AnimatedText
                                 texts={[
-                                    'pierre fg'
+                                    'pierre fg', 'p1ps'
                                 ]}
-                                holdTime={2500}
+                                holdTime={3500}
                             />
                             </h1>
                         </div>
