@@ -57,7 +57,7 @@ export default function LandingTop() {
                 <div className='py-4  md:py-8'>
                     <MenuBar />
                 </div>
-                <div className='flex flex-row gap-6 items-center text-small md:text-base mt-1 mb-1'>
+                {/* <div className='flex flex-row gap-6 items-center text-small md:text-base mt-1 mb-1'>
                     
                     <SimpleLink 
                         content={
@@ -68,7 +68,7 @@ export default function LandingTop() {
                             }
                         } 
                     />
-                </div>
+                </div> */}
                 <SocialIcons />
                 {/* <div className='hidden md:block'>
                     <ThemeSwitch />

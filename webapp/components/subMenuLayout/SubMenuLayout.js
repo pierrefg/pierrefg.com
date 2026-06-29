@@ -36,12 +36,12 @@ export default function SubMenuLayout({pageDescription, pagesData, noMenu=false 
                 <SubMenu pagesData={pagesData} />
             }
             
-            <div className={`sub-menu-content ${!isFullWidth && 'max-w-7xl lg:px-0 px-4 mx-auto'}`}>
+            <div className={`sub-menu-content ${!isFullWidth ? 'max-w-7xl lg:px-0 px-4 mx-auto' : ''}`}>
                 <div className='flex flex-col gap-10 mt-4'>
                     {
                         pagesData.map(
-                            (el, index) => (
-                                <div key={index} id={el.id} className='page-section flex flex-col gap-8'>
+                            (el, _) => (
+                                <div key={el.id} id={el.id} className='page-section flex flex-col gap-8'>
                                     {
                                         !el.noTitle && 
                                         <div className="flex flex-col text-center items-center justify-center">

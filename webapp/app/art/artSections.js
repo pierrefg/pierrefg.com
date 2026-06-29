@@ -34,6 +34,7 @@ export const artSections = [
         title: <><RiVideoOnLine className='title-icon' /> Vidéo</>,
         id: 'video',
         link: '/art#video',
-        section: <Video />
+        section: <Video />,
+        fullWidth: true
     },
 ];
