@@ -7,7 +7,7 @@ export const workData = [
         companies: [ 
             {
                 name: 'Institut Paris Région',
-                place: 'Île de France',
+                place: 'Île-de-France',
                 link: "https://www.institutparisregion.fr/"
             }
         ],
