@@ -26,8 +26,8 @@ export default function Privacy() {
                     <div className="flex flex-col gap-4 mt-4">
                     {
                         privacyData.map(
-                            (el, index) => (
-                                <div key={index}>
+                            (el, _) => (
+                                <div key={el.title}>
                                     <h3 className="underline">
                                         <strong>
                                             { el.title }

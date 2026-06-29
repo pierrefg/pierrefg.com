@@ -46,8 +46,8 @@ export default function Publications() {
             <div className="flex flex-col gap-10 max-w-5xl">
                 {
                     data.map(
-                        (item, index) => (
-                            <div key={index} className="flex flex-col gap-4">
+                        (item, _) => (
+                            <div key={item.title} className="flex flex-col gap-4">
                                 <h3 className='text-left'>/ {item.title}</h3>
                                 <div className="pl-2 lg:pl-12">
                                     <Timeline

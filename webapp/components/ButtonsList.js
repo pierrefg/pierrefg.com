@@ -6,7 +6,7 @@ export default function ButtonsList({ links }) {
                 <div className="mt-1">
                     {
                         links.map((link, index) => (
-                            <span key={index}> 
+                            <span key={link.url}> 
                                 { index>0 && <span> • </span> }
                                 <a
                                     href={link.url} 

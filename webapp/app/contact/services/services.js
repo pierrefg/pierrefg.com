@@ -29,7 +29,6 @@ const servicesData = [
     },
     {
         title: 'Graphisme',
-        // subtitle: 'Toutes les prestations sont réalisées sur la suite Adobe.',
         content: <>
             <ul>
                 <li>affiches, flyers, cartes de visite, stickers...</li>
@@ -44,8 +43,8 @@ export default function Services() {
         <div className="flex flex-col gap-8 max-w-4xl mx-auto" >
             {
                 servicesData.map(
-                    (item, index) => (
-                        <div key={index} className="flex flex-col gap-4 w-full">
+                    (item, _) => (
+                        <div key={item.title} className="flex flex-col gap-4 w-full">
                             <div className="w-full text-left">
                                 <h3>/ {item.title}</h3>
                             </div>

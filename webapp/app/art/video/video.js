@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import { videoLinkData, videoData } from "./data";
 

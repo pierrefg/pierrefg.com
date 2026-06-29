@@ -18,7 +18,7 @@ export default function SocialIcons() {
                 socialIcons.map(
                     ([Icon, link], index) => (
                         <a
-                            key={index}
+                            key={link}
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"

@@ -16,11 +16,11 @@ export default function Legals() {
                     Mentions légales
                 </h1>
 
-                <div className="flex flex-col gap-6 lg:items-center mt-6">  {/* Added items-center to center the content */}
+                <div className="flex flex-col gap-6 lg:items-center mt-6">
                     {
                         legalData.map(
-                            (data, index) => (
-                                <div key={index} className="lg:flex lg:flex-row justify-center">  {/* Added w-full and justify-center */}
+                            (data, _) => (
+                                <div key={data.title} className="lg:flex lg:flex-row justify-center">  {/* Added w-full and justify-center */}
                                     <div className="lg:w-[300px] lg:text-right lg:mr-4 underline lg:no-underline">
                                         <h3>{data.title}</h3>
                                     </div>

@@ -81,7 +81,7 @@ export default function PlaylistPlayer({playlist}) {
                         {
                             playlist.tracks.map(
                                 (track, index) => (
-                                    <div key={index}>
+                                    <div key={`${index}-${track.title}`}>
                                     <button
                                         onClick={() => setSelectedTrackIndex(index)}
                                         className={`btn text-left ${index==selectedTrackIndex && 'active text-primary bg-primary-hover'}`}
