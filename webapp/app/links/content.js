@@ -26,7 +26,7 @@ export const links = [
         content: [
             {
                 title: "pierrefg.com",
-                link: "https://www.pierrefg.com/",
+                link: "/",
             },
             {
                 title: "p1ps.net",

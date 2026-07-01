@@ -35,7 +35,7 @@ export default function LandingTop() {
             </div>
 
             <div className='absolute right-4 bottom-4 z-50'>
-                <SimpleLink content={{title: <FaLink />, link: 'https://pierrefg.com/links'}} />
+                <SimpleLink content={{title: <FaLink />, link: '/links'}} />
             </div>
 
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
