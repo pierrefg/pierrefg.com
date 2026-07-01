@@ -9,7 +9,7 @@ import AnimatedText from '@/components/animatedText';
 import { links } from './content';
 
 export const metadata = createPageMetadata(
-    "Linktree",
+    "Arbre à liens",
     "Trouve ici mes liens vers mes différents projets et réseaux sociaux.",
     "/links"
 )
