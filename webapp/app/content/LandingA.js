@@ -17,6 +17,7 @@ import AnimatedText from '@/components/animatedText';
 
 import SimpleLink from '@/components/SimpleLink';
 import { AiOutlineNumber, AiOutlineFilePdf } from "react-icons/ai";
+import { FaLink } from "react-icons/fa6";
 import { LuPartyPopper } from "react-icons/lu";
 
 export default function LandingTop() {
@@ -33,14 +34,18 @@ export default function LandingTop() {
                 <SimpleLink content={{title: <AiOutlineNumber />, link: 'https://p1ps.net', extern: true}} />
             </div>
 
+            <div className='absolute right-4 bottom-4 z-50'>
+                <SimpleLink content={{title: <FaLink />, link: 'https://pierrefg.com/links'}} />
+            </div>
+
             <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
                 <div className="flex flex-col items-center gap-4 ">
-                    <div className="flex w-[100px] md:w-[175px]">
+                    <div className="flex w-[100px] md:w-[150px]">
                         <Portrait />
                     </div>
                     <div className="flex flex-col gap-1 text-center justify-center items-center w-full">
                         <div className="w-full">
-                            <h1 className="text-3xl md:text-4xl"><AnimatedText targetText='pierre fg' />
+                            <h1 className="text-3xl md:text-4xl">
                             <AnimatedText
                                 texts={[
                                     'pierre fg', 'p1ps'
@@ -51,11 +56,9 @@ export default function LandingTop() {
                         </div>
                         <div className="w-full">
                             <span>
-                                Alternant cartographe
+                                {'/'} cartographie, informatique
                                 <br />
-                                Informatique engagée
-                                <br />
-                                Photographie, musique & illustration
+                                {'/'} photographie, musique, illustration
                             </span>
                         </div>
                     </div>
@@ -87,7 +90,7 @@ export default function LandingTop() {
                 <SimpleLink 
                     content={
                         {
-                            title: <><AiOutlineFilePdf className='inline'/>&nbsp;Mon CV</>,
+                            title: <><AiOutlineFilePdf className='inline'/>&nbsp;cv</>,
                             link: 'https://of5ylsz4mar7xvsj.public.blob.vercel-storage.com/pdfs/cv_pierrefg.pdf',
                             extern: true
                         }

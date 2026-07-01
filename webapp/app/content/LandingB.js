@@ -25,15 +25,6 @@ export default function About() {
                     title='Pierre Faure--Giovagnoli'
                 >
                     <div className='flex flex-col gap-4'>
-                        {/* <div className="flex flex-col gap-0">
-                            <span>
-                                <MdOutlinePlace className="inline" /> Lyon
-                            </span>
-                            <span>
-                                <IoLanguage className="inline" /> Français, anglais et (un petit peu) allemand
-                            </span>
-                        </div> */}
-                        
                         <p>
                             Originaire d’Angoulême, je rejoins{" "}
                             <a
@@ -90,8 +81,7 @@ export default function About() {
                             >
                                 CNR
                             </a>. 
-                            J’y étudie des données issues de capteurs fluviaux et hydroélectriques, croisées avec l’expertise métier et des données territoriales. 
-                            Je m’intéresse également à l’explicabilité des modèles d’apprentissage automatique, notamment via l’analyse des contre-exemples.
+                            J’y étudie des données issues de capteurs fluviaux et hydroélectriques, croisées avec l’expertise métier et des données territoriales.
                         {/* </p>
                         <p> */}
                             {" "}Après 2 ans comme ingénieur de recherche, je m'oriente aujourd'hui vers la cartographie afin de mettre mes compétences au service de la compréhension des territoires et de leurs enjeux.
@@ -111,8 +101,8 @@ export default function About() {
                             C’est également dans diverses associations que j’ai développé des compétences en graphisme, aussi bien en illustration qu’en design web.
                         </p>
                         <p>
-                            Ce site tente de réunir ces différentes facettes de mon parcours, en espérant que vous y trouverez des choses intéressantes !
-                            N'hésitez pas à m'envoyer un petit message si vous voulez collaborer ou juste dire bonjour :)
+                            Ce site réunit les différentes facettes de mon parcours, en espérant que vous y trouverez des choses intéressantes !
+                            N'hésitez pas à m'envoyer un petit message :)
                         </p>
                         {/* <MenuBar /> */}
                     

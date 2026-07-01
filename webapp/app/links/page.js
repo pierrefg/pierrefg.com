@@ -44,12 +44,12 @@ export default function Links() {
             </div>
 
             <div className="flex flex-col gap-4 justify-center z-20 items-center h-screen">
-                <div className="flex w-[100px] md:w-[100px] z-20">
+                <div className="flex w-[100px] md:w-[150px] z-20">
                     <Portrait />
                 </div>
                 <div className="flex flex-col gap-1 text-center justify-center items-center w-full z-20">
                     <div className="w-full">
-                        <h1 className="text-3xl md:text-4xl"><AnimatedText targetText='pierre fg' />
+                        <h1 className="text-3xl md:text-4xl">
                         <AnimatedText
                             texts={[
                                 'pierre fg', 'p1ps'
@@ -60,9 +60,9 @@ export default function Links() {
                     </div>
                     <div className="w-full">
                         <span>
-                             photographie : musique : illustration
+                            {'/'} cartographie, informatique
                             <br />
-                            cartographie : informatique
+                            {'/'} photographie, musique, illustration
                         </span>
                     </div>
                 </div>
