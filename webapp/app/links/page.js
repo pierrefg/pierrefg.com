@@ -3,6 +3,7 @@ import { createPageMetadata } from '@/utils/metadata';
 import SimpleLink from '@/components/SimpleLink';
 import SocialIcons from '@/components/SocialIcons';
 import Snake from "@/components/snake/Snake";
+import Sky from "@/components/sky/Sky";
 import Portrait from "@/components/portrait/Portrait";
 import AnimatedText from '@/components/animatedText';
 
@@ -39,8 +40,9 @@ export default function Links() {
     return (
         <>
             <div className={`absolute h-full w-full z-10 pointer-events-none`}>
-                <Snake color = "purple" big_interval_time={3000}/>
-                <Snake color = "#500052" big_interval_time={2000}/>
+                {/* <Snake color = "purple" big_interval_time={3000}/>
+                <Snake color = "#500052" big_interval_time={2000}/> */}
+                <Sky color = "#500052" big_interval_time={2000}/>
             </div>
 
             <div className="flex flex-col gap-4 justify-center z-20 items-center h-screen">
