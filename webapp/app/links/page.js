@@ -27,7 +27,6 @@ var links = [
     {
         title: "pierrefg.com",
         link: "https://www.pierrefg.com/",
-        extern: true
     },
     {
         title: "p1ps.net",
@@ -72,7 +71,7 @@ export default function Links() {
                     <SocialIcons />
                 </div>
                 <div className="flex flex-col gap-2 justify-center items-center z-20">
-                    {links.map((el, index) => (
+                    {links.map((el, _) => (
                         <SimpleLink 
                             key={el.link}
                             linkKey={el.link} 
