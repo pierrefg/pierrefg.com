@@ -9,7 +9,7 @@ import AnimatedText from '@/components/animatedText';
 export const metadata = createPageMetadata(
     "Linktree",
     "Trouve ici mes liens vers mes différents projets et réseaux sociaux.",
-    "/linktree"
+    "/links"
 )
 
 var links = [
@@ -35,7 +35,7 @@ var links = [
     }
 ];
 
-export default function Linktree() {
+export default function Links() {
     return (
         <>
             <div className={`absolute h-full w-full z-10 pointer-events-none`}>
