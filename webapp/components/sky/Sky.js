@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState } from "react";
 
-export default function Sky({ color = "purple", big_interval_time = 2000 }) {
+export default function Sky({ color = "purple" }) {
     const n_points = 70;
     const [stars, setStars] = useState([]);
+    const [mouse, setMouse] = useState({ x: 0, y: 0 });
 
     const genStars = () => {
         const width = window.innerWidth;
@@ -17,14 +18,23 @@ export default function Sky({ color = "purple", big_interval_time = 2000 }) {
             opacity: Math.random() * 0.5 + 0.35,
             textSize: Math.random() * 15 + 5,
             symbol: symbols[Math.floor(Math.random() * symbols.length)],
-            duration: Math.random() * 2 + 1.5, // 1.5s to 3.5s
-            delay: Math.random() * 3,          // stagger start
-            scale: Math.random() * 0.4 + 1.0,  // peak pulse size
+            duration: Math.random() * 2 + 1.5,
+            delay: Math.random() * 3,
+            depth: Math.random() * 30 + 5, // parallax strength
         }));
     };
 
     useEffect(() => {
         setStars(genStars());
+
+        const handleMouseMove = (e) => {
+            const offsetX = e.clientX - window.innerWidth / 2;
+            const offsetY = e.clientY - window.innerHeight / 2;
+            setMouse({ x: offsetX, y: offsetY });
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
 
     return (
@@ -44,47 +54,53 @@ export default function Sky({ color = "purple", big_interval_time = 2000 }) {
                         transform: scale(0.85);
                     }
                 }
-            `}</style>       
+            `}</style>
 
-            {stars.map((star, index) => (
-                <div
-                    key={index}
-                    className="absolute pointer-events-none"
-                    style={{
-                        left: `${star.x}px`,
-                        top: `${star.y}px`,
-                        transform: "translate(-50%, -50%)",
-                    }}
-                >
+            {stars.map((star, index) => {
+                const moveX = mouse.x / star.depth;
+                const moveY = mouse.y / star.depth;
+
+                return (
                     <div
-                        className="absolute"
+                        key={index}
+                        className="absolute pointer-events-none"
                         style={{
-                            color: "white",
-                            opacity: 0.6,
-                            fontSize: `${star.textSize}px`,
+                            left: `${star.x}px`,
+                            top: `${star.y}px`,
+                            transform: `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`,
+                            transition: "transform 0.20s ease-out",
                         }}
                     >
-                        {star.symbol}
-                    </div>
+                        <div
+                            className="absolute"
+                            style={{
+                                color: "white",
+                                opacity: 0.6,
+                                fontSize: `${star.textSize}px`,
+                            }}
+                        >
+                            {star.symbol}
+                        </div>
 
-                    <div
-                        className="absolute"
-                        style={{
-                            color,
-                            fontSize: `${star.textSize}px`,
-                            animationName: "starPulse",
-                            animationDuration: `${star.duration}s`,
-                            animationDelay: `${star.delay}s`,
-                            animationIterationCount: "infinite",
-                            animationTimingFunction: "ease-in-out",
-                            transformOrigin: "center",
-                            opacity: star.opacity,
-                        }}
-                    >
-                        {star.symbol}
+                        <div
+                            className="absolute"
+                            style={{
+                                color,
+                                fontSize: `${star.textSize}px`,
+                                animationName: "starPulse",
+                                animationDuration: `${star.duration}s`,
+                                animationDelay: `${star.delay}s`,
+                                animationIterationCount: "infinite",
+                                animationTimingFunction: "ease-in-out",
+                                transformOrigin: "center",
+                                opacity: star.opacity,
+                            }}
+                        >
+                            {star.symbol}
+                        </div>
                     </div>
-                </div>
-            ))}
+                );
+            })}
         </>
     );
 }
