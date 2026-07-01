@@ -17,7 +17,7 @@ export default function MainLayout({ children }) {
   const { darkMode } = useStore();
   const pathname = usePathname();
 
-  const noMenuRoutes = ["/", "/xp"];
+  const noMenuRoutes = ["/", "/xp", "/linktree"];
   const hasMenu = !noMenuRoutes.includes(pathname);
 
   return (

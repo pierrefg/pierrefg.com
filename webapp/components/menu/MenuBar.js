@@ -6,7 +6,6 @@ import useStore from '@/store/useStore';
 
 import Link from "next/link";
 
-import ThemeSwitch from '@/components/themeSwitch/ThemeSwitch';
 import Portrait from '@/components/portrait/Portrait';
 import SocialIcons from '@/components/SocialIcons';
 import MenuButtons from '@/components/menu/MenuButtons';
