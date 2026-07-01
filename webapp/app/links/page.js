@@ -22,7 +22,7 @@ export default function Links() {
             </div>
 
             <div className="flex flex-col gap-4 justify-center z-20 items-center h-screen">
-                <div className="flex w-[100px] md:w-[150px] z-20">
+                <div className="flex w-[100px] md:w-[100px] z-20">
                     <Portrait />
                 </div>
                 <div className="flex flex-col gap-1 text-center justify-center items-center w-full z-20">
@@ -47,15 +47,24 @@ export default function Links() {
                 <div className='z-20'>
                     <SocialIcons />
                 </div>
-                <div className="flex flex-col gap-2 justify-center items-center z-20">
-                    {links.map((el, _) => (
-                        <SimpleLink 
-                            key={el.link}
-                            linkKey={el.link} 
-                            content={el} 
-                            primary 
-                            large
-                        />
+                <div className="flex flex-col gap-4 justify-center items-center z-20">
+                    {links.map((section, _) => (
+                        <div key={section.id} className="flex flex-col gap-2 justify-center items-center w-full">
+                            { section.title && <h3 className="text-lg md:text-xl">{section.title}</h3> }
+                            <div className="flex flex-col gap-1 justify-center items-center w-full">
+                            { section.content.map((el, _) => (
+                                <SimpleLink 
+                                    key={el.link}
+                                    linkKey={el.link} 
+                                    content={el} 
+                                    primary 
+                                    large
+                                />
+                                
+                            )) }
+                            </div>
+                        </div>
+                        
                     ))}
                 </div>
             </div>
