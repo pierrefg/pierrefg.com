@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SimpleLink({content, linkKey=null, primary=false, large=false, onClick=null, active=false}) {
     return (
@@ -9,6 +10,15 @@ export default function SimpleLink({content, linkKey=null, primary=false, large=
             onClick={onClick}
             target={ content.extern && '_blank' }
         >
+            {
+                content.img && 
+                <Image 
+                    src={content.img} 
+                    alt='cover'
+                    width={40} height={40} 
+                    className="inline" 
+                />
+            }
             {content.icon && content.icon} { content.title && content.title }
         </Link>
     )
