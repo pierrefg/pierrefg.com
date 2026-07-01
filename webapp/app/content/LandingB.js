@@ -63,8 +63,7 @@ export default function About() {
                             >
                                 très jolies !
                             </a>) utilisées comme bio-indicateurs de la qualité de l’eau.
-                            {/* <br /><br /> */}
-                            Je poursuis ensuite en doctorat au{" "}
+                            {" "}Je poursuis ensuite en doctorat au{" "}
                             <a
                                 href="https://liris.cnrs.fr"
                                 target="_blank"

@@ -30,7 +30,7 @@ var links = [
     },
     {
         title: "p1ps.net",
-        link: "https://www.p1ps.net/",
+        link: "https://p1ps.net/",
         extern: true
     }
 ];
