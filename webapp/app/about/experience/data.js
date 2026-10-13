@@ -12,13 +12,18 @@ export const workData = [
             }
         ],
         type: "Alternant",
-        description: "Géomate pour la consolidation et la diffusion du Schéma Régional de Cohérence Écologique"
+        description: "Consolidation et diffusion du Schéma Régional de Cohérence Écologique d'Île-de-France"
     },
 {
         title: {
             name: "Photographe et graphiste"
         },
         period: "2024-*",
+        companies: [ 
+            {
+                name: 'Pierre FG',
+            }
+        ],
         type: "Auto-entrepreneur",
         description: "Travailleur indépendant en photographie, graphisme et vidéo",
     },
