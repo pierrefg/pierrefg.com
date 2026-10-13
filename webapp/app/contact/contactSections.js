@@ -9,9 +9,5 @@ export const contactSections = [
         id: 'contactForm',
         link: '/contact#form',
         section: <ContactSection />
-    },
-    // {
-    //     title: <><MdOutlineDesignServices className='title-icon' /> Prestations</>,
-    //     section: <Services />
-    // },
+    }
 ];
