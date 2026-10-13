@@ -4,12 +4,12 @@ import './style.css';
 
 import React, { useEffect, useState } from 'react';
 
-export default function Snake({color= 'purple', big_interval_time=2000}) {
+export default function Snake({color= 'purple', big_interval_time=2000, max_interval_time=100}) {
     const n_points = 10;
 
     const max_opacity = 0.4;
     // const big_interval_time = Math.random()*8*1000;
-    const small_interval_time = Math.random()*2*100;
+    const small_interval_time = Math.random()*2*max_interval_time;
 
     const [paths, setPaths] = useState([]);
     const [x_delta, setXDelta] = useState([]);

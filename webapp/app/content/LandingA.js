@@ -16,17 +16,19 @@ import Snake from '@/components/wallpapers/snake/Snake';
 import GaussianOcean from '@/components/wallpapers/gaussianOcean/GaussianOcean';
 import Sky from '@/components/wallpapers/sky/Sky';
 
+import { PiMountainsFill } from "react-icons/pi";
+import { GiFallingStar } from "react-icons/gi";
 import { GiSandSnake } from "react-icons/gi";
 
 export default function LandingTop() {
     const wallpaperTypes = {
         'sky': { 
-            icon: <GiSandSnake className='inline' />,
-            component: <Sky color="#500052" big_interval_time={2000} /> 
+            'icon': <GiFallingStar className='inline' />,
+            'component': <Sky color="#500052" big_interval_time={2000} /> 
         },
         'snake': {
-            icon: <GiSandSnake className='inline' />,
-            component: (
+            'icon': <GiSandSnake className='inline' />,
+            'component': (
                 <>
                     <Snake color="purple" big_interval_time={3000} />
                     <Snake color="#500052" big_interval_time={2000} />
@@ -34,40 +36,18 @@ export default function LandingTop() {
             )
         },
         'gaussianOcean': { 
-            icon: <GiSandSnake className='inline' />,
-            component: <GaussianOcean color="purple" /> 
+            'icon': <PiMountainsFill className='inline' />,
+            'component': <GaussianOcean color="purple" /> 
         }
     };
     const [wallpaperType, setWallpaperType] = useState('sky');
-
-    const renderWallpaper = () => {
-        switch (wallpaperType) {
-            case 'sky':
-                return <Sky color="#500052" big_interval_time={2000} />;
-
-            case 'snake':
-                return (
-                    <>
-                        <Snake color="purple" big_interval_time={3000} />
-                        <Snake color="#500052" big_interval_time={2000} />
-                    </>
-                );
-
-            case 'gaussianOcean':
-                return <GaussianOcean color="purple" />;
-
-            default:
-                console.warn(`Unknown wallpaper type: ${wallpaperType}`);
-                return null;
-        }
-    };
 
     return (
         <>
             <div
                 className={`absolute h-full w-full z-10 pointer-events-none opacity-80`}
             >
-                {renderWallpaper()}
+                {wallpaperTypes[wallpaperType]['component']}
             </div>
 
             <div className="absolute left-4 top-4 z-50">
@@ -162,7 +142,7 @@ export default function LandingTop() {
                             }`}
                             onClick={() => setWallpaperType(type)}
                         >
-                            {type}
+                            {wallpaperTypes[type]['icon']}
                         </button>
                     ))  
                 }
