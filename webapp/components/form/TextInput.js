@@ -1,8 +1,8 @@
-export default function TextInput({ type = 'text', label, name, placeholder, rows = "1", disabled = false }) {
+export default function TextInput({ type = 'text', label, name, placeholder, rows = "1", disabled = false, required = true }) {
     const commonProps = {
         name,
         className: "text-input",
-        required: true,
+        required: required,
     };
 
     return (
