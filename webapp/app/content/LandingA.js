@@ -6,12 +6,9 @@ import { FaArrowDown } from 'react-icons/fa';
 import { AiOutlineNumber, AiOutlineFilePdf } from 'react-icons/ai';
 import { FaLink } from 'react-icons/fa6';
 
-import Portrait from '@/components/portrait/Portrait';
-import MenuBar from '@/components/menu/MenuButtons';
-import SocialIcons from '@/components/SocialIcons';
-import AnimatedText from '@/components/animatedText';
 import SimpleLink from '@/components/SimpleLink';
 
+import Blobs from '@/components/wallpapers/blobs/Blobs';
 import Snake from '@/components/wallpapers/snake/Snake';
 import GaussianOcean from '@/components/wallpapers/gaussianOcean/GaussianOcean';
 import Sky from '@/components/wallpapers/sky/Sky';
@@ -19,9 +16,15 @@ import Sky from '@/components/wallpapers/sky/Sky';
 import { PiMountainsFill } from "react-icons/pi";
 import { GiFallingStar } from "react-icons/gi";
 import { GiSandSnake } from "react-icons/gi";
+import { GiBurstBlob } from "react-icons/gi";
+import LandingMenu from './LandingMenu';
 
 export default function LandingTop() {
     const wallpaperTypes = {
+        'blobs': { 
+            'icon': <GiBurstBlob className='inline' />,
+            'component': <Blobs /> 
+        },
         'sky': { 
             'icon': <GiFallingStar className='inline' />,
             'component': <Sky color="#500052" big_interval_time={2000} /> 
@@ -40,7 +43,7 @@ export default function LandingTop() {
             'component': <GaussianOcean color="purple" /> 
         }
     };
-    const [wallpaperType, setWallpaperType] = useState('sky');
+    const [wallpaperType, setWallpaperType] = useState('blobs');
 
     return (
         <>
@@ -69,53 +72,7 @@ export default function LandingTop() {
                 />
             </div>
 
-            <div className="flex flex-col gap-2 md:gap-5 justify-center items-center flex-1 my-6 z-20">
-                <div className="flex flex-col items-center gap-4">
-                    <div className="flex w-[100px] md:w-[150px]">
-                        <Portrait />
-                    </div>
-
-                    <div className="flex flex-col gap-1 text-center justify-center items-center w-full">
-                        <div className="w-full">
-                            <h1 className="text-3xl md:text-4xl">
-                                <AnimatedText
-                                    texts={['pierre fg', 'p1ps']}
-                                    holdTime={3500}
-                                />
-                            </h1>
-                        </div>
-
-                        <div className="w-full">
-                            <span>
-                                {'/'} cartographie, informatique
-                                <br />
-                                {'/'} photographie, musique, illustration
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="py-4 md:py-8">
-                    <MenuBar />
-                </div>
-
-                {/* <div className='flex flex-row gap-6 items-center text-small md:text-base mt-1 mb-1'>
-                    <SimpleLink
-                        content={{
-                            title: (
-                                <>
-                                    Echoes from the Garden (nouv. EP&nbsp;
-                                    <LuPartyPopper className="inline" />)
-                                </>
-                            ),
-                            link: 'https://album.link/echoes_from_the_garden',
-                            extern: true,
-                        }}
-                    />
-                </div> */}
-
-                <SocialIcons />
-            </div>
+            <LandingMenu />
 
             <div className="absolute right-4 top-4 z-50">
                 <SimpleLink
