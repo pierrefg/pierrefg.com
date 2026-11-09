@@ -1,0 +1,9 @@
+.text-input {
+    @apply appearance-none bg-foreground  w-full py-2 px-3 leading-tight outline-none; 
+    @apply border-2 border-primary focus:border-2 focus:border-primary-hover;
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.text-input:disabled {
+    @apply border-primary-muted text-primary-muted; 
+}
