@@ -26,7 +26,7 @@ export default function Tabs({ tabs, defaultTab }) {
                 ))}
             </div>
 
-            <div className="flex w-full flex-1 items-center justify-center p-4 border-2 border-solid border-primary">
+            <div className="bg-white flex w-full flex-1 items-center justify-center p-4 border-2 border-solid border-primary">
                 {activeTab?.content}
             </div>
         </div>

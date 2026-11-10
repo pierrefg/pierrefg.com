@@ -14,10 +14,10 @@ export const metadata = createPageMetadata(
 
 export default function ShortL() {
     return (
-        <div className="flex flex-col items-center justify-center flex-1">
+        <div className="shortL-page flex flex-col items-center justify-center flex-1">
             <Tabs
                 tabs={[
-                    { id: 'eater', title: 'Mes liens', content: <ShortLForm /> },
+                    { id: 'eater', title: 'Manger un lien', content: <ShortLForm /> },
                     { id: 'list', title: 'Liens actifs', content: <ShortLList /> },
                 ]}
                 defaultTab="eater"
