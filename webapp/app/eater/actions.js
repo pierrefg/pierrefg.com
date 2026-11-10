@@ -10,6 +10,7 @@ import { slugify } from "@/utils/slugify";
 export async function createShortLink(formData) {
     const url = formData.get("url");
     const shortcut = formData.get("shortcut");
+    const isPrivate = formData.get("private") ? 1 : 0;
 
     if (!url || !URL.canParse(url)) {
         throw new Error("URL invalide");
@@ -22,7 +23,7 @@ export async function createShortLink(formData) {
         shortId = nanoid(8);
     }
 
-    await turso.execute("INSERT INTO links (key, link) VALUES (?, ?)", [shortId, url]);
+    await turso.execute("INSERT INTO links (key, link, private) VALUES (?, ?, ?)", [shortId, url, isPrivate]);
 
     return { shortId };
 }
