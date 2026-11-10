@@ -4,7 +4,7 @@ import { retrieveShortLink } from '@/utils/shortLinks';
 
 export default async function EaterList() {
 
-    const { rows } = await turso.execute("SELECT * FROM links");
+    const { rows } = await turso.execute("SELECT * FROM links WHERE private = 0 AND active = 1 ORDER BY created_at DESC");
 
     return (
         <ul>

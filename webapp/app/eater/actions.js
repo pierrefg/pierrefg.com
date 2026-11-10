@@ -15,7 +15,7 @@ export async function createShortLink(formData) {
     if (!url || !URL.canParse(url)) {
         throw new Error("URL invalide");
     }
-    
+
     let shortId;
     if(shortcut !== null && shortcut !== "") {
         shortId = slugify(shortcut);
