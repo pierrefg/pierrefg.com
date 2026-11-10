@@ -2,7 +2,7 @@ import { turso } from "@/lib/turso";
 
 import { retrieveShortLink } from '@/utils/shortLinks';
 
-export default async function ShortLList() {
+export default async function EaterList() {
 
     const { rows } = await turso.execute("SELECT * FROM links");
 

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import SimpleLink from '@/components/SimpleLink';
 
-export default function Tabs({ tabs, defaultTab }) {
+export default function Tabs({ tabs, defaultTab, rootLink }) {
     const [activeTabId, setActiveTabId] = useState(defaultTab ?? tabs[0]?.id);
 
     const activeTab = tabs.find((tab) => tab.id === activeTabId);
@@ -16,7 +16,7 @@ export default function Tabs({ tabs, defaultTab }) {
                         key={tab.id}
                         content={{
                             title: tab.title,
-                            link: '/shortL',
+                            link: rootLink,
                             anchor: tab.id,
                         }}
                         linkKey={tab.id}

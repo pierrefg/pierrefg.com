@@ -12,7 +12,7 @@ import { GiEating } from "react-icons/gi";
 import { createShortLink } from "./actions";
 import { retrieveShortLink } from '@/utils/shortLinks';
 
-export default function ShortLForm() {
+export default function EaterForm() {
   const [submitState, setSubmitState] = useState(null);
   const [shortLinkId, setShortLinkId] = useState(null);
 
@@ -20,7 +20,7 @@ export default function ShortLForm() {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const link = formData.get("from_email");
+    const link = formData.get("url");
 
     setSubmitState("loading");
 

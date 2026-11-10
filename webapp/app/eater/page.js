@@ -1,7 +1,7 @@
 import './style.css';
 
-import ShortLForm from './ShortLForm';
-import ShortLList from './ShortLList';
+import EaterForm from './EaterForm';
+import EaterList from './EatenList';
 import { createPageMetadata } from '@/utils/metadata';
 
 import Tabs from '@/components/tabs/Tabs';
@@ -12,15 +12,16 @@ export const metadata = createPageMetadata(
     '/shortL'
 );
 
-export default function ShortL() {
+export default function Eater() {
     return (
         <div className="shortL-page flex flex-col items-center justify-center flex-1">
             <Tabs
                 tabs={[
-                    { id: 'eater', title: 'Manger un lien', content: <ShortLForm /> },
-                    { id: 'list', title: 'Liens actifs', content: <ShortLList /> },
+                    { id: 'digest', title: 'Manger un lien', content: <EaterForm /> },
+                    { id: 'list', title: 'Liens actifs', content: <EaterList /> },
                 ]}
-                defaultTab="eater"
+                defaultTab="digest"
+                rootLink="/eater"
             />
         </div>
     );
