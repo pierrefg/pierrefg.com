@@ -1,24 +1,52 @@
-import { turso } from "@/lib/turso";
+'use client';
 
-import { retrieveShortLink } from '@/utils/shortLinks';
+import { useCallback, useEffect, useState } from "react";
 
-export default async function EaterList() {
+import { IoReloadSharp } from "react-icons/io5";
 
-    const { rows } = await turso.execute("SELECT * FROM links WHERE private = 0 AND active = 1 ORDER BY created_at DESC");
+
+export default function EaterList() {
+    const [rows, setRows] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    async function loadLinks() {
+        setLoading(true);
+
+        try {
+            const res = await fetch("/api/eater-list", {
+                cache: "no-store",
+            });
+            const data = await res.json();
+
+            setRows(data);
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        loadLinks();
+    }, []);
 
     return (
-        <ul>
-            {
-                rows.map((row) => (
+        <div className="flex flex-col gap-4 items-center justify-center w-full">
+            <div>
+                <button type="button" className="btn btn-primary" onClick={loadLinks} disabled={loading}>
+                    {loading ? '...' : <IoReloadSharp className="inline" />}
+                </button>
+            </div>
+
+            <ul>
+                {rows.map((row) => (
                     <li key={row.key}>
-                        <a href={retrieveShortLink(row.key)} className="underline">
-                            {retrieveShortLink(row.key)}
+                        <a href={row.shortLink} className="underline">
+                            {row.shortLink}
                         </a>
                         {row.link && <span> - {row.link.slice(0, 20)}...</span>}
                     </li>
-                ))
-            }
-        </ul>
+                ))}
+            </ul>
+        </div>
     );
 
 }
