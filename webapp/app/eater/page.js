@@ -1,7 +1,7 @@
 import './style.css';
 
 import EaterForm from './EaterForm';
-import EaterList from './EatenList';
+import EaterList from './EaterList';
 import { createPageMetadata } from '@/utils/metadata';
 
 import Tabs from '@/components/tabs/Tabs';
