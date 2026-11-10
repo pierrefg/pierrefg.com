@@ -3,16 +3,7 @@
 
 import { nanoid } from "nanoid";
 
-function slugify(value) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
+import { slugify } from "@/utils/slugify";
 
 export async function createShortLink(formData) {
     const url = formData.get("url");

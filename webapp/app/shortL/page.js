@@ -1,6 +1,7 @@
 import './style.css';
 
 import ShortLForm from './ShortLForm';
+import ShortLList from './ShortLList';
 import { createPageMetadata } from '@/utils/metadata';
 
 export const metadata = createPageMetadata(
@@ -13,6 +14,7 @@ export default function ShortL() {
     return (
         <div className="flex flex-col items-center justify-center flex-1">
             <ShortLForm />
+            <ShortLList />
         </div>
     );
 }

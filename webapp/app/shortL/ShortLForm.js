@@ -10,6 +10,7 @@ import LoaderElement from '@/components/loader/LoaderElement';
 import { GiEating } from "react-icons/gi";
 
 import { createShortLink } from "./actions";
+import { retrieveShortLink } from './utils';
 
 export default function ShortLForm() {
   const [submitState, setSubmitState] = useState(null);
@@ -74,7 +75,7 @@ export default function ShortLForm() {
       </div>
       <div>{shortLinkId && (
         <p className="text-sm text-muted-foreground">
-          Votre lien raccourci : <a href={`/s/${shortLinkId}`} className="underline">{`https://pierrefg.com/s/${shortLinkId}`}</a>
+          Votre lien raccourci : <a href={retrieveShortLink(shortLinkId)} className="underline">{retrieveShortLink(shortLinkId)}</a>
         </p>
       )}</div>
     </form>
