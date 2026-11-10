@@ -128,3 +128,8 @@ li li::before {
 .inline-link:hover {
   opacity: 0.8;
 }
+
+input[type=checkbox] {
+    accent-color: rgb(var(--primary-color-rgb));
+    border-radius: 0rem;
+}

@@ -18,7 +18,7 @@ export default function Eater() {
             <Tabs
                 tabs={[
                     { id: 'digest', title: 'Manger un lien', content: <EaterForm /> },
-                    { id: 'list', title: 'Liens actifs', content: <EaterList /> },
+                    { id: 'poop', title: 'Liens actifs', content: <EaterList /> },
                 ]}
                 defaultTab="digest"
                 rootLink="/eater"
