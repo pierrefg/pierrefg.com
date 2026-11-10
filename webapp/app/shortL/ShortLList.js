@@ -1,6 +1,6 @@
 import { turso } from "@/lib/turso";
 
-import { retrieveShortLink } from './utils';
+import { retrieveShortLink } from '@/utils/shortLinks';
 
 export default async function ShortLList() {
 
@@ -14,7 +14,7 @@ export default async function ShortLList() {
                         <a href={retrieveShortLink(row.key)} className="underline">
                             {retrieveShortLink(row.key)}
                         </a>
-                        {row.link && <span> - {row.link}</span>}
+                        {row.link && <span> - {row.link.slice(0, 20)}...</span>}
                     </li>
                 ))
             }

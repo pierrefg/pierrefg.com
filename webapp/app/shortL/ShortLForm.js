@@ -10,7 +10,7 @@ import LoaderElement from '@/components/loader/LoaderElement';
 import { GiEating } from "react-icons/gi";
 
 import { createShortLink } from "./actions";
-import { retrieveShortLink } from './utils';
+import { retrieveShortLink } from '@/utils/shortLinks';
 
 export default function ShortLForm() {
   const [submitState, setSubmitState] = useState(null);
