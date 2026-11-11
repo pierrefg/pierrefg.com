@@ -55,7 +55,7 @@ a {
 }
 
 .text-frame {
-    @apply bg-white border-4 border-double m-2 border-primary p-6;
+    @apply bg-white border-4 border-double border-primary m-2 p-6;
 }
 
 .icon {
