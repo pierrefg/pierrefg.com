@@ -1,9 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
 import { IoReloadSharp } from "react-icons/io5";
-
 
 export default function EaterList() {
     const [rows, setRows] = useState([]);
@@ -31,22 +29,47 @@ export default function EaterList() {
     return (
         <div className="flex flex-col gap-4 items-center justify-center w-full">
             <div>
-                <button type="button" className="btn btn-primary" onClick={loadLinks} disabled={loading}>
-                    {loading ? '...' : <IoReloadSharp className="inline" />}
+                <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={loadLinks}
+                    disabled={loading}
+                >
+                    {loading ? "..." : <IoReloadSharp className="inline" />}
                 </button>
             </div>
 
-            <ul>
-                {rows.map((row) => (
-                    <li key={row.key}>
-                        <a href={row.shortLink} className="underline">
-                            {row.shortLink}
-                        </a>
-                        {row.link && <span> - {row.link.slice(0, 20)}...</span>}
-                    </li>
-                ))}
-            </ul>
+            <div className="w-full max-h-[250px] overflow-y-auto">
+                <table className="w-full border-collapse">
+                    <thead>
+                        <tr className="border-b">
+                            <th className="p-2 text-left">Short link</th>
+                            <th className="p-2 text-left">Link</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {rows.map((row) => (
+                            <tr key={row.key} className="border-b">
+                                <td className="p-2">
+                                    <a
+                                        href={row.shortLink}
+                                        className="underline"
+                                    >
+                                        {row.shortLink}
+                                    </a>
+                                </td>
+
+                                <td className="p-2 max-w-[240px]">
+                                    <div className="overflow-x-auto whitespace-nowrap">
+                                        {row.link ?? ""}
+                                    </div>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
-
 }
