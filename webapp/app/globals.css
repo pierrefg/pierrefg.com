@@ -9,7 +9,7 @@
     --secondary-menu-height: 90px; /* Default secondary menu height */
     --secondary-menu-mobile-height: 75px;
     /* FOREGROUND */
-    --foreground-rgb: 255, 255, 255; /* Background color */
+    --foreground-rgb: 255, 255, 250; /* Background color */
     /* PRIMARY */
     --primary-color-rgb: 90, 0, 90; /* Button primary color */
     --primary-hover-color-rgb: 128, 0, 128; /* Button primary hover color */
@@ -45,7 +45,6 @@ h3 {
     @apply text-lg font-josefin font-semibold;
 }
 
-
 .text-small {
     @apply text-sm;
 }
@@ -53,6 +52,10 @@ h3 {
 a {
     @apply hover:text-primary-hover cursor-pointer;
     @apply transition-colors duration-300 ease-in-out;
+}
+
+.text-frame {
+    @apply bg-white border-4 border-double m-2 border-primary p-6;
 }
 
 .icon {
@@ -132,4 +135,12 @@ li li::before {
 input[type=checkbox] {
     accent-color: rgb(var(--primary-color-rgb));
     border-radius: 0rem;
+}
+
+.tramed {
+    background: 
+        radial-gradient(closest-side, #777, #fff) 0/ 1em 1em space, 
+        linear-gradient(90deg, #888, #fff);
+    /* background-blend-mode: screen; */
+    filter: contrast(16)
 }
