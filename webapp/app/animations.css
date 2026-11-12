@@ -1,0 +1,19 @@
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.rotate-animation {
+    animation: rotate360 5s linear infinite;
+    animation-timing-function: ease-in-out;
+}

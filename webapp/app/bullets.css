@@ -1,0 +1,16 @@
+li {
+    @apply relative pl-3 my-2;
+}
+
+li::before {
+    content: '> ';
+    transform: translateY(-100%);
+}
+
+li li {
+    @apply pl-5 text-sm;
+}
+
+li li::before {
+    content: '~';
+}

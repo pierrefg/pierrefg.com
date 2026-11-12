@@ -1,0 +1,7 @@
+.tramed {
+    background: 
+        radial-gradient(closest-side, #777, #fff) 0/ 1em 1em space, 
+        linear-gradient(90deg, #888, #fff);
+    /* background-blend-mode: screen; */
+    filter: contrast(16)
+}

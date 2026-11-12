@@ -1,5 +1,8 @@
 import "./globals.css";
 import "./button.css";
+import "./decorations.css"
+import "./bullets.css"
+import "./animations.css"
 
 import { josefinSans, monaspaceArgon } from "./fonts";
 import MainLayout from "@/components/mainLayout/MainLayout";
