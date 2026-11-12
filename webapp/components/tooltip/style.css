@@ -1,0 +1,8 @@
+.tooltip {
+    @apply bg-primary text-foreground text-sm border-double border-foreground border-4 text-center p-0.5;
+}
+
+.tooltip-indicator {
+  border-bottom: 1px dotted black; /* Add dots under the hoverable text */
+  cursor: pointer;
+}

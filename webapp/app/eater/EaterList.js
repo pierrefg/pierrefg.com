@@ -4,8 +4,11 @@ import { useEffect, useState } from "react";
 import { IoReloadSharp } from "react-icons/io5";
 import { FaClipboard, FaClipboardCheck } from "react-icons/fa";
 import useCopyToClipboard from "@/hooks/useCopyToClipboard";
+import { useCursorTooltip } from "@/components/tooltip/CursorTooltipProvider";
+
 
 export default function EaterList() {
+    const { showTooltip, hideTooltip } = useCursorTooltip();
     const [rows, setRows] = useState([]);
     const [loading, setLoading] = useState(false);
     const { copiedKey, copyToClipboard } = useCopyToClipboard();
@@ -31,23 +34,13 @@ export default function EaterList() {
 
     return (
         <div className="flex flex-col gap-4 items-center justify-center w-full">
-            <div>
-                <button
-                    type="button"
-                    className="btn btn-primary"
-                    onClick={loadLinks}
-                    disabled={loading}
-                >
-                    {loading ? "..." : <IoReloadSharp className="inline" />}
-                </button>
-            </div>
-
             <div className="w-full max-h-[250px] overflow-y-auto">
                 <table className="w-full border-collapse">
                     <thead>
                         <tr className="border-b">
+                            <th className="p-2 text-left">Copy</th>
                             <th className="p-2 text-left">Short link</th>
-                            <th className="p-2 text-left">Link</th>
+                            <th className="p-2 text-left">Infos</th>
                         </tr>
                     </thead>
 
@@ -82,15 +75,38 @@ export default function EaterList() {
                                     </a>
                                 </td>
 
-                                <td className="p-2 max-w-[240px]">
+                                {/* <td className="p-2 max-w-[240px]">
                                     <div className="overflow-x-auto whitespace-nowrap">
                                         {row.link ?? ""}
+                                    </div>
+                                </td> */}
+
+                                <td className="p-2">
+                                    <div
+                                        className="max-w-[240px] truncate cursor-help"
+                                        onMouseEnter={(event) =>
+                                            showTooltip(row.link ?? "", event)
+                                        }
+                                        onMouseLeave={hideTooltip}
+                                    >
+                                        <span className="tooltip-indicator">infos</span>
                                     </div>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
+            </div>
+
+            <div>
+                <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={loadLinks}
+                    disabled={loading}
+                >
+                    {loading ? "..." : <IoReloadSharp className="inline" />}
+                </button>
             </div>
         </div>
     );
