@@ -71,7 +71,7 @@ export default function EaterList() {
                                         href={row.shortLink.relative}
                                         className="underline"
                                     >
-                                        {row.shortLink.absolute}
+                                        {row.shortLink.relative}
                                     </a>
                                 </td>
 

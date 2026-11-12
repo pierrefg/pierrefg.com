@@ -1,5 +1,5 @@
 .tooltip {
-    @apply bg-primary text-foreground text-sm border-double border-foreground border-4 text-center p-0.5;
+    @apply bg-primary text-foreground text-sm border-double border-foreground border-4 text-center p-0.5 overflow-hidden;
 }
 
 .tooltip-indicator {
