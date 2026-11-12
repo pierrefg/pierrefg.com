@@ -1,3 +1,6 @@
 export function retrieveShortLink(shortLinkId) {
-    return `pierrefg.com/s/${shortLinkId}`
+    return {
+        relative: `/s/${shortLinkId}`,
+        absolute: `https://pierrefg.com/s/${shortLinkId}`,
+    };
 }
