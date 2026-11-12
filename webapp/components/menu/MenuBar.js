@@ -36,7 +36,7 @@ export default function MenuBar() {
                     </div>
 
                     <div className='flex items-center text-center lg:hidden text-1xl h-full'>
-                        <h2>pierre fg</h2>
+                        <h2><a href="/">pierre fg</a></h2>
                     </div>
                     
                     {/* Hamburger Menu Icon */}
@@ -49,8 +49,6 @@ export default function MenuBar() {
                         }
                     </button>
                 </div>
-
-                {/* Mobile Menu */}
                 
                 {menuOpen && (
                     <div className="mobile-menu-bar fixed w-full flex flex-col z-50">
@@ -61,9 +59,6 @@ export default function MenuBar() {
                             <div className='flex'>
                                 <SocialIcons />
                             </div>
-                            {/* <div className='flex h-[50px]'>
-                                <ThemeSwitch />
-                            </div> */}
                         </div>
                     </div>
                 )}

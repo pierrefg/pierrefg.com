@@ -37,10 +37,10 @@ export default function Tools() {
     return (
         <div className='w-full flex-1 flex flex-col gap-6 mx-2 items-center justify-center'>
             <h1>Outils</h1>
-            <div className='w-full flex flex-col gap-2 mx-2 items-center justify-center'>
+            <div className='w-full flex flex-col gap-2 items-center justify-center'>
                 {tools.map((tool, _) => (
+                    <div key={tool.id}>
                     <SimpleLink
-                        linkKey={tool.id}
                         primary={true}
                         content={{
                             icon: tool.icon,
@@ -48,6 +48,7 @@ export default function Tools() {
                             link: tool.link
                         }}
                     />
+                    </div>
                 ))}
             </div>
         </div>
