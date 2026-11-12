@@ -2,9 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaArrowDown } from 'react-icons/fa';
-import { AiOutlineNumber, AiOutlineFilePdf } from 'react-icons/ai';
-import { FaLink } from 'react-icons/fa6';
 
 import SimpleLink from '@/components/SimpleLink';
 
@@ -17,6 +14,10 @@ import { PiMountainsFill } from "react-icons/pi";
 import { GiFallingStar } from "react-icons/gi";
 import { GiSandSnake } from "react-icons/gi";
 import { GiBurstBlob } from "react-icons/gi";
+import { FaArrowDown } from 'react-icons/fa';
+import { AiOutlineNumber, AiOutlineFilePdf } from 'react-icons/ai';
+import { FaLink } from 'react-icons/fa6';
+import { IoHammerOutline } from "react-icons/io5";
 import LandingMenu from './LandingMenu';
 
 export default function LandingTop() {
@@ -66,8 +67,8 @@ export default function LandingTop() {
             <div className="absolute right-4 bottom-4 z-50">
                 <SimpleLink
                     content={{
-                        title: <FaLink />,
-                        link: '/links',
+                        title: <IoHammerOutline />,
+                        link: '/tools',
                     }}
                 />
             </div>

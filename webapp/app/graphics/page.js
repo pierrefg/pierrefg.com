@@ -1,6 +1,14 @@
+import { createPageMetadata } from '@/utils/metadata';
+
+export const metadata = createPageMetadata(
+    "Charte graphique",
+    "Charte graphique du site pierrefg.com.",
+    "/graphics"
+)
+
 export default function Footer() {
     return (
-        <div className='w-full flex-1 flex flex-col gap-6 items-center justify-center'>
+        <div className='w-full flex-1 flex flex-col gap-6 mx-2 items-center justify-center'>
             <h1><a href="https://github.com/pierrefg/pierrefg.com/raw/refs/heads/main/webapp/app/fonts/Neo-castel.ttf">Titres en Neo Castel</a></h1>
             <p><a href="https://github.com/pierrefg/pierrefg.com/raw/refs/heads/main/webapp/app/fonts/monaspace_argon_var.ttf">Corps en Mona Space Argon</a></p>
 
