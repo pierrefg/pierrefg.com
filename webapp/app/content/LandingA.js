@@ -111,7 +111,7 @@ export default function LandingTop() {
                     href="/#about"
                     className="btn btn-primary rounded-full flex justify-center items-center w-[40px] h-[40px] animate-bounce"
                 >
-                    <FaArrowDown className="text-2xl" />
+                    <FaArrowDown className="text-2xl rotate-animation" />
                 </Link>
             </div>
         </>
