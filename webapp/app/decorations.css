@@ -1,4 +1,14 @@
-.tramed {
+.trame-a {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 1px,
+        rgba(90,0,90,0) 1px,
+        rgba(90,0,90,1) 3px
+    );
+}
+
+.trame-b {
     background: 
         radial-gradient(closest-side, #777, #fff) 0/ 1em 1em space, 
         linear-gradient(90deg, #888, #fff);

@@ -14,7 +14,8 @@ export const metadata = createPageMetadata(
 
 export default function Eater() {
     return (
-        <div className="shortL-page flex flex-col items-center justify-center flex-1">
+        <div className="trame-a flex flex-col items-center justify-center flex-1">
+            <h1 className="bg-foreground" >Mangeur de liens</h1>
             <Tabs
                 tabs={[
                     { id: 'digest', title: 'Manger un lien', content: <EaterForm /> },
